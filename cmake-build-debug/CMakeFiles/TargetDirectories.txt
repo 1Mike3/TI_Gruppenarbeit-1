@@ -1,3 +1,0 @@
-C:/Users/Michi/CLionProjects/Gruppenarbeit_TI/cmake-build-debug/CMakeFiles/Gruppenarbeit_TI.dir
-C:/Users/Michi/CLionProjects/Gruppenarbeit_TI/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Michi/CLionProjects/Gruppenarbeit_TI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
