@@ -82,83 +82,99 @@ CMakeFiles/Gruppenarbeit_TI.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/main.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\main.c -o CMakeFiles\Gruppenarbeit_TI.dir\main.c.s
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj: ../cmake-build-debug/mergesort.c
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\mergesort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\mergesort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\mergesort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
+CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj: ../src/mergesort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\src\mergesort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\src\mergesort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\mergesort.c
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\mergesort.c > CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\mergesort.c.i
+CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\mergesort.c > CMakeFiles\Gruppenarbeit_TI.dir\src\mergesort.c.i
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\mergesort.c -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\mergesort.c.s
+CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\mergesort.c -o CMakeFiles\Gruppenarbeit_TI.dir\src\mergesort.c.s
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj: ../cmake-build-debug/quicksort.c
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\quicksort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\quicksort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\quicksort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
+CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj: ../src/quicksort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\src\quicksort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\src\quicksort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\quicksort.c
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\quicksort.c > CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\quicksort.c.i
+CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\quicksort.c > CMakeFiles\Gruppenarbeit_TI.dir\src\quicksort.c.i
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\quicksort.c -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\quicksort.c.s
+CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\quicksort.c -o CMakeFiles\Gruppenarbeit_TI.dir\src\quicksort.c.s
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj: ../cmake-build-debug/insertionsort.c
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\insertionsort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\insertionsort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\insertionsort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
+CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj: ../src/insertionsort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\src\insertionsort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\src\insertionsort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\insertionsort.c
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\insertionsort.c > CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\insertionsort.c.i
+CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\insertionsort.c > CMakeFiles\Gruppenarbeit_TI.dir\src\insertionsort.c.i
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\insertionsort.c -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\insertionsort.c.s
+CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\insertionsort.c -o CMakeFiles\Gruppenarbeit_TI.dir\src\insertionsort.c.s
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj: ../cmake-build-debug/a.c
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\a.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\a.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\a.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
+CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj: ../src/bubblesort.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\src\bubblesort.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\src\bubblesort.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\bubblesort.c
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\a.c > CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\a.c.i
+CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\bubblesort.c > CMakeFiles\Gruppenarbeit_TI.dir\src\bubblesort.c.i
 
-CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-debug\a.c -o CMakeFiles\Gruppenarbeit_TI.dir\cmake-build-debug\a.c.s
+CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\bubblesort.c -o CMakeFiles\Gruppenarbeit_TI.dir\src\bubblesort.c.s
+
+CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/flags.make
+CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj: ../src/_genFunc.c
+CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj: CMakeFiles/Gruppenarbeit_TI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj -MF CMakeFiles\Gruppenarbeit_TI.dir\src\_genFunc.c.obj.d -o CMakeFiles\Gruppenarbeit_TI.dir\src\_genFunc.c.obj -c C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\_genFunc.c
+
+CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\_genFunc.c > CMakeFiles\Gruppenarbeit_TI.dir\src\_genFunc.c.i
+
+CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\src\_genFunc.c -o CMakeFiles\Gruppenarbeit_TI.dir\src\_genFunc.c.s
 
 # Object files for target Gruppenarbeit_TI
 Gruppenarbeit_TI_OBJECTS = \
 "CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj" \
-"CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj" \
-"CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj" \
-"CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj" \
-"CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj"
+"CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj" \
+"CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj" \
+"CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj" \
+"CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj" \
+"CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj"
 
 # External object files for target Gruppenarbeit_TI
 Gruppenarbeit_TI_EXTERNAL_OBJECTS =
 
 Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj
-Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj
-Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj
-Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj
-Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj
+Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj
+Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj
+Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj
+Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj
+Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj
 Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/build.make
 Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/linklibs.rsp
 Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/objects1.rsp
 Gruppenarbeit_TI.exe: CMakeFiles/Gruppenarbeit_TI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Gruppenarbeit_TI.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Gruppenarbeit_TI.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Gruppenarbeit_TI.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

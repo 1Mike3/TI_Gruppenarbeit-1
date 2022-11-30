@@ -128,102 +128,6 @@ Gruppenarbeit_TI/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/build
 .PHONY : Gruppenarbeit_TI/fast
 
-cmake-build-debug/a.obj: cmake-build-debug/a.c.obj
-.PHONY : cmake-build-debug/a.obj
-
-# target to build an object file
-cmake-build-debug/a.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj
-.PHONY : cmake-build-debug/a.c.obj
-
-cmake-build-debug/a.i: cmake-build-debug/a.c.i
-.PHONY : cmake-build-debug/a.i
-
-# target to preprocess a source file
-cmake-build-debug/a.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.i
-.PHONY : cmake-build-debug/a.c.i
-
-cmake-build-debug/a.s: cmake-build-debug/a.c.s
-.PHONY : cmake-build-debug/a.s
-
-# target to generate assembly for a file
-cmake-build-debug/a.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.s
-.PHONY : cmake-build-debug/a.c.s
-
-cmake-build-debug/insertionsort.obj: cmake-build-debug/insertionsort.c.obj
-.PHONY : cmake-build-debug/insertionsort.obj
-
-# target to build an object file
-cmake-build-debug/insertionsort.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj
-.PHONY : cmake-build-debug/insertionsort.c.obj
-
-cmake-build-debug/insertionsort.i: cmake-build-debug/insertionsort.c.i
-.PHONY : cmake-build-debug/insertionsort.i
-
-# target to preprocess a source file
-cmake-build-debug/insertionsort.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.i
-.PHONY : cmake-build-debug/insertionsort.c.i
-
-cmake-build-debug/insertionsort.s: cmake-build-debug/insertionsort.c.s
-.PHONY : cmake-build-debug/insertionsort.s
-
-# target to generate assembly for a file
-cmake-build-debug/insertionsort.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.s
-.PHONY : cmake-build-debug/insertionsort.c.s
-
-cmake-build-debug/mergesort.obj: cmake-build-debug/mergesort.c.obj
-.PHONY : cmake-build-debug/mergesort.obj
-
-# target to build an object file
-cmake-build-debug/mergesort.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj
-.PHONY : cmake-build-debug/mergesort.c.obj
-
-cmake-build-debug/mergesort.i: cmake-build-debug/mergesort.c.i
-.PHONY : cmake-build-debug/mergesort.i
-
-# target to preprocess a source file
-cmake-build-debug/mergesort.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.i
-.PHONY : cmake-build-debug/mergesort.c.i
-
-cmake-build-debug/mergesort.s: cmake-build-debug/mergesort.c.s
-.PHONY : cmake-build-debug/mergesort.s
-
-# target to generate assembly for a file
-cmake-build-debug/mergesort.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.s
-.PHONY : cmake-build-debug/mergesort.c.s
-
-cmake-build-debug/quicksort.obj: cmake-build-debug/quicksort.c.obj
-.PHONY : cmake-build-debug/quicksort.obj
-
-# target to build an object file
-cmake-build-debug/quicksort.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj
-.PHONY : cmake-build-debug/quicksort.c.obj
-
-cmake-build-debug/quicksort.i: cmake-build-debug/quicksort.c.i
-.PHONY : cmake-build-debug/quicksort.i
-
-# target to preprocess a source file
-cmake-build-debug/quicksort.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.i
-.PHONY : cmake-build-debug/quicksort.c.i
-
-cmake-build-debug/quicksort.s: cmake-build-debug/quicksort.c.s
-.PHONY : cmake-build-debug/quicksort.s
-
-# target to generate assembly for a file
-cmake-build-debug/quicksort.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.s
-.PHONY : cmake-build-debug/quicksort.c.s
-
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -248,6 +152,126 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/main.c.s
 .PHONY : main.c.s
 
+src/_genFunc.obj: src/_genFunc.c.obj
+.PHONY : src/_genFunc.obj
+
+# target to build an object file
+src/_genFunc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.obj
+.PHONY : src/_genFunc.c.obj
+
+src/_genFunc.i: src/_genFunc.c.i
+.PHONY : src/_genFunc.i
+
+# target to preprocess a source file
+src/_genFunc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.i
+.PHONY : src/_genFunc.c.i
+
+src/_genFunc.s: src/_genFunc.c.s
+.PHONY : src/_genFunc.s
+
+# target to generate assembly for a file
+src/_genFunc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/_genFunc.c.s
+.PHONY : src/_genFunc.c.s
+
+src/bubblesort.obj: src/bubblesort.c.obj
+.PHONY : src/bubblesort.obj
+
+# target to build an object file
+src/bubblesort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.obj
+.PHONY : src/bubblesort.c.obj
+
+src/bubblesort.i: src/bubblesort.c.i
+.PHONY : src/bubblesort.i
+
+# target to preprocess a source file
+src/bubblesort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.i
+.PHONY : src/bubblesort.c.i
+
+src/bubblesort.s: src/bubblesort.c.s
+.PHONY : src/bubblesort.s
+
+# target to generate assembly for a file
+src/bubblesort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/bubblesort.c.s
+.PHONY : src/bubblesort.c.s
+
+src/insertionsort.obj: src/insertionsort.c.obj
+.PHONY : src/insertionsort.obj
+
+# target to build an object file
+src/insertionsort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.obj
+.PHONY : src/insertionsort.c.obj
+
+src/insertionsort.i: src/insertionsort.c.i
+.PHONY : src/insertionsort.i
+
+# target to preprocess a source file
+src/insertionsort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.i
+.PHONY : src/insertionsort.c.i
+
+src/insertionsort.s: src/insertionsort.c.s
+.PHONY : src/insertionsort.s
+
+# target to generate assembly for a file
+src/insertionsort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/insertionsort.c.s
+.PHONY : src/insertionsort.c.s
+
+src/mergesort.obj: src/mergesort.c.obj
+.PHONY : src/mergesort.obj
+
+# target to build an object file
+src/mergesort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.obj
+.PHONY : src/mergesort.c.obj
+
+src/mergesort.i: src/mergesort.c.i
+.PHONY : src/mergesort.i
+
+# target to preprocess a source file
+src/mergesort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.i
+.PHONY : src/mergesort.c.i
+
+src/mergesort.s: src/mergesort.c.s
+.PHONY : src/mergesort.s
+
+# target to generate assembly for a file
+src/mergesort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/mergesort.c.s
+.PHONY : src/mergesort.c.s
+
+src/quicksort.obj: src/quicksort.c.obj
+.PHONY : src/quicksort.obj
+
+# target to build an object file
+src/quicksort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.obj
+.PHONY : src/quicksort.c.obj
+
+src/quicksort.i: src/quicksort.c.i
+.PHONY : src/quicksort.i
+
+# target to preprocess a source file
+src/quicksort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.i
+.PHONY : src/quicksort.c.i
+
+src/quicksort.s: src/quicksort.c.s
+.PHONY : src/quicksort.s
+
+# target to generate assembly for a file
+src/quicksort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/src/quicksort.c.s
+.PHONY : src/quicksort.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -257,21 +281,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Gruppenarbeit_TI
-	@echo ... cmake-build-debug/a.obj
-	@echo ... cmake-build-debug/a.i
-	@echo ... cmake-build-debug/a.s
-	@echo ... cmake-build-debug/insertionsort.obj
-	@echo ... cmake-build-debug/insertionsort.i
-	@echo ... cmake-build-debug/insertionsort.s
-	@echo ... cmake-build-debug/mergesort.obj
-	@echo ... cmake-build-debug/mergesort.i
-	@echo ... cmake-build-debug/mergesort.s
-	@echo ... cmake-build-debug/quicksort.obj
-	@echo ... cmake-build-debug/quicksort.i
-	@echo ... cmake-build-debug/quicksort.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/_genFunc.obj
+	@echo ... src/_genFunc.i
+	@echo ... src/_genFunc.s
+	@echo ... src/bubblesort.obj
+	@echo ... src/bubblesort.i
+	@echo ... src/bubblesort.s
+	@echo ... src/insertionsort.obj
+	@echo ... src/insertionsort.i
+	@echo ... src/insertionsort.s
+	@echo ... src/mergesort.obj
+	@echo ... src/mergesort.i
+	@echo ... src/mergesort.s
+	@echo ... src/quicksort.obj
+	@echo ... src/quicksort.i
+	@echo ... src/quicksort.s
 .PHONY : help
 
 

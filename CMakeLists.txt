@@ -3,4 +3,4 @@ project(Gruppenarbeit_TI C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Gruppenarbeit_TI main.c cmake-build-debug/mergesort.c cmake-build-debug/quicksort.c cmake-build-debug/insertionsort.c cmake-build-debug/a.c)
+add_executable(Gruppenarbeit_TI main.c src/mergesort.c src/quicksort.c src/insertionsort.c src/bubblesort.c src/_genFunc.c)

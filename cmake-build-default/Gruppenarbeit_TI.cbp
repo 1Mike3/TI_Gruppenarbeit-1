@@ -76,19 +76,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/a.c">
-			<Option target="Gruppenarbeit_TI"/>
-		</Unit>
-		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/insertionsort.c">
-			<Option target="Gruppenarbeit_TI"/>
-		</Unit>
-		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/mergesort.c">
-			<Option target="Gruppenarbeit_TI"/>
-		</Unit>
-		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/quicksort.c">
-			<Option target="Gruppenarbeit_TI"/>
-		</Unit>
 		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/main.c">
+			<Option target="Gruppenarbeit_TI"/>
+		</Unit>
+		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/src/_genFunc.c">
+			<Option target="Gruppenarbeit_TI"/>
+		</Unit>
+		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/src/bubblesort.c">
+			<Option target="Gruppenarbeit_TI"/>
+		</Unit>
+		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/src/insertionsort.c">
+			<Option target="Gruppenarbeit_TI"/>
+		</Unit>
+		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/src/mergesort.c">
+			<Option target="Gruppenarbeit_TI"/>
+		</Unit>
+		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/src/quicksort.c">
 			<Option target="Gruppenarbeit_TI"/>
 		</Unit>
 		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/CMakeLists.txt">
