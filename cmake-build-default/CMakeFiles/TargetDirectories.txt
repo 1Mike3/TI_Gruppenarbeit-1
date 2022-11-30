@@ -1,0 +1,3 @@
+C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-default/CMakeFiles/Gruppenarbeit_TI.dir
+C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-default/CMakeFiles/edit_cache.dir
+C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-default/CMakeFiles/rebuild_cache.dir
