@@ -13,6 +13,7 @@ void mergeS (int *arr, unsigned int size);
 void bubbleS (int *arr, unsigned int size);
 void inserS (int *arr, unsigned int size);
 void quickS (int *arr, unsigned int size);
+unsigned int genRandNum();
 
 
 #endif //TI_GRUPPENARBEIT_1_ALLFUNCLIB_H
