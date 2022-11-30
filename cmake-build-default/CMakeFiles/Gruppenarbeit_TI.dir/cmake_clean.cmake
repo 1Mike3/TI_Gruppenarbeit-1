@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj"
+  "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj.d"
   "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj"
   "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj.d"
   "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj"

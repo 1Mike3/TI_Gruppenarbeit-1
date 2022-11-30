@@ -22,6 +22,7 @@ int main() {
     mergeS(arr, size);
 
     ah();
+    af();
 
     return 0;
 }

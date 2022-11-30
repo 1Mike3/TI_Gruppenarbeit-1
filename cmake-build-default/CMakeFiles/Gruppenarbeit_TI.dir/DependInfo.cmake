@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/a.c" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj" "gcc" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj.d"
   "C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/insertionsort.c" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj" "gcc" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/insertionsort.c.obj.d"
   "C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/mergesort.c" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj" "gcc" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/mergesort.c.obj.d"
   "C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/quicksort.c" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj" "gcc" "CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/quicksort.c.obj.d"

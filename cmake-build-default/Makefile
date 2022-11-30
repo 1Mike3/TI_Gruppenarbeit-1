@@ -128,6 +128,30 @@ Gruppenarbeit_TI/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/build
 .PHONY : Gruppenarbeit_TI/fast
 
+cmake-build-debug/a.obj: cmake-build-debug/a.c.obj
+.PHONY : cmake-build-debug/a.obj
+
+# target to build an object file
+cmake-build-debug/a.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.obj
+.PHONY : cmake-build-debug/a.c.obj
+
+cmake-build-debug/a.i: cmake-build-debug/a.c.i
+.PHONY : cmake-build-debug/a.i
+
+# target to preprocess a source file
+cmake-build-debug/a.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.i
+.PHONY : cmake-build-debug/a.c.i
+
+cmake-build-debug/a.s: cmake-build-debug/a.c.s
+.PHONY : cmake-build-debug/a.s
+
+# target to generate assembly for a file
+cmake-build-debug/a.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gruppenarbeit_TI.dir\build.make CMakeFiles/Gruppenarbeit_TI.dir/cmake-build-debug/a.c.s
+.PHONY : cmake-build-debug/a.c.s
+
 cmake-build-debug/insertionsort.obj: cmake-build-debug/insertionsort.c.obj
 .PHONY : cmake-build-debug/insertionsort.obj
 
@@ -233,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Gruppenarbeit_TI
+	@echo ... cmake-build-debug/a.obj
+	@echo ... cmake-build-debug/a.i
+	@echo ... cmake-build-debug/a.s
 	@echo ... cmake-build-debug/insertionsort.obj
 	@echo ... cmake-build-debug/insertionsort.i
 	@echo ... cmake-build-debug/insertionsort.s

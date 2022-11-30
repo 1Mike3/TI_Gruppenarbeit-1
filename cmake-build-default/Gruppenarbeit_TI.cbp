@@ -76,6 +76,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/a.c">
+			<Option target="Gruppenarbeit_TI"/>
+		</Unit>
 		<Unit filename="C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-debug/insertionsort.c">
 			<Option target="Gruppenarbeit_TI"/>
 		</Unit>

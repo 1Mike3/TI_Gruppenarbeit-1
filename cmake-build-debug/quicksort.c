@@ -4,5 +4,9 @@
 #include "stdio.h"
 
 void af (){
-    printf("Hello my name is michi");
+
+    printf("\nHello my name is ");
+    for(int i=0; i <=19; i++){
+        printf("\nmy name is");
+    }
 }
