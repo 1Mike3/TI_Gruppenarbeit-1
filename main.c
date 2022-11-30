@@ -7,12 +7,21 @@ void mergeS (int *arr, unsigned int size);
 //implementation in main.c function
 unsigned int genRandNum();
 
+//Test
+#include "stdio.h"
+
+void af ();
+void ah ();
+
+
 int main() {
     printf("Hello, World!\n");
     int arr[2] = {};
     unsigned  int size;
 
     mergeS(arr, size);
+
+    ah();
 
     return 0;
 }

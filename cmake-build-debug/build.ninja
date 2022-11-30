@@ -61,6 +61,18 @@ build CMakeFiles/Gruppenarbeit_TI.dir/mergesort.c.obj: C_COMPILER__Gruppenarbeit
   OBJECT_DIR = CMakeFiles\Gruppenarbeit_TI.dir
   OBJECT_FILE_DIR = CMakeFiles\Gruppenarbeit_TI.dir
 
+build CMakeFiles/Gruppenarbeit_TI.dir/quicksort.c.obj: C_COMPILER__Gruppenarbeit_TI_Debug C$:/Users/Michi/CLionProjects/Gruppenarbeit_TI/cmake-build-debug/quicksort.c || cmake_object_order_depends_target_Gruppenarbeit_TI
+  DEP_FILE = CMakeFiles\Gruppenarbeit_TI.dir\quicksort.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Gruppenarbeit_TI.dir
+  OBJECT_FILE_DIR = CMakeFiles\Gruppenarbeit_TI.dir
+
+build CMakeFiles/Gruppenarbeit_TI.dir/insertionsort.c.obj: C_COMPILER__Gruppenarbeit_TI_Debug C$:/Users/Michi/CLionProjects/Gruppenarbeit_TI/cmake-build-debug/insertionsort.c || cmake_object_order_depends_target_Gruppenarbeit_TI
+  DEP_FILE = CMakeFiles\Gruppenarbeit_TI.dir\insertionsort.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Gruppenarbeit_TI.dir
+  OBJECT_FILE_DIR = CMakeFiles\Gruppenarbeit_TI.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Gruppenarbeit_TI
@@ -69,7 +81,7 @@ build CMakeFiles/Gruppenarbeit_TI.dir/mergesort.c.obj: C_COMPILER__Gruppenarbeit
 #############################################
 # Link the executable Gruppenarbeit_TI.exe
 
-build Gruppenarbeit_TI.exe: C_EXECUTABLE_LINKER__Gruppenarbeit_TI_Debug CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj CMakeFiles/Gruppenarbeit_TI.dir/mergesort.c.obj
+build Gruppenarbeit_TI.exe: C_EXECUTABLE_LINKER__Gruppenarbeit_TI_Debug CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj CMakeFiles/Gruppenarbeit_TI.dir/mergesort.c.obj CMakeFiles/Gruppenarbeit_TI.dir/quicksort.c.obj CMakeFiles/Gruppenarbeit_TI.dir/insertionsort.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Gruppenarbeit_TI.dir

@@ -1,10 +1,13 @@
 # ninja log v5
 14	191	6914474297183267	CMakeFiles/Gruppenarbeit_TI.dir/mergesort.c.obj	e6d3a35b4c5eb099
-1	196	6914474297193182	CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj	3b89dcf1c68ac5d8
-197	602	6914474301199242	Gruppenarbeit_TI.exe	78e866dd1efcdc78
-5	151	6914475790791422	CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj	3b89dcf1c68ac5d8
-153	406	6914475793277987	Gruppenarbeit_TI.exe	78e866dd1efcdc78
-9	193	6914484722995312	CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj	3b89dcf1c68ac5d8
-195	422	6914484725170480	Gruppenarbeit_TI.exe	78e866dd1efcdc78
+304	761	6915316207416104	Gruppenarbeit_TI.exe	c982a92d9803d9d5
+15	300	6915316202976516	CMakeFiles/Gruppenarbeit_TI.dir/quicksort.c.obj	8f9a0f1b4f0b0c8f
 14	722	6915305099617110	CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj	3b89dcf1c68ac5d8
-726	1449	6915305106744430	Gruppenarbeit_TI.exe	78e866dd1efcdc78
+12	191	6915318213153322	CMakeFiles/Gruppenarbeit_TI.dir/insertionsort.c.obj	5d278541c8e0c9c8
+193	560	6915318216623063	Gruppenarbeit_TI.exe	b5e0998df0bf09bc
+12	1010	6915320129094271	CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj	3b89dcf1c68ac5d8
+11	321	6915320295447015	CMakeFiles/Gruppenarbeit_TI.dir/quicksort.c.obj	8f9a0f1b4f0b0c8f
+33	335	6915320295573863	CMakeFiles/Gruppenarbeit_TI.dir/insertionsort.c.obj	5d278541c8e0c9c8
+337	800	6915320300191490	Gruppenarbeit_TI.exe	b5e0998df0bf09bc
+14	387	6915320547768498	CMakeFiles/Gruppenarbeit_TI.dir/main.c.obj	3b89dcf1c68ac5d8
+391	821	6915320552004653	Gruppenarbeit_TI.exe	b5e0998df0bf09bc
