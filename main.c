@@ -8,7 +8,7 @@
 int main() {
 
     int arr[2] = {};
-    unsigned  int size;
+    unsigned int size;
 
     mergeS(arr, size);
     quickS(arr, size);

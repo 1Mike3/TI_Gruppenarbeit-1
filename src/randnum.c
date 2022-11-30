@@ -7,7 +7,10 @@
 #include "time.h"
 
 unsigned int genRandNum(){
+
+    /* MICHI Try -> Emad übernimmt
     time_t t;
     srand((unsigned) time(&t));
     int rand();
+     */
 }
