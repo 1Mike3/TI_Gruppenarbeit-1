@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 #include "stdlib.h"
 #include "time.h"
 
-//implementation min merge.c file
-void mergeS (int *arr, unsigned int size);
+#include "include/allfunclib.h"
+
 //implementation in main.c function
 unsigned int genRandNum();
 

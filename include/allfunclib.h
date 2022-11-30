@@ -6,3 +6,6 @@
 #define TI_GRUPPENARBEIT_1_ALLFUNCLIB_H
 
 #endif //TI_GRUPPENARBEIT_1_ALLFUNCLIB_H
+
+//implementation min merge.c file
+void mergeS (int *arr, unsigned int size);
