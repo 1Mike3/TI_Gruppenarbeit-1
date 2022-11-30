@@ -7,11 +7,6 @@
 //implementation in main.c function
 unsigned int genRandNum();
 
-//Test
-#include "stdio.h"
-
-void af ();
-void ah ();
 
 
 int main() {
@@ -20,9 +15,10 @@ int main() {
     unsigned  int size;
 
     mergeS(arr, size);
+    quickS(arr, size);
+    bubbleS(arr, size);
+    inserS(arr, size);
 
-    ah();
-    af();
 
     return 0;
 }

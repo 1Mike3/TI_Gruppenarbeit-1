@@ -3,7 +3,6 @@
 //
 #include "stdio.h"
 
-void ah (){
-    printf("Hello my name is gupta \n");
-    printf("Hello Emad is this shit working :) \n");
+void inserS (int *arr, unsigned int size){
+    printf("test");
 }

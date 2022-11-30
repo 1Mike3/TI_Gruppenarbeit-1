@@ -10,6 +10,9 @@
 
 //implementation min merge.c file
 void mergeS (int *arr, unsigned int size);
+void bubbleS (int *arr, unsigned int size);
+void inserS (int *arr, unsigned int size);
+void quickS (int *arr, unsigned int size);
 
 
 #endif //TI_GRUPPENARBEIT_1_ALLFUNCLIB_H
