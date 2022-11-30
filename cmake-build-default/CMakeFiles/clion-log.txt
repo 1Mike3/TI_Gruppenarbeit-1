@@ -1,4 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -G "CodeBlocks - MinGW Makefiles" -S C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1 -B C:\Users\Emad\Desktop\FH\HWSE\TI_Gruppenarbeit-1\cmake-build-default
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Emad/Desktop/FH/HWSE/TI_Gruppenarbeit-1/cmake-build-default
