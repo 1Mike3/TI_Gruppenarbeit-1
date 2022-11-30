@@ -15,7 +15,7 @@ void ah ();
 
 
 int main() {
-    printf("Hello, World!\n");
+    printf("Hello, World! - A\n");
     int arr[2] = {};
     unsigned  int size;
 
