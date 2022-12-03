@@ -16,7 +16,7 @@ void inserS (int *arr, unsigned int size);
 //Michi
 void printarr(int *arr, unsigned int size);
 void copyarr(int *arr1, int *arr2,unsigned int size);
-void quickS (int *arrUS,int *arrS , unsigned int size);
+void quickS (int *arr, unsigned int size);
 
 
 

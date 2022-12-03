@@ -14,7 +14,7 @@ int main() {
     unsigned int size = 12;
 
     //mergeS(*arr, size);
-    quickS(arrUS, arrS, size);
+    quickS(arrUS, size);
    // bubbleS(*arr, size);
    // inserS(*arr, size);
 

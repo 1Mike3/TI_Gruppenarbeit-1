@@ -14,14 +14,15 @@ void copyarr(int *arr1, int *arr2, int size);
 // "size" ist die größe des übergebenen Arrays
 //TODO error code für diverse Laufzeitfehler erstellen
 
-//Qicksortfunktion, es werden zwei Arrays übergeben ein unsortiertes und ein leeres gleicher größe in das geschrieben wird
+//Qicksortfunktion, eingegebenes array wird sortiert
 //copyarr und printarr funktionieren
-void quickS (int *arrUS, int *arrS, unsigned int size){
-
+void quickS (int *arr, unsigned int size){
+int first = arr[0], last = arr[(size-1)], temp = 0;
     //an dieser Stelle wird das unsortierte Array kopiert
-    copyarr(arrUS, arrS, size );
+    //copyarr(arrUS, arrS, size );
+
 
     //Ausgabe des sortierten Arrays an die Konsole
-    printarr(arrS, size);
+    printarr(arr, size);
 }
 
