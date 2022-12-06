@@ -20,7 +20,7 @@ void quickS (int *arr, unsigned int size);
 
 
 
-unsigned int genRandNum();
+int *genRandNum(int size, int *randArr);
 
 
 #endif //TI_GRUPPENARBEIT_1_ALLFUNCLIB_H

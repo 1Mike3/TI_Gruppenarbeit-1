@@ -15,9 +15,26 @@ int main() {
 
     //mergeS(*arr, size);
     quickS(arrUS, size);
-   // bubbleS(*arr, size);
-   // inserS(*arr, size);
+    // bubbleS(*arr, size);
+    // inserS(*arr, size);
 
+
+    //=====================FERTIG DONTDELETE =======GETRANNUM
+    //int pointer
+    int *pRandArr;
+    //initalise array with 64 which is the maximum possible size in our case
+    int randArr[64] = { 0 };
+    //actual size to which the array will be filled
+    int arrSize = 8;
+    //get the random numbers and save the pointers
+    pRandArr = genRandNum(arrSize,randArr);
+    //print the array
+    printf("Arr ");
+    for (int i = 0; i < arrSize; i++) {
+        //printf("%d ", pRandArr[i]);
+        printf( " %d", *(pRandArr + i));
+    }
+    //===================== EOF=====================GETRANNUM
 
     return 0;
 }
