@@ -19,8 +19,8 @@ int main() {
     // inserS(*arr, size);
 
 
-    //=====================FERTIG DONTDELETE =======GETRANNUM
-    //int pointer
+    //=============EMAD FERTIG DONTDELETE =======GETRANNUM
+    // int pointer
     int *pRandArr;
     //initalise array with 64 which is the maximum possible size in our case
     int randArr[64] = { 0 };
@@ -30,7 +30,7 @@ int main() {
     pRandArr = genRandNum(arrSize,randArr);
     //print the array with a function
     printRandArr(pRandArr, arrSize);
-    //===================== EOF=====================GETRANNUM
+    //=====================EOF===================GETRANNUM
 
     return 0;
 }
