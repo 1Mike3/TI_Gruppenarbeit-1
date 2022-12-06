@@ -18,3 +18,13 @@ void copyarr(int *arr1, int *arr2, unsigned int size){
         arr2[i] = arr1[i];
     }
 }
+
+//===========EMAD
+//print array pointer (for rand arraygen)
+//print the array
+void printRandArr(int *arrToPrint, int arrSize) {
+    printf("Arr ");
+    for (int i = 0; i < arrSize; i++) {
+        printf(" %d", *(arrToPrint + i));
+    }
+}

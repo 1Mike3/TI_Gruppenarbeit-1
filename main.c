@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "stdlib.h"
-#include "time.h"
+#include <stdlib.h>
+#include <time.h>
 
 //include custom lib
 #include "include/allfunclib.h"
@@ -14,7 +14,7 @@ int main() {
     unsigned int size = 12;
 
     //mergeS(*arr, size);
-    quickS(arrUS, size);
+    //quickS(arrUS, size);
     // bubbleS(*arr, size);
     // inserS(*arr, size);
 
@@ -28,12 +28,8 @@ int main() {
     int arrSize = 8;
     //get the random numbers and save the pointers
     pRandArr = genRandNum(arrSize,randArr);
-    //print the array
-    printf("Arr ");
-    for (int i = 0; i < arrSize; i++) {
-        //printf("%d ", pRandArr[i]);
-        printf( " %d", *(pRandArr + i));
-    }
+    //print the array with a function
+    printRandArr(pRandArr, arrSize);
     //===================== EOF=====================GETRANNUM
 
     return 0;

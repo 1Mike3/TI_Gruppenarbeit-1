@@ -21,7 +21,7 @@ void quickS (int *arr, unsigned int size);
 
 
 int *genRandNum(int size, int *randArr);
-
+void printRandArr(int *arrToPrint, int arrSize);
 
 #endif //TI_GRUPPENARBEIT_1_ALLFUNCLIB_H
 

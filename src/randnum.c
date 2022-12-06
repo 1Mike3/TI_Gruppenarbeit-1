@@ -1,13 +1,14 @@
 //
 // Created by Emad on 30/11/2022.
 //
-//finished ============DONT CHANGE!!!
+//Emad finished ============DONT CHANGE!!!
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 int *genRandNum(int size, int *randArr){
 
+    //define upper and lower
     int upper = 32767;
     int lower = -32768;
     int num = 0;
