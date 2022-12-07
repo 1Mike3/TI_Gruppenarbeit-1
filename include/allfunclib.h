@@ -14,8 +14,8 @@ void bubbleS (int *arr, unsigned int size);
 void inserS (int *arr, unsigned int size);
 
 //Michi
-void printarr(int *arr, unsigned int size);
-void copyarr(int *arr1, int *arr2,unsigned int size);
+void printArr(int *arr, unsigned int size);
+void copyArr(int *arr1, int *arr2,unsigned int size);
 void quickS (int *arr, unsigned int size);
 void swapi(int *, int *);
 

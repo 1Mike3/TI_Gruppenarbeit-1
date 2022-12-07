@@ -15,10 +15,10 @@ int main() {
 
     //mergeS(*arr, size);
 
-    //Michi #1 Start
-    copyarr(arrUS, arrS, size );
+    //Michi #1 START
+    copyArr(arrUS, arrS, size );
     quickS(arrS, size);
-    //Michi #1 End
+    //Michi #1 END
 
     // bubbleS(*arr, size);
     // inserS(*arr, size);
@@ -26,9 +26,9 @@ int main() {
     //################Michi Test Quicksortfunktion######################
     //don't delete, comment out instead pls :)
     printf("\nPrintout of the UNSORTED ARRAY:\n");
-    printarr(arrUS, 12);
+    printArr(arrUS, 12);
     printf("\nPrintout of the QS-SORTED ARRAY:\n");
-    printarr(arrS, 12);
+    printArr(arrS, 12);
 
     //END############Michi Test Qicksortfungktio#######################
 

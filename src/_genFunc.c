@@ -5,15 +5,16 @@
 #include "stdlib.h"
 
 //==========Michi
-//Prrint array values to consoole
-void printarr(int *arr, unsigned int size){
+//Prrint array values to console
+void printArr(int *arr, unsigned int size){
     printf("Printarray:\n");
     for (int i = 0; i < size; ++i) {
         printf("[%i]: %i\n", i, *(arr+i));
     }
+
 }
 //copy values of array1 too array2
-void copyarr(int *arr1, int *arr2, unsigned int size){
+void copyArr(int *arr1, int *arr2, unsigned int size){
     for (int i = 0; i < size; ++i) {
         arr2[i] = arr1[i];
     }
