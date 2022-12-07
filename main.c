@@ -14,11 +14,27 @@ int main() {
     unsigned int size = 12;
 
     //mergeS(*arr, size);
-    //quickS(arrUS, size);
+
+    //Michi #1 Start
+    copyarr(arrUS, arrS, size );
+    quickS(arrS, size);
+    //Michi #1 End
+
     // bubbleS(*arr, size);
     // inserS(*arr, size);
 
+    //################Michi Test Quicksortfunktion######################
+    //don't delete, comment out instead pls :)
+    printf("\nPrintout of the UNSORTED ARRAY:\n");
+    printarr(arrUS, 12);
+    printf("\nPrintout of the QS-SORTED ARRAY:\n");
+    printarr(arrS, 12);
 
+    //END############Michi Test Qicksortfungktio#######################
+
+
+//NOTE Hab deinen code kurz für einen Test Ausgeblendet -Michi
+/*
     //=============EMAD FERTIG DONTDELETE =======GETRANNUM
     // int pointer
     int *pRandArr;
@@ -31,7 +47,7 @@ int main() {
     //print the array with a function
     printRandArr(pRandArr, arrSize);
     //=====================EOF===================GETRANNUM
-
+*/
     return 0;
 }
 

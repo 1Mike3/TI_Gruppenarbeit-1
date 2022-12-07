@@ -7,8 +7,8 @@
 //==========Michi
 //Prrint array values to consoole
 void printarr(int *arr, unsigned int size){
+    printf("Printarray:\n");
     for (int i = 0; i < size; ++i) {
-        printf("Printarray:\n");
         printf("[%i]: %i\n", i, *(arr+i));
     }
 }
@@ -20,6 +20,7 @@ void copyarr(int *arr1, int *arr2, unsigned int size){
 }
 
 //swap the values of two integer pointers
+//functioncall example arrays:  swapi(arr,(arr+size-1)); !!don#t forget -1 at size to avoid writing outside array bounds
 void swapi(int *val1, int *val2){
     int temp = *val1;
     *val1 = *val2;
