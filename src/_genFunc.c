@@ -4,19 +4,26 @@
 #include <stdio.h>
 #include "stdlib.h"
 
-//Michi
-//Gibt Array an Konsole aus
+//==========Michi
+//Prrint array values to consoole
 void printarr(int *arr, unsigned int size){
     for (int i = 0; i < size; ++i) {
         printf("Printarray:\n");
         printf("[%i]: %i\n", i, *(arr+i));
     }
 }
-//Kopiert arr1 nach arr2
+//copy values of array1 too array2
 void copyarr(int *arr1, int *arr2, unsigned int size){
     for (int i = 0; i < size; ++i) {
         arr2[i] = arr1[i];
     }
+}
+
+//swap the values of two integer pointers
+void swapi(int *val1, int *val2){
+    int temp = *val1;
+    *val1 = *val2;
+    *val2 = temp;
 }
 
 //===========EMAD

@@ -17,6 +17,7 @@ void inserS (int *arr, unsigned int size);
 void printarr(int *arr, unsigned int size);
 void copyarr(int *arr1, int *arr2,unsigned int size);
 void quickS (int *arr, unsigned int size);
+void swapi(int *, int *);
 
 
 
