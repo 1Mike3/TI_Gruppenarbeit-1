@@ -15,8 +15,6 @@ int *genRandNum(int size, int *randArr){
     int i;
 
     for (i = 0; i < size; i++) {
-        //num = (rand() % (upper - lower + 1)) + lower;
-        //num = (rand() % (upper * 2 + 1)) + lower;
         num = (rand() % (upper - lower + 1) + lower / 2) * 2;
         randArr[i] = num;
     }
