@@ -13,16 +13,24 @@
 
 
 //TODO create error code for different runtime problems /errors
-//TODO check code with valgrind when fonished
+//TODO implement a check function to truly know if the array is sorted
+//TODO make a shell script on anuminas which fethes the .c , compiles it and checks it with valgrind
 
 //Used sub-functions, (further infos over implementation):
 void pivotSide(int pivot,int * arr, unsigned int size,int pivInd, int *rollPivInd);
+void checkWhereNextPivot(unsigned int size,int *rollPivInd,int status);
 
 //Qicksortfunction, entered array will be sorted using the quicksort-alg
 //"arr" is the chosen array of any size (edgecase size 0 behavior?)
 // "size" is the value of the chosen array
 void quickS (int *arr, unsigned int size){
 int first = arr[0], last = arr[(size-1)], temp = 0, pivot = 0, initPivotindex = 0, rollingPivotIndex = 0;
+
+//0 == not executed, 1 = netxt Pivot chosen; 2 = function decided no further pivot placement neccesary
+int checkWhNxtPivStatus = 0; //Statuscode for te status of the "checkWhereNextPivot" function
+short int lSideDone = 0; //if 1: no further sorting needed on the left side
+short int rSideDone = 0; //if 1: no further sorting needen on the right side
+
 
 //''''''''''''''''''''''Chosing the Pivot''''''''''''''''''''''''''''''
 //for now i will just select the first element, might change later
@@ -82,3 +90,9 @@ tempRollingIndex++;
     //TEST
     if(tempRollingIndex > size){ printf("ERROR quicksort pivotSide written too many values\n");}
 }//END Pivotside Function
+
+
+//this function decides where to put the next pivot
+void checkWhereNextPivot(unsigned int size,int *rollPivInd, int status){
+
+}
