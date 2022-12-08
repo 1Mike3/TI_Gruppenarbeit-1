@@ -5,7 +5,7 @@
 
 //STATUS Build in progress
 
-#include "C:\Users\Michi\CLionProjects\Gruppenarbeit_TI\include\allfunclib.h"
+#include "..\include\allfunclib.h"
 #include "stdio.h"
 
 //define the lowest accepted division

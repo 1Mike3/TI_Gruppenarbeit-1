@@ -7,13 +7,26 @@
 
 int main() {
 
+    //=============EMAD FERTIG DONTDELETE =======GETRANNUM
+    // int pointer
+    int *pRandArr;
+    //initalise array with 64 which is the maximum possible size in our case
+    int randArr[64] = { 0 };
+    //actual size to which the array will be filled
+    int arrSize = 8;
+    //get the random numbers and save the pointers
+    pRandArr = genRandNum(arrSize,randArr);
+    //print the array with a function
+    //printRandArr(pRandArr, arrSize);
+    //=====================EOF===================GETRANNUM
+
     //Testarray um Funktion auf Korrektheit zu überrprüfen
     int arrUS[12] = {5,66,8,3,3,7,0,2,1,4,6,9,};
     //Testarray, sortierte version von oberem Array
     int arrS[12] = {};
     unsigned int size = 12;
 
-    //mergeS(*arr, size);
+
 
     //Michi #1 START
     copyArr(arrUS, arrS, size );
@@ -32,22 +45,21 @@ int main() {
 
     //END############Michi Test Qicksortfungktio#######################
 
-
-//NOTE Hab deinen code kurz für einen Test Ausgeblendet -Michi
-/*
-    //=============EMAD FERTIG DONTDELETE =======GETRANNUM
+    //====================EMAD TEST MERGESORT=====================
     // int pointer
-    int *pRandArr;
+    int *pRandArr1;
     //initalise array with 64 which is the maximum possible size in our case
-    int randArr[64] = { 0 };
+    int randArr1[8] = { 0 };
     //actual size to which the array will be filled
-    int arrSize = 8;
+    int arrSize1 = 8;
     //get the random numbers and save the pointers
-    pRandArr = genRandNum(arrSize,randArr);
+    pRandArr1 = genRandNum(arrSize,randArr);
     //print the array with a function
-    printRandArr(pRandArr, arrSize);
-    //=====================EOF===================GETRANNUM
-*/
+    //printRandArr(pRandArr, arrSize);
+    mergeS(randArr1, arrSize1);
+
+    //==========================EOF===============================
+
     return 0;
 }
 
