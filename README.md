@@ -31,6 +31,3 @@ sagt was ihr davon haltet und schreibt wenn ihr selber vorschläge habts welche
 was dazu.
 
 #############1
-
-GIT Tipps:
-Verwendet "Update" statt "Pull"

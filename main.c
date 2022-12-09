@@ -21,7 +21,7 @@ int main() {
     //=====================EOF===================GETRANNUM
 
     //Testarray um Funktion auf Korrektheit zu überrprüfen
-    int arrUS[12] = {5,66,8,3,3,7,0,2,1,4,6,9,};
+    int arrUS[12] = {5,66,8,9,3,7,0,2,1,4,6,5,};
     //Testarray, sortierte version von oberem Array
     int arrS[12] = {};
     unsigned int size = 12;
