@@ -20,11 +20,11 @@ int main() {
     //printRandArr(pRandArr, arrSize);
     //=====================EOF===================GETRANNUM
 
-    /*
+/*
     //Testarray to check function on correctneess
     int arrUS[12] = {5,66,8,9,3,7,0,2,1,4,6,5,};
     //Testarray, sorted version of the array below
-    int arrS[12] = {};
+    int arrS[12] = {5,66,8,9,3,7,0,-2,1,4,6,5,};
     unsigned int size = 12;
 */
 
@@ -48,16 +48,20 @@ int main() {
     // bubbleS(*arr, size);
     // inserS(*arr, size);
 
+
     //################Michi Test Quicksortfunktion######################
     //don't delete, comment out instead pls :)
     /*
+    quickS(arrS,12);
     printf("\nPrintout of the UNSORTED ARRAY:\n");
     printArr(arrUS, 12);
     printf("\nPrintout of the QS-SORTED ARRAY:\n");
     printArr(arrS, 12);
-*/
+    */
     //END############Michi Test Qicksortfungktio#######################
 
+
+    /*
     //====================EMAD TEST MERGESORT=====================
     // int pointer
     int *pRandArr1;
@@ -72,7 +76,7 @@ int main() {
     mergeS(randArr1, arrSize1);
 
     //==========================EOF===============================
-
+*/
     return 0;
 }
 

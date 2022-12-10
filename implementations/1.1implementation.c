@@ -12,7 +12,7 @@ void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64, int *sizeArr){
     switch (call) {
         //mergesort
         case 1:
-            /*
+/*
             printf("\n###### MERGESORT-IMPLEMENTATION #####\n\n");
             printf("printout randomly initialized Array:\n");
             genRandNum(*(sizeArr+0),arr8) ;
@@ -33,18 +33,18 @@ void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64, int *sizeArr){
 
         //quicksort
         case 2:
-            /*
+
             printf("\n###### Quicksort-IMPLEMENTATION #####\n\n");
             printf("printout randomly initialized Array:\n");
             int arr8test[8] = {2,4,7,2,8,5,3,3,};
-           // genRandNum(*(sizeArr+0),arr8) ;
+            genRandNum(*(sizeArr+0),arr8) ;
             printArr(arr8test, 8);
             printf("printout quicksort sorted Array:\n");
-           // quickS(arr8test, 5);
+            quickS(arr8test, 8);
             printArr(arr8test, 8);
             printf("Check if the array is correctly sorted:\n");
-           // checkSort(arr8test,8,1);
-             */
+            checkSort(arr8test,8,1);
+
         break;
         //Bubblesort
         case 3:
