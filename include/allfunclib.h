@@ -18,7 +18,7 @@ void printArr(int *arr, unsigned int size);
 void copyArr(int *arr1, int *arr2,unsigned int size);
 void quickS (int *arr, unsigned int size);
 void swapi(int *, int *);
-
+int checkSort(int *arr, unsigned int size, short int mode);
 
 
 int *genRandNum(int size, int *randArr);

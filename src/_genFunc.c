@@ -30,6 +30,38 @@ void swapi(int *val1, int *val2){
     *val2 = temp;
 }
 
+
+//function which checks if an array is sorted (ascending)
+//return 0 if sorted correctly
+//return 1 if sorted incorrectly
+//mode if mode is set to 1 it also prints out a info message to the console, if it is 0 only return value
+int checkSort(int *arr, unsigned int size, short int mode){
+
+    int tempLeftToComapare = 0;
+    int largerElementFound = 0;
+    for (int i = 0; i < (size); ++i) { //size -1 because don't need check for last element
+        for (int j = (unsigned int)(size-1); j >= tempLeftToComapare; --j) {
+            if(*(arr+i) <= (*(arr+j)) ){
+                printf("arr+ i =(%i)  <=  arr+j =(%i)\n",*(arr+i),*(arr+j));
+                continue;
+            } else{
+                largerElementFound = 1;
+            }
+        }
+        tempLeftToComapare++;
+        if(largerElementFound == 1){
+            if(mode == 1){
+                printf("checkSort: the chosen array is UNSORTED. \n");
+            }
+            return 1;
+        }
+    }
+    if(mode == 1){
+        printf("checkSort: the chosen array is SORTED. \n");
+    }
+    return 0;
+}
+
 //===========EMAD
 //print array pointer (for rand arraygen)
 //print the array

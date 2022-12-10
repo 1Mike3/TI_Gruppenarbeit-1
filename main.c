@@ -27,10 +27,11 @@ int main() {
     unsigned int size = 12;
 
 
-
     //Michi #1 START
     copyArr(arrUS, arrS, size );
     quickS(arrS, size);
+    checkSort(arrS, 12, 1);
+
     //Michi #1 END
 
     // bubbleS(*arr, size);
