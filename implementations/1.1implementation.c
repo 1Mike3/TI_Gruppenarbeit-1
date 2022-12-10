@@ -45,6 +45,8 @@ void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64, int *sizeArr){
             printf("Check if the array is correctly sorted:\n");
             checkSort(arr8test,8,1);
 
+
+
         break;
         //Bubblesort
         case 3:
