@@ -20,6 +20,9 @@ void quickS (int *arr, unsigned int size);
 void swapi(int *, int *);
 int checkSort(int *arr, unsigned int size, short int mode);
 
+//_________________Main implementations:
+void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64,int *sizeArr);
+
 
 int *genRandNum(int size, int *randArr);
 void printRandArr(int *arrToPrint, int arrSize);
