@@ -34,7 +34,7 @@ int main() {
     int arr8[8];
     int arr16[16];
     int arr64[64];
-
+//
     int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail
     int arrSizePar[3] = {8,16,64};
 
