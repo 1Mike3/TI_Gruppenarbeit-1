@@ -73,8 +73,10 @@ void insertionsort()
 
 void printlist(struct node* head)
 {
+    printf("Arr" );
     while (head != NULL) {
-        printf("%d->", head->data);
+
+        printf("%d ", head->data);
         head = head->next;
     }
     printf("NULL");
@@ -82,15 +84,15 @@ void printlist(struct node* head)
 void inserS_LL (int *randArr, int sizeRandArr){
 
 
-        for(int i = 0; i < sizeRandArr; ){
+        for(int i = ( sizeRandArr - 1 ); i >= 0; ){
             push(randArr[i]);
-            i++;
+            i--;
         }
-
-        //printf("Linked List before sorting:\n");
-        //printlist(head);
+/*
+        printf("\nLinked List before sorting:\n");
+        printlist(head);
         printf("\n");
-
+*/
 
         clock_t t;
 
@@ -100,10 +102,10 @@ void inserS_LL (int *randArr, int sizeRandArr){
         insertionsort(head);
 
         t = clock() - t;
-
-        //printf("Linked List after sorting:\n");
-        //printlist(head);
-
+/*
+        printf("\nLinked List after sorting:\n");
+        printlist(head);
+*/
         double time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
 
         printf("\ninserS() with linked list took %f miliseconds to execute \n", time_taken);
