@@ -8,12 +8,12 @@
 
 void compareLinkedList() {
 
+    const int arrSizeCLL[1] = {8};
     clock_t t;
     t = clock();
-    basicCheck1_1(3, arrSizePar, 3);
+    basicCheck1_1(3, arrSizeCLL, 3);
     t = clock() - t;
     double time_taken = ((double)t)/CLOCKS_PER_SEC;
     printf("inserS() took %f seconds to execute \n", time_taken);
-    return 0;
 
 }

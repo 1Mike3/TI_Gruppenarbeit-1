@@ -6,7 +6,6 @@
 int main() {
 
 
-
     //=============EMAD FERTIG DONTDELETE =======GETRANNUM
     // int pointer
     int *pRandArr;
