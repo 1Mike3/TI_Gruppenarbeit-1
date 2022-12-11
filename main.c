@@ -36,7 +36,7 @@ int main() {
     int arr64[64];
 //
     int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail
-    int arrSizePar[3] = {8,16,64};
+   const int arrSizePar[3] = {8,16,64};
 
     while (call < 5){ //while loop which increments the call variable so that a different sort. alg. is unsed every cycle.
         basicCheck1_1(call, arrSizePar, 3);
@@ -61,7 +61,7 @@ int main() {
     //END############Michi Test Qicksortfungktio#######################
 
 
-    /*
+
     //====================EMAD TEST MERGESORT=====================
     // int pointer
     int *pRandArr1;
@@ -73,10 +73,18 @@ int main() {
     pRandArr1 = genRandNum(arrSize,randArr);
     //print the array with a function
     //printRandArr(pRandArr, arrSize);
-    mergeS(randArr1, arrSize1);
+    printf("\n");
+    printRandArr(pRandArr1, arrSize1);
+    printf("\n");
+
+    mergeS(pRandArr1, arrSize1);
+
+    printf("\n");
+    printRandArr(pRandArr1, arrSize1);
+    printf("\n");
 
     //==========================EOF===============================
-*/
+
     return 0;
 }
 
