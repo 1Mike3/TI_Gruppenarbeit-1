@@ -7,22 +7,33 @@
 #include "stdlib.h"
 
 
-void printAndSort2 (char sortAlgName[],const int *sizeArr, int sizeNo, int call);
+void selectSubFunction (char sortAlgName[], const int *sizeArr, int sizeNo, int call, int choseInit);
 
-//arrays for the benchmark
-int arr8[8] = {0};
-int arr32[32] = {0};
-int arr128[128] = {0};
-int arr512[512] = {0};
-int arr2048[2048] = {0};
-int arr8192[8192] = {0};
-int arr32768[32768] = {0};
+
+
 
 
 //call sorting function 1 = mergesort, 2 = quicksort, 3 = Bubblesort, 4 = Insertion-sort
 //sizeArr contains teh sizes of the arrays in the order they are passed thorough as parameters
 //arraynumber = number of arrays in size arr
-void benchmark1_2(int call,const int *sizeArr, int arrayNumber){
+void benchmark1_2(int call){
+
+    //selectInitialization 1 = ascending, 2 = descending, 3 = random generated
+    int selectInitialization = 1;
+    printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
+
+    //arrays for the benchmark
+    int arr8[8] = {0};
+    int arr32[32] = {0};
+    int arr128[128] = {0};
+    int arr512[512] = {0};
+    int arr2048[2048] = {0};
+    int arr8192[8192] = {0};
+    int arr32768[32768] = {0};
+    const int size = 7;
+    const int sizeArrPar[7] = {8,32,128,512,2048, 8192, 32768};
+
+
 
 //strings for insertion into the sorting & output function
     char mergeSort[] = "MERGESORT";
@@ -34,37 +45,26 @@ void benchmark1_2(int call,const int *sizeArr, int arrayNumber){
     switch (call) {
         //mergesort
         case 1:
-            //  printAndSort2(mergeSort, sizeArr ,arrayNumber,call);
+            selectSubFunction(mergeSort, sizeArrPar, size, call, 1);
             break;
 
 
             //quicksort
         case 2:
-            //the commented-out block below works, will keep if need to go back
-/*
-            printf("\n###### %s-IMPLEMENTATION #####\n\n", quickSort);
-            printf("printout randomly initialized Array (SIZE: | %i |):\n",*(sizeArr+0));
-            genRandNum(*(sizeArr+0),arr8) ;
-            printArr(arr8, *(sizeArr+0));
-            printf("printout %s sorted Array (SIZE: | %i |):\n", quickSort, *(sizeArr+0));
-            quickS(arr8, *(sizeArr+0));
-            printArr(arr8, *(sizeArr+0));
-            printf("Check if the array is correctly sorted:\n");
-            checkSort(arr8,*(sizeArr+0),1);
-*/
-            printAndSort2(quickSort, sizeArr ,arrayNumber,call);
+
+            selectSubFunction(quickSort, sizeArrPar, size, call,1 );
 
             break;
             //Bubblesort
         case 3:
-            printAndSort2(bubbleSort, sizeArr ,arrayNumber,call);
+            selectSubFunction(bubbleSort, sizeArrPar, size, call,1 );
 
 
             //Insertion-sort
             break;
         case 4:
 
-            printAndSort2(insertionSort, sizeArr ,arrayNumber,call);
+            selectSubFunction(insertionSort, sizeArrPar, size, call,1 );
 
             break;
 
@@ -72,14 +72,20 @@ void benchmark1_2(int call,const int *sizeArr, int arrayNumber){
             break;
     }
 
-}//END Basic1.1 Call
+}//END Benchmark2_2 Call
 
 //function which will be called in every switch-case to do the actual printing and sorting
 
 
-void printAndSort2(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
-    printf("\n###### %s-IMPLEMENTATION #####\n\n", sortAlgName);
+void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int call,int choseInit) {
 
+
+    printf("\n###### %s-IMPLEMENTATION #####\n\n", sortAlgName);
+//########## Switch case for selection of initialization ############
+
+
+
+//END####### Switch case for selection of initialization ############
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
     int *tempArr = malloc(sizeof(int) * *(sizeArr+0));
     for (int i = 0; i < sizeNo; ++i) {
@@ -87,9 +93,9 @@ void printAndSort2(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
             tempArr = realloc(tempArr, sizeof (int )* *(sizeArr+i));
         }
 
-        printf("printout randomly initialized Array (SIZE: | %i |):\n",*(sizeArr+i));
+
         genRandNum(*(sizeArr+i),tempArr) ;
-        printArr(tempArr, *(sizeArr+i));
+
         printf("\nprintout %s sorted Array (SIZE: | %i |):\n", sortAlgName, *(sizeArr+i));
 
         switch(call){
@@ -132,8 +138,8 @@ void fillArrWithRanNum(int size, int *randArr){
 
 
 //sort array in ascending order
-void arrayUp (int *arr, unsigned int size){
-    int i, j, temp;
+void initAscending (int *arr, unsigned int size){
+    int i, j;
     for (i = 0; i < size-1; i++) {
         for (j = 0; j < size-i-1; j++) {
             if (*(arr+j) > *(arr+j+1)) {
@@ -146,8 +152,8 @@ void arrayUp (int *arr, unsigned int size){
 }
 
 //sort array in descending order
-void arrayDown (int *arr, int size){
-    int i, j, temp;
+void initDescending (int *arr, int size){
+    int i, j;
     for (i = 0; i < size-1; i++) {
         for (j = 0; j < size-i-1; j++) {
             if (*(arr+j) < *(arr+j+1)) {
