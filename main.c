@@ -44,11 +44,9 @@ int main() {
     printf("\nSTART implementation 1.1\n");
     //if (inputString == "1.1") {
         int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail
-        const int arrSizePar[3] = {8, 16,
-                                   64}; //size parameter, determines the tested array sizes in the basic check function
+        const int arrSizePar[3] = {8, 16,64}; //size parameter, determines the tested array sizes in the basic check function
 
-        while (call <
-               5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
+        while (call < 5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
             basicCheck1_1(call, arrSizePar, 3);
             call++;
         }
