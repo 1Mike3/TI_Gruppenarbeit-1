@@ -5,17 +5,6 @@
 
 int main() {
 
-    //TODO this is only a quick test make the function immune to wring input
-    //============MICHI USER SELECTION =================
-    char inputString[] ="000";
-   //let the User select which implementation will be tested (1.1 12 ...)
-    printf("\n#######  SORTING & SEARCHING ALGORITHMS ####### \n\n");
-    printf("\" G \"\n\n");
-    printf("select the implementation you want to run: \n");
-    printf("(possible input: 1.1, 1.2, 1.3, 1.4, all) \n");
-    scanf("%s", inputString);
-
-    //END=========MICHI USER SELECTION ==============
 
     //=============EMAD FERTIG DONTDELETE =======GETRANNUM
     // int pointer
@@ -42,18 +31,14 @@ int main() {
 
     //created the th arrays but have not initialized them, this will happen in the "basicCheck1_1 function with Emads rand func"
     printf("\nSTART implementation 1.1\n");
-    if (inputString == "1.1") {
         int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail
-        const int arrSizePar[3] = {8, 16,
-                                   64}; //size parameter, determines the tested array sizes in the basic check function
+        const int arrSizePar[3] = {8, 16,64}; //size parameter, determines the tested array sizes in the basic check function
 
-        while (call <
-               5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
+        while (call < 5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
             basicCheck1_1(call, arrSizePar, 3);
             call++;
         }
         printf("\nEND implementation 1.1\n");
-    }
     //Michi END attempt at implementation 1.1
 
     // bubbleS(*arr, size);
@@ -71,7 +56,7 @@ int main() {
     */
     //END############Michi Test Qicksortfungktio#######################
 
-
+/*
 
     //====================EMAD TEST MERGESORT=====================
     // int pointer
@@ -88,14 +73,15 @@ int main() {
     printRandArr(pRandArr1, arrSize1);
     printf("\n");
 
-    mergeS(pRandArr1, arrSize1);
+    //mergeS(pRandArr1, arrSize1);
+    mergeS(pRandArr1, 0, arrSize1 - 1);
 
     printf("\n");
     printRandArr(pRandArr1, arrSize1);
     printf("\n");
 
     //==========================EOF===============================
-
+*/
     return 0;
 }
 

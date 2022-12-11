@@ -22,7 +22,7 @@ void basicCheck1_1(int call,const int *sizeArr, int arrayNumber){
     switch (call) {
         //mergesort
         case 1:
-          //  printAndSort(mergeSort, sizeArr ,arrayNumber,call);
+            printAndSort(mergeSort, sizeArr ,arrayNumber,call);
             break;
 
 
@@ -82,7 +82,7 @@ void printAndSort(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
 
         switch(call){
             case 1:
-                //mergeS(tempArr, *(sizeArr+i));
+                mergeS(tempArr,0 ,*(sizeArr+i));
                 break;
             case 2:
                 quickS(tempArr, *(sizeArr+i));
