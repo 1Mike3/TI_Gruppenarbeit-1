@@ -28,3 +28,4 @@ void comparison1_3(){
     printf("The average time for 20 cycles of bubbleS is: %f seconds \n", time_spent / cycleCount);
     //short = time_spent
     printf("The shortest time for 20 cycles of bubbleS is: %f seconds \n", time_spent);
+    ??? LONG_LONG_MAX ???
