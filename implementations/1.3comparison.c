@@ -43,14 +43,15 @@ void comparison1_3() {
     }
     //
     printf("Bubble Sort:\n");
-    printf("Average: %d\n", bubbleSortAverage);
-    printf("Minimum: %d\n", bubbleSortMin);
-    printf("Maximum: %d\n", bubbleSortMax);
     //print the results of all 20 cycles
-    printf("All 20 cycles:\n");
+    printf("Cycle\t\tTime (ms)\n");
     for (int i = 0; i < cycleCount; i++) {
-        printf("%d\n", bubbleSortTimes[i]);
+        printf("%d\t\t%d ms\n", i + 1, bubbleSortTimes[i]);
     }
+    printf("\n");
+   printf("Minimum of 20 Cycles: %d ms\n", bubbleSortMin);
+    printf("Maximum of 20 Cycles: %d ms\n", bubbleSortMax);
+    printf("Average of 20 Cycles: %d ms\n", bubbleSortAverage);
     //free the memory
     free(bubbleSortTimes);
 }
