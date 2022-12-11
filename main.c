@@ -88,7 +88,8 @@ int main() {
     printRandArr(pRandArr1, arrSize1);
     printf("\n");
 
-    mergeS(pRandArr1, arrSize1);
+    //mergeS(pRandArr1, arrSize1);
+    mergeS(pRandArr1, 0, arrSize1 - 1);
 
     printf("\n");
     printRandArr(pRandArr1, arrSize1);

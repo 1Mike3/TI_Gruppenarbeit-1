@@ -9,7 +9,9 @@
 //declare all functions below;
 
 //implementation min merge.c file
-void mergeS (int *arr, unsigned int size);
+//void mergeS (int *arr, unsigned int size);
+void merge(int arr[], int p, int q, int r);
+void mergeS (int *arr, int l, int r);
 void bubbleS (int *arr, unsigned int size);
 void inserS (int *arr, unsigned int size);
 
