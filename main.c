@@ -66,11 +66,11 @@ int main() {
     // int pointer
     int *pRandArr1;
     //initalise array with 64 which is the maximum possible size in our case
-    int randArr1[8] = { 0 };
+    int randArr1[64] = { 0 };
     //actual size to which the array will be filled
     int arrSize1 = 8;
     //get the random numbers and save the pointers
-    pRandArr1 = genRandNum(arrSize,randArr);
+    pRandArr1 = genRandNum(arrSize1,randArr);
     //print the array with a function
     //printRandArr(pRandArr, arrSize);
     printf("\n");
