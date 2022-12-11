@@ -4,6 +4,6 @@ project(Gruppenarbeit_TI C)
 set(CMAKE_C_STANDARD 99)
 
 add_executable(Gruppenarbeit_TI main.c src/mergesort.c src/quicksort.c src/insertionsort.c
-        src/bubblesort.c src/_genFunc.c include/allfunclib.h src/sortcheck.c src/randnum.c
-        implementations/1.1implementation.c src/mergesort2.c)
+        src/bubblesort.c src/_genFunc.c include/allfunclib.h src/randnum.c
+        implementations/1.1implementation.c)
 

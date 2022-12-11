@@ -23,6 +23,7 @@ void basicCheck1_1(int call, int *sizeArr, int arrayNumber){
     switch (call) {
         //mergesort
         case 1:
+          //  printAndSort(mergeSort, sizeArr ,arrayNumber,call);
             break;
 
 
@@ -46,31 +47,14 @@ void basicCheck1_1(int call, int *sizeArr, int arrayNumber){
         //Bubblesort
         case 3:
             printAndSort(bubbleSort, sizeArr ,arrayNumber,call);
-/*
-            printf("\n###### BUBBLESORT-IMPLEMENTATION #####\n\n");
-            printf("printout randomly initialized Array:\n");
-            genRandNum(*(sizeArr+0),arr8) ;
-            printArr(arr8, *(sizeArr+0));
-            printf("printout Bubblesort sorted Array:\n");
-            bubbleS(arr8, 8);
-            printArr(arr8, *(sizeArr+0));
-            printf("Check if the array is correctly sorted:\n");
-            checkSort(arr8,*(sizeArr+0),1);
-*/
+
+
         //Insertion-sort
         break;
         case 4:
-/*
-            printf("\n###### INSERTIONSORT-IMPLEMENTATION #####\n\n");
-            printf("printout randomly initialized Array:\n");
-            genRandNum(*(sizeArr+0),arr8) ;
-            printArr(arr8, *(sizeArr+0));
-            printf("printout INSERTIONSORT sorted Array:\n");
-            inserS(arr8, 8);
-            printArr(arr8, *(sizeArr+0));
-            printf("Check if the array is correctly sorted:\n");
-            checkSort(arr8,*(sizeArr+0),1);
-*/
+
+            printAndSort(insertionSort, sizeArr ,arrayNumber,call);
+
         break;
 
         default:
@@ -107,6 +91,8 @@ void printAndSort(char sortAlgName[], int *sizeArr, int sizeNo, int call){
                 break;
             case 4:
                 inserS(tempArr, *(sizeArr+i));
+                break;
+            default:
                 break;
         }
 
