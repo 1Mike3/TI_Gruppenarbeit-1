@@ -5,33 +5,22 @@
 #include <time.h>
 #include "..\include\allfunclib.h"
 #include "stdlib.h"
-#include "Stddef.h"
 
 
-void selectSubFunction (char sortAlgName[], const int *sizeArr, int sizeNo, int call, int choseInit);
+//function declarations, further information at definition
+void selectSubFunction (const int *sizeArr, int sizeNo, int call, int choseInit);
 void initAscending (int *arr, unsigned int size);
 void initDescending (int *arr, int size);
 void printSortingMethod(int index);
 void printArrSizesAndSortAlgUsed(char *algName);
+void timeMeasuringFixer();
 
 //call sorting function 1 = mergesort, 2 = quicksort, 3 = Bubblesort, 4 = Insertion-sort
-//sizeArr contains teh sizes of the arrays in the order they are passed thorough as parameters
-//arraynumber = number of arrays in size arr
+//chose init(further down): 1 = ascending, 2 = descending, 3 = random
 void benchmark1_2(int call){
-
-    //selectInitialization 1 = ascending, 2 = descending, 3 = random generated
-    int selectInitialization = 1;
-
-
-    //arrays for the benchmark
-    int arr8[8] = {0};
-    int arr32[32] = {0};
-    int arr128[128] = {0};
-    int arr512[512] = {0};
-    int arr2048[2048] = {0};
-    int arr8192[8192] = {0};
-    int arr32768[32768] = {0};
-    const int size = 7;
+    //noSize = the number of different array sizes
+    const int noSize = 7;
+    //sizeArrPar = Array which contains the array-sizes which will be used for the tests
     const int sizeArrPar[7] = {8,32,128,512,2048, 8192, 32768};
 
 
@@ -46,71 +35,67 @@ void benchmark1_2(int call){
     //i will only explain what this stuff does in the first case
     switch (call) {
 
-        //mergesort
+        //#######MERGE-SORT#######
+
         case 1:
             printArrSizesAndSortAlgUsed(mergeSort); //prints the Table header
-            for (int i = 1; i < 4; ++i) {
+            for (int i = 1; i < 4; ++i) { //for loop which selects the three different types of array initialization (choseInit)
                 printSortingMethod(i); //Prints the used sorting method into the table
-                selectSubFunction(mergeSort, sizeArrPar, size, call, i);
+                //subfunction: contains initialization, sorting, time-measurement and printing
+                //(some of the tasks are outsourced to smaller functions which are defined below)
+                selectSubFunction( sizeArrPar, noSize, call, i);
             }
 
             break;
 
 
-            //quicksort
+            //######QUICK-SORT########
+
         case 2:
              printArrSizesAndSortAlgUsed(quickSort);
             for (int i = 1; i < 4; ++i) {
                 printSortingMethod(i);
-                selectSubFunction(quickSort, sizeArrPar, size, call,i );
+                selectSubFunction( sizeArrPar, noSize, call, i );
             }
 
 
             break;
-            //Bubblesort
+            //#######BUBBLE-SORT#######
+
         case 3:
             printArrSizesAndSortAlgUsed(bubbleSort);
             for (int i = 1; i < 4; ++i) {
                 printSortingMethod(i);
-                selectSubFunction(bubbleSort, sizeArrPar, size, call,i );
+                selectSubFunction( sizeArrPar, noSize, call, i );
             }
 
 
-            //Insertion-sort
+            //#######INSERTION-SORT########
+
             break;
         case 4:
             printArrSizesAndSortAlgUsed(insertionSort);
             for (int i = 1; i < 4; ++i) {
                 printSortingMethod(i);
-                selectSubFunction(insertionSort, sizeArrPar, size, call,i );
+                selectSubFunction(sizeArrPar, noSize, call, i );
             }
 
 
             break;
 
         default:
+            printf("well... if you're here you did something wrong :(  (switch call)");
             break;
     }
 
 }//END Benchmark2_2 Call
 
-//function which will be called in every switch-case to do the actual printing and sorting
 
 
-
-
-
-
-
-
-
-
-
-
-
-void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int call,int choseInit) {
+//function which will be called in every switch-case, main function to do the actual printing and sorting
+void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
     clock_t t;
-
+    double time_taken;
 
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
     int *tempArr = malloc(sizeof(int) * *(sizeArr+0));
@@ -119,9 +104,7 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
             tempArr = realloc(tempArr, sizeof (int )* *(sizeArr+i));
         }
 
-
-
-                //########## Switch case for selection of initialization ############
+        //########## Switch case for selection of initialization ############
                 switch (choseInit) {
                     case 1:
                         //printf("The Initialization will be done in an ASCENDING:\n");
@@ -137,60 +120,72 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
                         genRandNum(*(sizeArr+i),tempArr);
                 break;
 
-            default:
+                default:
+                    printf("well... if you're here you did something wrong :(  (switch chose int)");
                 break;
         }
 
+        //END####### Switch case for selection of initialization ############
 
-//END####### Switch case for selection of initialization ############
 
-        //printf("\nprintout %s sorted Array (SIZE: | %i |):\n", sortAlgName, *(sizeArr+i));
-
+//the call of the sorting algs. in the main for loop
         switch(call){
             case 1:
                 t = clock();
                 mergeS(tempArr, 0, *(sizeArr+i));
+                timeMeasuringFixer();
                 t = clock() - t;
-                double time_taken = (((double)t)/CLOCKS_PER_SEC)*100000 ;
-                printf("%f[ns]  ", time_taken);
+                time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
+                printf("%07.2f     ", time_taken);
                 break;
             case 2:
-              //  quickS(tempArr, *(sizeArr+i));
+
+                t = clock();
+                quickS(tempArr, *(sizeArr+i));
+                timeMeasuringFixer();
+                t = clock() - t;
+                time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
+                printf("%07.2f     ", time_taken);
+
                 break;
             case 3:
-              //  bubbleS(tempArr, *(sizeArr+i));
+
+                t = clock();
+                bubbleS(tempArr, *(sizeArr+i));
+                timeMeasuringFixer();
+                t = clock() - t;
+                time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
+                printf("%07.2f     ", time_taken);
+
                 break;
             case 4:
-              //  inserS(tempArr, *(sizeArr+i));
+
+                t = clock();
+                inserS(tempArr, *(sizeArr+i));
+                timeMeasuringFixer();
+                t = clock() - t;
+                time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
+                printf("%07.2f     ", time_taken);
+
                 break;
             default:
                 break;
         }
-/*
-        printArr(tempArr, *(sizeArr+i));
-        printf("Check if the array is correctly sorted:\n");
-        checkSort(tempArr,*(sizeArr+i),1);
-*/
 
 
     }//end main for loop
+
+    //lonely printf :)
     printf("\n");
 
+    //free the dynamically allocated Memory
     free(tempArr);
 }
 
 
-/*
-//generate random numbers
-void fillArrWithRanNum(int size, int *randArr){
-    //define upper and lower
-
-}
-*/
 
 
-
-//sort array in ascending order
+//initialize array in ascending order
 void initAscending (int *arr, unsigned int size){
     int i, j;
     for (i = 0; i < size-1; i++) {
@@ -204,7 +199,7 @@ void initAscending (int *arr, unsigned int size){
     }
 }
 
-//sort array in descending order
+//initialize array in descending order
 void initDescending (int *arr, int size){
     int i, j;
     for (i = 0; i < size-1; i++) {
@@ -219,38 +214,36 @@ void initDescending (int *arr, int size){
 
 }
 
+//Print the Head of the Table
 void printArrSizesAndSortAlgUsed(char *algName){
     printf("\n###### %s-IMPLEMENTATION #####\n\n", algName);
     printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", algName);
-    printf("Size    :   8      32    128    512     2048       8192      32768\n");
+    printf("Size        :       8          32          128         512        2048        8192        32768\n");
 }
-
+//only used for the Printing of the lower descriptors of the Tables
 void printSortingMethod(int index){
     switch (index) {
         case 1:
-            printf("ascend. :    ");
+            printf("ascend. [ms]:    ");
             break;
         case 2:
-            printf("descend.:    ");
+            printf("descend.[ms]:    ");
             break;
         case 3:
-            printf("random  :    ");
+            printf("random  [ms]:    ");
             break;
         default:
             break;
     }
 }
-/*
-//calculate the time from bubblesorting() and print it
-int time(){
-    clock_t t;
-    t = clock();
-    //bubblesorting();
-    t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("bubbleSort() took %f seconds to execute \n", time_taken);
-    return 0;
 
+//inserts a small delay so no bug in time measurement
+void timeMeasuringFixer(){
+    int a = 3,b = 2,c = 1;
+    for (int i = 0; i < 300000; ++i) {
+        c = a+i;
+        a = b+i;
+        b = c+i;
+    }
 }
-*/
 
