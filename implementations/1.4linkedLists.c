@@ -8,12 +8,25 @@
 
 void compareLinkedList() {
 
-    const int arrSizeCLL[1] = {8};
+
+    // int pointer
+    int *pRandArr;
+    int randArr[8] = { 0 };
+    int arrSize = 8;
+    //get the random numbers and save the pointers
+    pRandArr = genRandNum(arrSize,randArr);
+    printRandArr(pRandArr, arrSize);
+
     clock_t t;
     t = clock();
-    basicCheck1_1(3, arrSizeCLL, 3);
+    //inserS (pRandArr, arrSize);
+    mergeS (pRandArr, 0, arrSize);
     t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("inserS() took %f seconds to execute \n", time_taken);
+    double time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
+    printf("\ninserS() took %f miliseconds to execute \n", time_taken);
+
+    printf("\n");
+    printRandArr(pRandArr, arrSize);
+
 
 }

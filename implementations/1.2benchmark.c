@@ -8,8 +8,8 @@
 
 
 void selectSubFunction (char sortAlgName[], const int *sizeArr, int sizeNo, int call, int choseInit);
-
-
+void initAscending (int *arr, unsigned int size);
+void initDescending (int *arr, int size);
 
 
 
@@ -43,28 +43,42 @@ void benchmark1_2(int call){
 
     //switch case for the different sorting algs.:
     switch (call) {
+
         //mergesort
         case 1:
-            selectSubFunction(mergeSort, sizeArrPar, size, call, 1);
+            printf("\n###### %s-IMPLEMENTATION #####\n\n", mergeSort);
+            for (int i = 1; i < 4; ++i) {
+                selectSubFunction(mergeSort, sizeArrPar, size, call, i);
+            }
+
             break;
 
 
             //quicksort
         case 2:
+            printf("\n###### %s-IMPLEMENTATION #####\n\n", quickSort);
+            for (int i = 1; i < 4; ++i) {
+                selectSubFunction(quickSort, sizeArrPar, size, call,i );
+            }
 
-            selectSubFunction(quickSort, sizeArrPar, size, call,1 );
 
             break;
             //Bubblesort
         case 3:
-            selectSubFunction(bubbleSort, sizeArrPar, size, call,1 );
+            printf("\n###### %s-IMPLEMENTATION #####\n\n", bubbleSort);
+            for (int i = 1; i < 4; ++i) {
+                selectSubFunction(bubbleSort, sizeArrPar, size, call,i );
+            }
 
 
             //Insertion-sort
             break;
         case 4:
+            printf("\n###### %s-IMPLEMENTATION #####\n\n", insertionSort);
+            for (int i = 1; i < 4; ++i) {
+                selectSubFunction(insertionSort, sizeArrPar, size, call,i );
+            }
 
-            selectSubFunction(insertionSort, sizeArrPar, size, call,1 );
 
             break;
 
@@ -80,12 +94,7 @@ void benchmark1_2(int call){
 void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int call,int choseInit) {
 
 
-    printf("\n###### %s-IMPLEMENTATION #####\n\n", sortAlgName);
-//########## Switch case for selection of initialization ############
 
-
-
-//END####### Switch case for selection of initialization ############
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
     int *tempArr = malloc(sizeof(int) * *(sizeArr+0));
     for (int i = 0; i < sizeNo; ++i) {
@@ -94,13 +103,35 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
         }
 
 
-        genRandNum(*(sizeArr+i),tempArr) ;
 
-        printf("\nprintout %s sorted Array (SIZE: | %i |):\n", sortAlgName, *(sizeArr+i));
+                //########## Switch case for selection of initialization ############
+                switch (choseInit) {
+                    case 1:
+                        printf("The Initialization will be done in an ASCENDING order:\n");
+                        initAscending(tempArr, *(sizeArr+i));
+                        break;
+                    case 2:
+                        printf("The Initialization will be done in an DESCENDING order:\n");
+                        initDescending(tempArr, *(sizeArr+i));
+                        break;
+
+                    case 3:
+                        printf("The Initialization will be done using RANDOM numbers:\n");
+                        genRandNum(*(sizeArr+i),tempArr);
+                break;
+
+            default:
+                break;
+        }
+
+
+//END####### Switch case for selection of initialization ############
+
+        //printf("\nprintout %s sorted Array (SIZE: | %i |):\n", sortAlgName, *(sizeArr+i));
 
         switch(call){
             case 1:
-                //mergeS(tempArr, *(sizeArr+i));
+                mergeS(tempArr, 0, *(sizeArr+i));
                 break;
             case 2:
                 quickS(tempArr, *(sizeArr+i));
@@ -166,21 +197,16 @@ void initDescending (int *arr, int size){
 
 }
 
-/*
+
 //calculate the time from bubblesorting() and print it
 int main(){
     clock_t t;
     t = clock();
-    bubblesorting();
+    //bubblesorting();
     t = clock() - t;
     double time_taken = ((double)t)/CLOCKS_PER_SEC;
     printf("bubbleSort() took %f seconds to execute \n", time_taken);
     return 0;
 
 }
-*/
 
-
-void initializeArray (){
-
-}

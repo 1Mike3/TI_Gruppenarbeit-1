@@ -20,6 +20,7 @@ void copyArr(int *arr1, int *arr2,unsigned int size);
 void quickS (int *arr, int size);
 void swapi(int *, int *);
 int checkSort(int *arr, unsigned int size, short int mode);
+void benchmark1_2(int call);
 
 //Emad
 void compareLinkedList();
