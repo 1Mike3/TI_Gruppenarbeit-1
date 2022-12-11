@@ -5,6 +5,7 @@
 #include <time.h>
 #include "..\include\allfunclib.h"
 #include "stdlib.h"
+#include "Stddef.h"
 
 
 void selectSubFunction (char sortAlgName[], const int *sizeArr, int sizeNo, int call, int choseInit);
@@ -82,7 +83,7 @@ void benchmark1_2(int call){
         case 4:
             printf("\n###### %s-IMPLEMENTATION #####\n\n", insertionSort);
             printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", insertionSort);
-            printf("Size:   8      32    128    512     2048       8192      32768");
+            printf("Size:   8      32    128    512     2048       8192      32768\n");
             for (int i = 1; i < 4; ++i) {
                 selectSubFunction(insertionSort, sizeArrPar, size, call,i );
             }
@@ -111,7 +112,7 @@ void benchmark1_2(int call){
 
 
 void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int call,int choseInit) {
-
+    clock_t t;
 
 
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
@@ -126,16 +127,16 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
                 //########## Switch case for selection of initialization ############
                 switch (choseInit) {
                     case 1:
-                        printf("The Initialization will be done in an ASCENDING:");
+                        //printf("The Initialization will be done in an ASCENDING:\n");
                         initAscending(tempArr, *(sizeArr+i));
                         break;
                     case 2:
-                        printf("The Initialization will be done in an DESCENDING order:\n");
+                       // printf("The Initialization will be done in an DESCENDING order:\n");
                         initDescending(tempArr, *(sizeArr+i));
                         break;
 
                     case 3:
-                        printf("The Initialization will be done using RANDOM numbers:\n");
+                        //printf("The Initialization will be done using RANDOM numbers:\n");
                         genRandNum(*(sizeArr+i),tempArr);
                 break;
 
@@ -150,16 +151,20 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
 
         switch(call){
             case 1:
+                t = clock();
                 mergeS(tempArr, 0, *(sizeArr+i));
+                t = clock() - t;
+                double time_taken = (((double)t)/CLOCKS_PER_SEC)*100 ;
+                printf("%f[ms]  ", time_taken);
                 break;
             case 2:
-                quickS(tempArr, *(sizeArr+i));
+              //  quickS(tempArr, *(sizeArr+i));
                 break;
             case 3:
-                bubbleS(tempArr, *(sizeArr+i));
+              //  bubbleS(tempArr, *(sizeArr+i));
                 break;
             case 4:
-                inserS(tempArr, *(sizeArr+i));
+              //  inserS(tempArr, *(sizeArr+i));
                 break;
             default:
                 break;
@@ -169,9 +174,10 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
         printf("Check if the array is correctly sorted:\n");
         checkSort(tempArr,*(sizeArr+i),1);
 */
-        printf("\n\n");
-    }//end main for loop
 
+
+    }//end main for loop
+    printf("\n");
 
     free(tempArr);
 }
