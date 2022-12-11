@@ -28,6 +28,7 @@ int *genRandNum(int size, int *randArr);
 void printRandArr(int *arrToPrint, int arrSize);
 void merge(int arr[], int p, int q, int r);
 void mergeS (int *arr, int l, int r);
+void inserS_LL (int *randArr, int sizeRandArr);
 
 //_________________Main implementations:
 void basicCheck1_1(int call ,const int *sizeArr, int arrayNumber);

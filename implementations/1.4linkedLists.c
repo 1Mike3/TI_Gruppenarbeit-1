@@ -11,22 +11,32 @@ void compareLinkedList() {
 
     // int pointer
     int *pRandArr;
-    int randArr[8] = { 0 };
-    int arrSize = 8;
+    int randArr[8192] = { 0 };
+    int arrSize = 8192;
     //get the random numbers and save the pointers
+
+
     pRandArr = genRandNum(arrSize,randArr);
-    printRandArr(pRandArr, arrSize);
+
+    inserS_LL(pRandArr, arrSize);
 
     clock_t t;
+
     t = clock();
-    //inserS (pRandArr, arrSize);
-    mergeS (pRandArr, 0, arrSize);
+
+
+    inserS (pRandArr, arrSize);
+
     t = clock() - t;
+
+    //printRandArr(pRandArr, arrSize);
     double time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
-    printf("\ninserS() took %f miliseconds to execute \n", time_taken);
+
 
     printf("\n");
-    printRandArr(pRandArr, arrSize);
+    //printRandArr(pRandArr, arrSize);
+
+    printf("\ninserS() with array took %f miliseconds to execute \n", time_taken);
 
 
 }
