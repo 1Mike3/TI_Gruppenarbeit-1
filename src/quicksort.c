@@ -12,7 +12,7 @@
 //Used sub-functions, (further infos over implementation):
 //unsigned in for indexes chosen so don't waste space on negative array indexes
 //lower technically not needed but added to be able to sort arrays partially
-unsigned int chosePartition(int *arr, int lower, int upper);
+int chosePartition(int *arr, int lower, int upper);
 void sorting(int *arr,int lower, int upper);
 
 
@@ -33,7 +33,7 @@ void quickS(int *arr, int size){
 
 //function for choosing the Partition, will be recursively called in the "sorting function"
 //the lower and upper
-unsigned int chosePartition(int *arr,int lower,int upper){
+int chosePartition(int *arr,int lower,int upper){
    int pivotValue = *(arr+upper); //initialising Pivot, always chosen as upper element
    int lowCounter = lower; // var which will be incremented in for loop
 
