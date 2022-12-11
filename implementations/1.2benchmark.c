@@ -1,5 +1,5 @@
 //
-// Created by Kirari Momobami on 10.12.2022.
+// Created by Michi on 10.12.2022.
 //
 #include <stdio.h>
 #include <time.h>
@@ -173,3 +173,8 @@ int main(){
 
 }
 */
+
+
+void initializeArray (){
+
+}
