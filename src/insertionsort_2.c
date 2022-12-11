@@ -13,7 +13,8 @@ struct node {
 
 struct node* head = NULL;
 struct node* sorted = NULL;
-void push(int val)
+
+void writeToList(int val)
 {
     /* allocate node */
     struct node* newnode
@@ -48,7 +49,7 @@ void sortedInsert(struct node* newnode)
 
 // function to sort a singly linked list
 
-void insertionsort()
+void insertionSort()
 {
 
     struct node* current = head;
@@ -71,7 +72,7 @@ void insertionsort()
 }
 
 
-void printlist(struct node* head)
+void printList(struct node* head)
 {
     printf("Arr" );
     while (head != NULL) {
@@ -85,12 +86,12 @@ void inserS_LL (int *randArr, int sizeRandArr){
 
 
         for(int i = ( sizeRandArr - 1 ); i >= 0; ){
-            push(randArr[i]);
+            writeToList(randArr[i]);
             i--;
         }
 /*
         printf("\nLinked List before sorting:\n");
-        printlist(head);
+        printList(head);
         printf("\n");
 */
 
@@ -98,13 +99,12 @@ void inserS_LL (int *randArr, int sizeRandArr){
 
         t = clock();
 
-
-        insertionsort(head);
+        insertionSort(head);
 
         t = clock() - t;
 /*
         printf("\nLinked List after sorting:\n");
-        printlist(head);
+        printList(head);
 */
         double time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
 

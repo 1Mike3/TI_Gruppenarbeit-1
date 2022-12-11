@@ -11,8 +11,8 @@ void compareLinkedList() {
 
     // int pointer
     int *pRandArr;
-    int randArr[8192] = { 0 };
-    int arrSize = 8192;
+    int randArr[2048] = { 0 };
+    int arrSize = 2048;
     //get the random numbers and save the pointers
     pRandArr = genRandNum(arrSize,randArr);
     /*
