@@ -20,7 +20,7 @@ void copyArr(int *arr1, int *arr2,unsigned int size);
 void quickS (int *arr, int size);
 void swapi(int *, int *);
 int checkSort(int *arr, unsigned int size, short int mode);
-void benchmark1_2(int call);
+
 
 //Emad
 void compareLinkedList();
@@ -31,8 +31,8 @@ void mergeS (int *arr, int l, int r);
 
 //_________________Main implementations:
 void basicCheck1_1(int call ,const int *sizeArr, int arrayNumber);
-
-
+void benchmark1_2(int call);
+void comparison1_3();
 
 #endif //TI_GRUPPENARBEIT_1_ALLFUNCLIB_H
 
