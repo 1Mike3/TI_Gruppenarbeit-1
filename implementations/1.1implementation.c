@@ -5,21 +5,20 @@
 #include "stdlib.h"
 #include "..\include\allfunclib.h"
 
-void printAndSort(char sortAlgName[], int *sizeArr, int sizeNo, int call);
+void printAndSort(char sortAlgName[],const int *sizeArr, int sizeNo, int call);
 
-
-//read in three arrays of sizes 8,16 and 64 and initialize them with random numbers
 //call sorting function 1 = mergesort, 2 = quicksort, 3 = Bubblesort, 4 = Insertion-sort
-//although obvious will pass size so easier adapting if requirements change
 //sizeArr contains teh sizes of the arrays in the order they are passed thorough as parameters
 //arraynumber = number of arrays in size arr
-void basicCheck1_1(int call, int *sizeArr, int arrayNumber){
-//switch case for the different sorting algs.:
+void basicCheck1_1(int call,const int *sizeArr, int arrayNumber){
+
 //strings for insertion into the sorting & output function
     char mergeSort[] = "MERGESORT";
     char quickSort[] = "QUICKSORT";
     char bubbleSort[] = "BUBBLESORT";
     char insertionSort[] = "INSERTION-SORT";
+
+    //switch case for the different sorting algs.:
     switch (call) {
         //mergesort
         case 1:
@@ -64,7 +63,9 @@ void basicCheck1_1(int call, int *sizeArr, int arrayNumber){
 }//END Basic1.1 Call
 
 //fuction which will be called in every switch-case to do teh actual printing and sorting
-void printAndSort(char sortAlgName[], int *sizeArr, int sizeNo, int call){
+
+
+void printAndSort(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
     printf("\n###### %s-IMPLEMENTATION #####\n\n", sortAlgName);
 
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr

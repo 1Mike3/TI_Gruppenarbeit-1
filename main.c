@@ -36,7 +36,7 @@ int main() {
     int arr64[64];
 //
     int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail
-    int arrSizePar[3] = {8,16,64};
+   const int arrSizePar[3] = {8,16,64};
 
     while (call < 5){ //while loop which increments the call variable so that a different sort. alg. is unsed every cycle.
         basicCheck1_1(call, arrSizePar, 3);
