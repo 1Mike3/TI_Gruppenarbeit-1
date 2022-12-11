@@ -240,7 +240,7 @@ void printSortingMethod(int index){
 //inserts a small delay so no bug in time measurement
 void timeMeasuringFixer(){
     int a = 3,b = 2,c = 1;
-    for (int i = 0; i < 300000; ++i) {
+    for (int i = 0; i < 350000; ++i) {
         c = a+i;
         a = b+i;
         b = c+i;
