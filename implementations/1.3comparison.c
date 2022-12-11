@@ -5,38 +5,53 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "..\include\allfunclib.h"
-/*
+
 //function which implements the 1.2 assignment
-void comparison1_3(){
+void comparison1_3() {
     const int arraySize = 2000;
     const int cycleCount = 20;
-    int *arr[arraySize] = {};
+    int *arr = malloc(arraySize * sizeof(int));
     genRandNum(arraySize, arr);
     bubbleS(arr, arraySize);
-    //do bubbleS 20 times
-    clock_t start = clock();
+    //bubble sort x20 cycles - store values in array
+    int *bubbleSortTimes = malloc(cycleCount * sizeof(int));
     for (int i = 0; i < cycleCount; i++) {
+        clock_t start = clock();
         bubbleS(arr, arraySize);
+        clock_t end = clock();
+        bubbleSortTimes[i] = (int) (end - start);
     }
-    clock_t end = clock();
-    double time_spent = (double)(end - start) / CLOCKS_PER_SEC;
-    printf("Time spent for bubble sort: %f seconds for %d cycles with %d elements in the array \n", time_spent, cycleCount, arraySize);
-    genRandNum(arraySize, arr);
-    bubbleS(arr, arraySize);
-    double minTime = time_spent;
-    double maxTime = time_spent;
+    //average x20 cycles from the array
+    int bubbleSortAverage = 0;
     for (int i = 0; i < cycleCount; i++) {
-        start = clock();
-        bubbleS(arr, arraySize);
-        end = clock();
-        time_spent = (double)(end - start) / CLOCKS_PER_SEC;
-        if (time_spent < minTime){
-            minTime = time_spent;
-        }
-        if (time_spent > maxTime){
-            maxTime = time_spent;
+        bubbleSortAverage += bubbleSortTimes[i];
+    }
+    bubbleSortAverage /= cycleCount;
+    //minimum x20 cycles from the array
+    int bubbleSortMin = bubbleSortTimes[0];
+    for (int i = 0; i < cycleCount; i++) {
+        if (bubbleSortTimes[i] < bubbleSortMin) {
+            bubbleSortMin = bubbleSortTimes[i];
         }
     }
-    printf("Min time for bubble sort: %f seconds for %d cycles with %d elements in the array \n", minTime, cycleCount, arraySize);
-    printf("Max time for bubble sort: %f seconds for %d cycles with %d elements in the array \n", maxTime, cycleCount, arraySize);
-*/
+    //maximum x20 cycles from the array
+    int bubbleSortMax = bubbleSortTimes[0];
+    for (int i = 0; i < cycleCount; i++) {
+        if (bubbleSortTimes[i] > bubbleSortMax) {
+            bubbleSortMax = bubbleSortTimes[i];
+        }
+    }
+    //print the results
+    printf("Bubble Sort:\n");
+    printf("Average: %d\n", bubbleSortAverage);
+    printf("Minimum: %d\n", bubbleSortMin);
+    printf("Maximum: %d\n", bubbleSortMax);
+    //print the results of all 20 cycles
+    printf("All 20 cycles:\n");
+    for (int i = 0; i < cycleCount; i++) {
+        printf("%d\n", bubbleSortTimes[i]);
+    }
+    //free the memory
+    free(bubbleSortTimes);
+    return;
+}
