@@ -62,7 +62,7 @@ void basicCheck1_1(int call,const int *sizeArr, int arrayNumber){
 
 }//END Basic1.1 Call
 
-//fuction which will be called in every switch-case to do teh actual printing and sorting
+//function which will be called in every switch-case to do the actual printing and sorting
 
 
 void printAndSort(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
