@@ -39,4 +39,4 @@ void comparison1_3(){
     }
     printf("Min time for bubble sort: %f seconds for %d cycles with %d elements in the array \n", minTime, cycleCount, arraySize);
     printf("Max time for bubble sort: %f seconds for %d cycles with %d elements in the array \n", maxTime, cycleCount, arraySize);
-*//
+*/

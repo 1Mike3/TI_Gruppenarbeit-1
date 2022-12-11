@@ -47,6 +47,8 @@ void benchmark1_2(int call){
         //mergesort
         case 1:
             printf("\n###### %s-IMPLEMENTATION #####\n\n", mergeSort);
+            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", mergeSort);
+            printf("Size:   8      32    128    512     2048       8192      32768");
             for (int i = 1; i < 4; ++i) {
                 selectSubFunction(mergeSort, sizeArrPar, size, call, i);
             }
@@ -57,6 +59,8 @@ void benchmark1_2(int call){
             //quicksort
         case 2:
             printf("\n###### %s-IMPLEMENTATION #####\n\n", quickSort);
+            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", quickSort);
+            printf("Size:   8      32    128    512     2048       8192      32768");
             for (int i = 1; i < 4; ++i) {
                 selectSubFunction(quickSort, sizeArrPar, size, call,i );
             }
@@ -66,6 +70,8 @@ void benchmark1_2(int call){
             //Bubblesort
         case 3:
             printf("\n###### %s-IMPLEMENTATION #####\n\n", bubbleSort);
+            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", bubbleSort);
+            printf("Size:   8      32    128    512     2048       8192      32768");
             for (int i = 1; i < 4; ++i) {
                 selectSubFunction(bubbleSort, sizeArrPar, size, call,i );
             }
@@ -75,6 +81,8 @@ void benchmark1_2(int call){
             break;
         case 4:
             printf("\n###### %s-IMPLEMENTATION #####\n\n", insertionSort);
+            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", insertionSort);
+            printf("Size:   8      32    128    512     2048       8192      32768");
             for (int i = 1; i < 4; ++i) {
                 selectSubFunction(insertionSort, sizeArrPar, size, call,i );
             }
@@ -89,6 +97,17 @@ void benchmark1_2(int call){
 }//END Benchmark2_2 Call
 
 //function which will be called in every switch-case to do the actual printing and sorting
+
+
+
+
+
+
+
+
+
+
+
 
 
 void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int call,int choseInit) {
@@ -107,7 +126,7 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
                 //########## Switch case for selection of initialization ############
                 switch (choseInit) {
                     case 1:
-                        printf("The Initialization will be done in an ASCENDING order:\n");
+                        printf("The Initialization will be done in an ASCENDING:");
                         initAscending(tempArr, *(sizeArr+i));
                         break;
                     case 2:
@@ -145,11 +164,11 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
             default:
                 break;
         }
-
+/*
         printArr(tempArr, *(sizeArr+i));
         printf("Check if the array is correctly sorted:\n");
         checkSort(tempArr,*(sizeArr+i),1);
-
+*/
         printf("\n\n");
     }//end main for loop
 
@@ -198,8 +217,9 @@ void initDescending (int *arr, int size){
 }
 
 
+/*
 //calculate the time from bubblesorting() and print it
-int main(){
+int time(){
     clock_t t;
     t = clock();
     //bubblesorting();
@@ -209,4 +229,4 @@ int main(){
     return 0;
 
 }
-
+*/
