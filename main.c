@@ -57,7 +57,7 @@ int main() {
     */
     //END############Michi Test Qicksortfungktio#######################
 
-
+/*
 
     //====================EMAD TEST MERGESORT=====================
     // int pointer
@@ -82,7 +82,7 @@ int main() {
     printf("\n");
 
     //==========================EOF===============================
-
+*/
     return 0;
 }
 
