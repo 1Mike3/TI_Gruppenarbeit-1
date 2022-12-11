@@ -46,6 +46,7 @@ int main() {
 
     //created the th arrays but have not initialized them, this will happen in the "basicCheck1_1 function with Emads rand func"
     printf("\nSTART implementation 1.2\n\n");
+    printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
     int call = 1; //Variable that stands for the different sorting algorithms see 1.2implementation for further detail
     while (call < 5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
         benchmark1_2(call);

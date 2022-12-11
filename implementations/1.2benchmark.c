@@ -11,8 +11,8 @@
 void selectSubFunction (char sortAlgName[], const int *sizeArr, int sizeNo, int call, int choseInit);
 void initAscending (int *arr, unsigned int size);
 void initDescending (int *arr, int size);
-
-
+void printSortingMethod(int index);
+void printArrSizesAndSortAlgUsed(char *algName);
 
 //call sorting function 1 = mergesort, 2 = quicksort, 3 = Bubblesort, 4 = Insertion-sort
 //sizeArr contains teh sizes of the arrays in the order they are passed thorough as parameters
@@ -21,7 +21,7 @@ void benchmark1_2(int call){
 
     //selectInitialization 1 = ascending, 2 = descending, 3 = random generated
     int selectInitialization = 1;
-    printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
+
 
     //arrays for the benchmark
     int arr8[8] = {0};
@@ -43,14 +43,14 @@ void benchmark1_2(int call){
     char insertionSort[] = "INSERTION-SORT";
 
     //switch case for the different sorting algs.:
+    //i will only explain what this stuff does in the first case
     switch (call) {
 
         //mergesort
         case 1:
-            printf("\n###### %s-IMPLEMENTATION #####\n\n", mergeSort);
-            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", mergeSort);
-            printf("Size:   8      32    128    512     2048       8192      32768");
+            printArrSizesAndSortAlgUsed(mergeSort); //prints the Table header
             for (int i = 1; i < 4; ++i) {
+                printSortingMethod(i); //Prints the used sorting method into the table
                 selectSubFunction(mergeSort, sizeArrPar, size, call, i);
             }
 
@@ -59,10 +59,9 @@ void benchmark1_2(int call){
 
             //quicksort
         case 2:
-            printf("\n###### %s-IMPLEMENTATION #####\n\n", quickSort);
-            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", quickSort);
-            printf("Size:   8      32    128    512     2048       8192      32768");
+             printArrSizesAndSortAlgUsed(quickSort);
             for (int i = 1; i < 4; ++i) {
+                printSortingMethod(i);
                 selectSubFunction(quickSort, sizeArrPar, size, call,i );
             }
 
@@ -70,10 +69,9 @@ void benchmark1_2(int call){
             break;
             //Bubblesort
         case 3:
-            printf("\n###### %s-IMPLEMENTATION #####\n\n", bubbleSort);
-            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", bubbleSort);
-            printf("Size:   8      32    128    512     2048       8192      32768");
+            printArrSizesAndSortAlgUsed(bubbleSort);
             for (int i = 1; i < 4; ++i) {
+                printSortingMethod(i);
                 selectSubFunction(bubbleSort, sizeArrPar, size, call,i );
             }
 
@@ -81,10 +79,9 @@ void benchmark1_2(int call){
             //Insertion-sort
             break;
         case 4:
-            printf("\n###### %s-IMPLEMENTATION #####\n\n", insertionSort);
-            printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", insertionSort);
-            printf("Size:   8      32    128    512     2048       8192      32768\n");
+            printArrSizesAndSortAlgUsed(insertionSort);
             for (int i = 1; i < 4; ++i) {
+                printSortingMethod(i);
                 selectSubFunction(insertionSort, sizeArrPar, size, call,i );
             }
 
@@ -154,8 +151,8 @@ void selectSubFunction(char *sortAlgName, const int *sizeArr, int sizeNo, int ca
                 t = clock();
                 mergeS(tempArr, 0, *(sizeArr+i));
                 t = clock() - t;
-                double time_taken = (((double)t)/CLOCKS_PER_SEC)*100 ;
-                printf("%f[ms]  ", time_taken);
+                double time_taken = (((double)t)/CLOCKS_PER_SEC)*100000 ;
+                printf("%f[ns]  ", time_taken);
                 break;
             case 2:
               //  quickS(tempArr, *(sizeArr+i));
@@ -222,7 +219,27 @@ void initDescending (int *arr, int size){
 
 }
 
+void printArrSizesAndSortAlgUsed(char *algName){
+    printf("\n###### %s-IMPLEMENTATION #####\n\n", algName);
+    printf("The Array Sizes and their required sorting(%s) time with different initialization:\n", algName);
+    printf("Size    :   8      32    128    512     2048       8192      32768\n");
+}
 
+void printSortingMethod(int index){
+    switch (index) {
+        case 1:
+            printf("ascend. :    ");
+            break;
+        case 2:
+            printf("descend.:    ");
+            break;
+        case 3:
+            printf("random  :    ");
+            break;
+        default:
+            break;
+    }
+}
 /*
 //calculate the time from bubblesorting() and print it
 int time(){
@@ -236,3 +253,4 @@ int time(){
 
 }
 */
+
