@@ -61,7 +61,7 @@ int main() {
     //END############Michi Test Qicksortfungktio#######################
 
 
-    /*
+
     //====================EMAD TEST MERGESORT=====================
     // int pointer
     int *pRandArr1;
@@ -73,10 +73,18 @@ int main() {
     pRandArr1 = genRandNum(arrSize,randArr);
     //print the array with a function
     //printRandArr(pRandArr, arrSize);
-    mergeS(randArr1, arrSize1);
+    printf("\n");
+    printRandArr(pRandArr1, arrSize1);
+    printf("\n");
+
+    mergeS(pRandArr1, arrSize1);
+
+    printf("\n");
+    printRandArr(pRandArr1, arrSize1);
+    printf("\n");
 
     //==========================EOF===============================
-*/
+
     return 0;
 }
 
