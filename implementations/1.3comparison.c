@@ -19,7 +19,7 @@ void comparison1_3() {
         clock_t start = clock();
         bubbleS(arr, arraySize);
         clock_t end = clock();
-        bubbleSortTimes[i] = (int) (end - start);
+        bubbleSortTimes[i] = (int) ((end - start) * 1000 / CLOCKS_PER_SEC);
     }
     //average x20 cycles from the array
     int bubbleSortAverage = 0;
@@ -41,7 +41,7 @@ void comparison1_3() {
             bubbleSortMax = bubbleSortTimes[i];
         }
     }
-    //print the results
+    //
     printf("Bubble Sort:\n");
     printf("Average: %d\n", bubbleSortAverage);
     printf("Minimum: %d\n", bubbleSortMin);
@@ -53,5 +53,4 @@ void comparison1_3() {
     }
     //free the memory
     free(bubbleSortTimes);
-    return;
 }
