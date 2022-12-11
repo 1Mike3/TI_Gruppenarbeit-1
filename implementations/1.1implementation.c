@@ -82,7 +82,7 @@ void printAndSort(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
 
         switch(call){
             case 1:
-                mergeS(tempArr,*(sizeArr+0) ,*(sizeArr+i));
+                mergeS(tempArr,0 ,*(sizeArr+i));
                 break;
             case 2:
                 quickS(tempArr, *(sizeArr+i));
