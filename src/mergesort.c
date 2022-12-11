@@ -7,13 +7,31 @@
 
 //this fuction is the main implementation of the merge sort algorithm
 void mergeS (int *arr, unsigned int size){
-    int i, j, l, r, m, k;
+    int i = 0, j = 0, l, r, m, k;
     l = 0; //left index
     r = size - 1; //right index = size -1
     m = l + (r - l) / 2; //middle index
     int tmpArrSize1 = m - l + 1;
     int tmpArrSize2 = r - m;
-
+/*
+    int halfSize = size;
+    int arrSize[100] = { 0 };
+    int halfSArrSize = 0;
+    do{
+        arrSize[j] = halfSize;
+        j++;
+        halfSize = halfSize / 2;
+        halfSArrSize++;
+        if(halfSize == 1){
+            arrSize[j] = halfSize;
+            halfSArrSize++;
+            i = 1;
+        }
+    } while( i == 0 );
+    for(i = 0; i < halfSArrSize; i++){
+        printf("%d ", arrSize[i]);
+    }
+*/
     int arrL[tmpArrSize1], arrR[tmpArrSize2];
 
     //copy arr to left and right temp arrays
@@ -23,6 +41,8 @@ void mergeS (int *arr, unsigned int size){
     for (j = 0; j < tmpArrSize2; j++){
         arrR[j] = arr[m + 1 + j];
     }
+
+
     printf("\n");
     printRandArr(arrL, tmpArrSize1);
     printf("\n");
@@ -31,13 +51,13 @@ void mergeS (int *arr, unsigned int size){
     printf("\n");
     i = 0;
     j = 0;
-    k = 1;
+    k = 0;
 
     //while array indexes are smaller than array size
     while (i < tmpArrSize1 && j < tmpArrSize2) {
         //when the number under left arrays index is smaller than the right then sort it
         // and add it to the k index of original array
-        if (arrL[i] <= arrR[j]) {
+        if (arrR[i] <= arrL[j]) {
             arr[k] = arrL[i];
             i++;
         }
