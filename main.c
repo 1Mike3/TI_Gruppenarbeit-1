@@ -39,7 +39,7 @@ int main() {
     int arrSizePar[3] = {8,16,64};
 
     while (call < 5){ //while loop which increments the call variable so that a different sort. alg. is unsed every cycle.
-        basicCheck1_1(call, arr8, arr16, arr64, arrSizePar);
+        basicCheck1_1(call, arrSizePar, 3);
         call++;
     }
     printf("\nEND implementation 1.1\n");

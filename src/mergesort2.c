@@ -2,6 +2,7 @@
 // Created by Mark on 10.12.2022.
 //
 //Emad working ============DONT CHANGE!!!
+/*
 #include <stdio.h>
 
 //this fuction is the main implementation of the merge sort algorithm
@@ -58,3 +59,4 @@ void mergesort(int *arr, int l, int r){
         mergeS(arr, l, m, r);
     }
 }
+*/

@@ -21,7 +21,7 @@ void swapi(int *, int *);
 int checkSort(int *arr, unsigned int size, short int mode);
 
 //_________________Main implementations:
-void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64,int *sizeArr);
+void basicCheck1_1(int call ,int *sizeArr, int arrayNumber);
 
 
 int *genRandNum(int size, int *randArr);

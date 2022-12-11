@@ -2,54 +2,50 @@
 // Created by Michi on 10.12.2022.
 //
 #include "stdio.h"
+#include "stdlib.h"
 #include "..\include\allfunclib.h"
+
+void printAndSort(char sortAlgName[], int *sizeArr, int sizeNo, int call);
+
+
 //read in three arrays of sizes 8,16 and 64 and initialize them with random numbers
 //call sorting function 1 = mergesort, 2 = quicksort, 3 = Bubblesort, 4 = Insertion-sort
 //although obvious will pass size so easier adapting if requirements change
 //sizeArr contains teh sizes of the arrays in the order they are passed thorough as parameters
-void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64, int *sizeArr){
+//arraynumber = number of arrays in size arr
+void basicCheck1_1(int call, int *sizeArr, int arrayNumber){
 //switch case for the different sorting algs.:
+//strings for insertion into the sorting & output function
+    char mergeSort[] = "MERGESORT";
+    char quickSort[] = "QUICKSORT";
+    char bubbleSort[] = "BUBBLESORT";
+    char insertionSort[] = "INSERTION-SORT";
     switch (call) {
         //mergesort
         case 1:
-/*
-            printf("\n###### MERGESORT-IMPLEMENTATION #####\n\n");
-            printf("printout randomly initialized Array:\n");
-            genRandNum(*(sizeArr+0),arr8) ;
-            printArr(arr8, *(sizeArr+0));
-            printf("printout mergesort sorted Array:\n");
-            mergeS(arr8, *(sizeArr+0));
-            printArr(arr8, *(sizeArr+0));
-            printf("Check if the array is correctly sorted:\n");
-            checkSort(arr8,*(sizeArr+0),1);
-          //  printf("before emad randnum\n");
-          //  printArr(arr8, 8);
+            break;
 
-          //  printf("after emad randnum \n");
-           // printArr(arr8, 8);
-
-        break;
-             */
 
         //quicksort
         case 2:
-
-            printf("\n###### Quicksort-IMPLEMENTATION #####\n\n");
-            printf("printout randomly initialized Array:\n");
-            int arr8test[8] = {2,4,7,2,8,5,3,3,};
+            //the commented-out block below works, will keep if need to go back
+/*
+            printf("\n###### %s-IMPLEMENTATION #####\n\n", quickSort);
+            printf("printout randomly initialized Array (SIZE: | %i |):\n",*(sizeArr+0));
             genRandNum(*(sizeArr+0),arr8) ;
-            printArr(arr8test, 8);
-            printf("printout quicksort sorted Array:\n");
-            quickS(arr8test, 8);
-            printArr(arr8test, 8);
+            printArr(arr8, *(sizeArr+0));
+            printf("printout %s sorted Array (SIZE: | %i |):\n", quickSort, *(sizeArr+0));
+            quickS(arr8, *(sizeArr+0));
+            printArr(arr8, *(sizeArr+0));
             printf("Check if the array is correctly sorted:\n");
-            checkSort(arr8test,8,1);
-
-
+            checkSort(arr8,*(sizeArr+0),1);
+*/
+            printAndSort(quickSort, sizeArr ,arrayNumber,call);
 
         break;
         //Bubblesort
         case 3:
+            printAndSort(bubbleSort, sizeArr ,arrayNumber,call);
 /*
             printf("\n###### BUBBLESORT-IMPLEMENTATION #####\n\n");
             printf("printout randomly initialized Array:\n");
@@ -82,3 +78,45 @@ void basicCheck1_1(int call, int *arr8, int *arr16, int*arr64, int *sizeArr){
     }
 
 }//END Basic1.1 Call
+
+//fuction which will be called in every switch-case to do teh actual printing and sorting
+void printAndSort(char sortAlgName[], int *sizeArr, int sizeNo, int call){
+    printf("\n###### %s-IMPLEMENTATION #####\n\n", sortAlgName);
+
+    //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
+    int *tempArr = malloc(sizeof(int) * *(sizeArr+0));
+    for (int i = 0; i < sizeNo; ++i) {
+        if(i >= 1){
+            tempArr = realloc(tempArr, sizeof (int )* *(sizeArr+i));
+        }
+
+        printf("printout randomly initialized Array (SIZE: | %i |):\n",*(sizeArr+i));
+        genRandNum(*(sizeArr+i),tempArr) ;
+        printArr(tempArr, *(sizeArr+i));
+        printf("\nprintout %s sorted Array (SIZE: | %i |):\n", sortAlgName, *(sizeArr+i));
+
+        switch(call){
+            case 1:
+                //mergeS(tempArr, *(sizeArr+i));
+                break;
+            case 2:
+                quickS(tempArr, *(sizeArr+i));
+                break;
+            case 3:
+                bubbleS(tempArr, *(sizeArr+i));
+                break;
+            case 4:
+                inserS(tempArr, *(sizeArr+i));
+                break;
+        }
+
+        printArr(tempArr, *(sizeArr+i));
+        printf("Check if the array is correctly sorted:\n");
+        checkSort(tempArr,*(sizeArr+i),1);
+
+        printf("\n\n");
+    }//end main for loop
+
+
+    free(tempArr);
+}

@@ -42,7 +42,8 @@ int checkSort(int *arr, unsigned int size, short int mode){
     for (int i = 0; i < (size); ++i) { //size -1 because don't need check for last element
         for (int j = (unsigned int)(size-1); j >= tempLeftToComapare; --j) {
             if(*(arr+i) <= (*(arr+j)) ){
-                printf("arr+ i =(%i)  <=  arr+j =(%i)\n",*(arr+i),*(arr+j));
+                //debug Helper :)
+                //printf("arr+ i =(%i)  <=  arr+j =(%i)\n",*(arr+i),*(arr+j));
                 continue;
             } else{
                 largerElementFound = 1;
