@@ -45,7 +45,7 @@ int main() {
     //Michi implementation 1.2
 
     //created the th arrays but have not initialized them, this will happen in the "basicCheck1_1 function with Emads rand func"
-    /*
+
     printf("\nSTART implementation 1.2\n\n");
     printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
     int call = 1; //Variable that stands for the different sorting algorithms see 1.2implementation for further detail
@@ -54,11 +54,11 @@ int main() {
         call++;
     }
     printf("\nEND implementation 1.2\n");
-     */
+
     //Michi implementation 1.2
 
     //implementation 1.3
-comparison1_3();
+//comparison1_3();
     //END implementation 1.3
 
     //################Michi Test Quicksortfunktion######################

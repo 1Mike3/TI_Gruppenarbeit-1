@@ -136,7 +136,12 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                 timeMeasuringFixer();
                 t = clock() - t;
                 time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
-                printf("%07.2f     ", time_taken);
+                if(time_taken < 1){
+                    printf("t < 1ms     "); // Print if time is less then 1ms
+                } else{
+                    printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
+                }
+
                 break;
             case 2:
 
@@ -145,7 +150,11 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                 timeMeasuringFixer();
                 t = clock() - t;
                 time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
-                printf("%07.2f     ", time_taken);
+                if(time_taken < 1){
+                    printf("t < 1ms     "); // Print if time is less then 1ms
+                } else{
+                    printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
+                }
 
                 break;
             case 3:
@@ -155,7 +164,11 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                 timeMeasuringFixer();
                 t = clock() - t;
                 time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
-                printf("%07.2f     ", time_taken);
+                if(time_taken < 1){
+                    printf("t < 1ms     "); // Print if time is less then 1ms
+                } else{
+                    printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
+                }
 
                 break;
             case 4:
@@ -165,7 +178,11 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                 timeMeasuringFixer();
                 t = clock() - t;
                 time_taken = (((double)t)/CLOCKS_PER_SEC)*1000 ;
-                printf("%07.2f     ", time_taken);
+                if(time_taken < 1){
+                    printf("t < 1ms     "); // Print if time is less then 1ms
+                } else{
+                    printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
+                }
 
                 break;
             default:
@@ -240,7 +257,7 @@ void printSortingMethod(int index){
 //inserts a small delay so no bug in time measurement
 void timeMeasuringFixer(){
     int a = 3,b = 2,c = 1;
-    for (int i = 0; i < 350000; ++i) {
+    for (int i = 0; i < 1000; ++i) {
         c = a+i;
         a = b+i;
         b = c+i;
