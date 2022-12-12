@@ -4,6 +4,21 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "..\include\allfunclib.h"
+ //deactivate comment out if you want to run this as a standalone executable
+/*
+ * int main () {
+    //created the th arrays but have not initialized them, this will happen in the "basicCheck1_1 function with Emads rand func"
+    printf("\nSTART implementation 1.1\n");
+        int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail
+        const int arrSizePar[3] = {8, 16,64}; //size parameter, determines the tested array sizes in the basic check function
+
+        while (call < 5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
+            basicCheck1_1(call, arrSizePar, 3);
+            call++;
+        }
+        printf("\nEND implementation 1.1\n");
+        }
+        */
 
 void printAndSort(char sortAlgName[],const int *sizeArr, int sizeNo, int call);
 

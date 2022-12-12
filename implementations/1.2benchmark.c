@@ -5,7 +5,19 @@
 #include <time.h>
 #include "..\include\allfunclib.h"
 #include "stdlib.h"
-
+//deactivate comment out if want to compile and run standalone
+/*
+int main(){
+    printf("\nSTART implementation 1.2\n\n");
+    printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
+    int call = 1; //Variable that stands for the different sorting algorithms see 1.2implementation for further detail
+    while (call < 5) { //while loop which increments the call variable so that a different sort. alg. is used every cycle.
+        benchmark1_2(call);
+        call++;
+    }
+    printf("\nEND implementation 1.2\n");
+}
+*/
 
 //function declarations, further information at definition
 void selectSubFunction (const int *sizeArr, int sizeNo, int call, int choseInit);
