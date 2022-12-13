@@ -4,7 +4,11 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "..\include\allfunclib.h"
+#include "allfunclib.h"
+void comparison1_3();
+        int main(){
+    comparison1_3();
+}
 
 //function which implements the 1.2 assignment
 void comparison1_3() {
