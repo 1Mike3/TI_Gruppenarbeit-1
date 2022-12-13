@@ -72,7 +72,7 @@ void sort()
 void printstruct(struct data* temp)
 {
 
-    unsigned int i = 0;
+    int i = 0;
     //only print 15 numbers
     while (temp != NULL && i < 15) {
 

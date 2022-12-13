@@ -7,7 +7,7 @@
 #include "stdlib.h"
 //deactivate comment out if want to compile and run standalone
 void benchmark1_2(int call);
-
+/*
 int main(){
     printf("\nSTART implementation 1.2\n\n");
     printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
@@ -18,11 +18,11 @@ int main(){
     }
     printf("\nEND implementation 1.2\n");
 }
-
+*/
 
 //function declarations, further information at definition
 void selectSubFunction (const int *sizeArr, int sizeNo, int call, int choseInit);
-void initAscending (int *arr, unsigned int size);
+void initAscending (int *arr, int size);
 void initDescending (int *arr, int size);
 void printSortingMethod(int index);
 void printArrSizesAndSortAlgUsed(char *algName);
@@ -229,7 +229,7 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
 
 
 //initialize array in ascending order
-void initAscending (int *arr, unsigned int size){
+void initAscending (int *arr, int size){
     int i, j;
     for (i = 0; i < size-1; i++) {
         for (j = 0; j < size-i-1; j++) {

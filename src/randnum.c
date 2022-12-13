@@ -10,7 +10,7 @@ int *genRandNum(int size, int *randArr){
 
     //integer for temporary storage of the generated number
     int num = 0;
-    unsigned int i;
+    int i;
 
     for (i = 0; i < size; i++) {
 

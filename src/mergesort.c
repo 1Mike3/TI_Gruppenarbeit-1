@@ -4,7 +4,7 @@
 void merge(int arr[], int l, int m, int r) {
 
     //declare counter variables
-    unsigned int i, j, k;
+    int i, j, k;
     // Create temp arrays with half the size of arr[]
     int tmpArrSize1 = m - l + 1;
     int tmpArrSize2 = r - m;

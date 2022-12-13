@@ -1,14 +1,11 @@
-//
-// Created by Emad on 30/11/2022.
-//
 #include <stdio.h>
 #include "stdlib.h"
 #include "allfunclib.h"
 
 
-//==========Michi
+
 //Prrint array values to console
-void printArr(int *arr, unsigned int size){
+void printArr(int *arr, int size){
     printf("Printarray:\n");
     for (int i = 0; i < size; ++i) {
         printf("[%i]: %i\n", i, *(arr+i));
@@ -16,7 +13,7 @@ void printArr(int *arr, unsigned int size){
 
 }
 //copy values of array1 too array2
-void copyArr(int *arr1, int *arr2, unsigned int size){
+void copyArr(int *arr1, int *arr2, int size){
     for (int i = 0; i < size; ++i) {
         arr2[i] = arr1[i];
     }
@@ -35,12 +32,12 @@ void swapi(int *val1, int *val2){
 //return 0 if sorted correctly
 //return 1 if sorted incorrectly
 //mode if mode is set to 1 it also prints out a info message to the console, if it is 0 only return value
-int checkSort(int *arr, unsigned int size, short int mode){
+int checkSort(int *arr, int size, short int mode){
 
     int tempLeftToComapare = 0;
     int largerElementFound = 0;
     for (int i = 0; i < (size); ++i) { //size -1 because don't need check for last element
-        for (int j = (unsigned int)(size-1); j >= tempLeftToComapare; --j) {
+        for (int j = (int)(size-1); j >= tempLeftToComapare; --j) {
             if(*(arr+i) <= (*(arr+j)) ){
                 //debug Helper :)
                 //printf("arr+ i =(%i)  <=  arr+j =(%i)\n",*(arr+i),*(arr+j));

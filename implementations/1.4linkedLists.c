@@ -1,17 +1,13 @@
-//
-// Created by Michi on 11.12.2022.
-//
 #include <stdio.h>
 #include <time.h>
 #include "allfunclib.h"
 
-//void compareLinkedList();
 
-
+/*
 int main(){
     compareLinkedList();
 }
-
+*/
 
 void compareLinkedList() {
 

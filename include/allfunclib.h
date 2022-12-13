@@ -11,15 +11,15 @@
 //implementation min merge.c file
 //void mergeS (int *arr, unsigned int size);
 
-void bubbleS (int *arr, unsigned int size);
-void inserS (int *arr, unsigned int size);
+void bubbleS (int *arr, int size);
+void inserS (int *arr, int size);
 
 //Michi
-void printArr(int *arr, unsigned int size);
-void copyArr(int *arr1, int *arr2,unsigned int size);
+void printArr(int *arr, int size);
+void copyArr(int *arr1, int *arr2, int size);
 void quickS (int *arr, int size);
 void swapi(int *, int *);
-int checkSort(int *arr, unsigned int size, short int mode);
+int checkSort(int *arr, int size, short int mode);
 
 
 //Emad

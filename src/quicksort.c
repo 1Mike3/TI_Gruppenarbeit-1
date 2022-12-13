@@ -27,7 +27,7 @@ int chosePartition(int *arr,int lower,int upper){
    int pivotValue = *(arr+upper); //initialising Pivot, always chosen as upper element
    int lowCounter = lower; // var which will be incremented in for loop
 
-    for ( unsigned int i = lower; i <= upper; ++i) { //
+    for ( int i = lower; i <= upper; ++i) { //
         if (*(arr+i) < pivotValue){
             swapi((arr+lowCounter), (arr+i));
             lowCounter++;
