@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 #include <time.h>
-#include "..\include\allfunclib.h"
+#include "allfunclib.h"
 #include "stdlib.h"
 //deactivate comment out if want to compile and run standalone
 /*

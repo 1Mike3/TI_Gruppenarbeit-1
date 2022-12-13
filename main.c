@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //include custom lib
-#include "include/allfunclib.h"
+#include "allfunclib.h"
 
 int main() {
 

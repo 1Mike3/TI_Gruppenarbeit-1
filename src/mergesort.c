@@ -3,7 +3,7 @@
 //
 //Emad working ============DONT CHANGE!!!
 #include <stdio.h>
-#include "../include/allfunclib.h"
+#include "allfunclib.h"
 
 void merge(int arr[], int l, int m, int r) {
 

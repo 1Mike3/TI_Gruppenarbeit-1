@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 #include <time.h>
-#include "..\include\allfunclib.h"
+#include "allfunclib.h"
 
 void compareLinkedList() {
 

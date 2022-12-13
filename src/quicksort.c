@@ -5,7 +5,7 @@
 
 //STATUS Build in progress
 
-#include "..\include\allfunclib.h"
+#include "allfunclib.h"
 
 
 

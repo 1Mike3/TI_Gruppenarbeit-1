@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 #include "stdlib.h"
-#include "..\include\allfunclib.h"
+#include "allfunclib.h"
 
 
 //==========Michi
