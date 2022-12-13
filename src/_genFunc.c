@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "stdlib.h"
 #include "allfunclib.h"
 
 
@@ -12,6 +11,7 @@ void printArr(int *arr, int size){
     }
 
 }
+
 //copy values of array1 too array2
 void copyArr(int *arr1, int *arr2, int size){
     for (int i = 0; i < size; ++i) {
@@ -60,7 +60,6 @@ int checkSort(int *arr, int size, short int mode){
     return 0;
 }
 
-//===========EMAD
 //print array pointer (for rand arraygen)
 //print the array
 void printRandArr(int *arrToPrint, int arrSize) {
