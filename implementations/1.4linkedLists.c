@@ -3,11 +3,11 @@
 #include "allfunclib.h"
 
 
-/*
+
 int main(){
     compareLinkedList();
 }
-*/
+
 
 void compareLinkedList() {
 

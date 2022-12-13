@@ -7,7 +7,7 @@
 #include "stdlib.h"
 //deactivate comment out if want to compile and run standalone
 void benchmark1_2(int call);
-/*
+
 int main(){
     printf("\nSTART implementation 1.2\n\n");
     printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
@@ -18,7 +18,7 @@ int main(){
     }
     printf("\nEND implementation 1.2\n");
 }
-*/
+
 
 //function declarations, further information at definition
 void selectSubFunction (const int *sizeArr, int sizeNo, int call, int choseInit);
