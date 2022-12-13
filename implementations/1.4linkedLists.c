@@ -5,6 +5,12 @@
 #include <time.h>
 #include "allfunclib.h"
 
+void compareLinkedList();
+
+int main(){
+    compareLinkedList();
+}
+
 void compareLinkedList() {
 
     //===================Calculate time taken by array init
