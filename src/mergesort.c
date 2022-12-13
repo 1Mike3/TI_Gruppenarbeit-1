@@ -1,26 +1,24 @@
-//
-// Created by Michi on 29.11.2022.
-//
-//Emad working ============DONT CHANGE!!!
 #include <stdio.h>
 #include "allfunclib.h"
 
 void merge(int arr[], int l, int m, int r) {
 
-    int i, j, k;
-    // Create temp arrays with half the size
+    //declare counter variables
+    unsigned int i, j, k;
+    // Create temp arrays with half the size of arr[]
     int tmpArrSize1 = m - l + 1;
     int tmpArrSize2 = r - m;
 
+    //declare temp arrays
     int arrL[tmpArrSize1], arrR[tmpArrSize2];
 
-    for (int i = 0; i < tmpArrSize1; i++)
+    //copy left and right values of arr[] into left and right temp array
+    for (i = 0; i < tmpArrSize1; i++)
         arrL[i] = arr[l + i];
-    for (int j = 0; j < tmpArrSize2; j++)
+    for (j = 0; j < tmpArrSize2; j++)
         arrR[j] = arr[m + 1 + j];
 
-
-
+    //reset counters
     i = 0;
     j = 0;
     k = l;
@@ -37,7 +35,7 @@ void merge(int arr[], int l, int m, int r) {
         k++;
     }
 
-    // Write remeaining elements to the array
+    // Write remaining elements to the array
     while (i < tmpArrSize1) {
         arr[k] = arrL[i];
         i++;
@@ -51,11 +49,13 @@ void merge(int arr[], int l, int m, int r) {
     }
 }
 
-
+//handle the mergesort request
 void mergeS (int *arr, int l, int r){
+
+    //only sort if array actually has a length
     if (l < r) {
 
-        // m is the middle
+        // m is the middle of *arr
         int m = l + (r - l) / 2;
 
         //sort left

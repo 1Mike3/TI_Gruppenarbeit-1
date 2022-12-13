@@ -1,21 +1,23 @@
-//
-// Created by Emad on 30/11/2022.
-//
-//Emad finished ============DONT CHANGE!!!
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 int *genRandNum(int size, int *randArr){
 
-    //define upper and lower
-    int upper = 32767;
-    int lower = -32768;
+    //define max upper and lower
+    const int upper = 32767;
+    const int lower = -32768;
+
+    //integer for temporary storage of the generated number
     int num = 0;
-    int i;
+    unsigned int i;
 
     for (i = 0; i < size; i++) {
+
+        //calculate a random number | % = modulo
         num = (rand() % (upper - lower + 1) + lower / 2) * 2;
+
+        //write random num to array
         randArr[i] = num;
     }
 

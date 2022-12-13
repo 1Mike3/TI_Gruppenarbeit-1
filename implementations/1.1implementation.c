@@ -6,7 +6,7 @@
 #include "allfunclib.h"
  //deactivate comment out if you want to run this as a standalone executable
 
- * int main () {
+ int main () {
     //created the th arrays but have not initialized them, this will happen in the "basicCheck1_1 function with Emads rand func"
     printf("\nSTART implementation 1.1\n");
         int call = 1; //Variable that stands for the different sorting algorithms see 1.1implementation.c for further detail

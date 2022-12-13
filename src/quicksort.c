@@ -1,10 +1,3 @@
-//
-// Created by Michi on 30.11.2022.
-//My Implementation of the quicksort algorithm
-//
-
-//STATUS Build in progress
-
 #include "allfunclib.h"
 
 
@@ -22,12 +15,9 @@ void sorting(int *arr,int lower, int upper);
 // "size" is the total number of elements the chosen array
 //!!watch out size is total number of items AND NOT last array index...
 void quickS(int *arr, int size){
-     int upperValue = (size-1);
+    int upperValue = (size-1);
     sorting(arr, 0, upperValue);
 }
-
-
-
 
 //######################SUBFUNCTIONS######################################
 
@@ -37,7 +27,7 @@ int chosePartition(int *arr,int lower,int upper){
    int pivotValue = *(arr+upper); //initialising Pivot, always chosen as upper element
    int lowCounter = lower; // var which will be incremented in for loop
 
-    for ( int i = lower; i <= upper; ++i) { //
+    for ( unsigned int i = lower; i <= upper; ++i) { //
         if (*(arr+i) < pivotValue){
             swapi((arr+lowCounter), (arr+i));
             lowCounter++;

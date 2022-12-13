@@ -5,11 +5,13 @@
 #include <time.h>
 #include "allfunclib.h"
 
-void compareLinkedList();
+//void compareLinkedList();
+
 
 int main(){
     compareLinkedList();
 }
+
 
 void compareLinkedList() {
 
@@ -57,8 +59,8 @@ void compareLinkedList() {
     //===================Print the init values
     printf("\nInitialisation of\t\tTime needed (ms)\n");
     printf("-------------------------------------------\n");
-    (init_time_taken2 < 0) ? printf("\nArray of size[%d]\t\t <1ms\n", arrSize) : printf("\nArray of size[%d]\t\t%.2f \n", arrSize, init_time_taken2);
-    (*init_time_taken < 0) ? printf("\nStruct\t\t\t\t <1ms \n") : printf("\nStruct\t\t\t\t%.2f \n", *init_time_taken);
+    (init_time_taken2 <= 0) ? printf("\nArray of size[%d]\t\t <1ms\n", arrSize) : printf("\nArray of size[%d]\t\t%.2f \n", arrSize, init_time_taken2);
+    (*init_time_taken <= 0) ? printf("\nStruct\t\t\t\t <1ms \n") : printf("\nStruct\t\t\t\t%.2f \n", *init_time_taken);
 
     printf("\n");
     //===================END
@@ -66,8 +68,8 @@ void compareLinkedList() {
     //====================Print the values of time taken by sorting algs
     printf("\nSorting algorithm\t\tTime needed (ms) \n");
     printf("-------------------------------------------\n");
-    (sort_time_taken2 < 0) ? printf("\nInsertionsort array\t\t <1ms \n") : printf("\nInsertionsort array\t\t%.2f \n", sort_time_taken2);
-    (*sort_time_taken < 0) ? printf("\nInsertionsort linked list\t <1ms \n") : printf("\nInsertionsort linked list\t%.2f \n", *sort_time_taken);
+    (sort_time_taken2 <= 0) ? printf("\nInsertionsort array\t\t <1ms \n") : printf("\nInsertionsort array\t\t%.2f \n", sort_time_taken2);
+    (*sort_time_taken <= 0) ? printf("\nInsertionsort linked list\t <1ms \n") : printf("\nInsertionsort linked list\t%.2f \n", *sort_time_taken);
     //====================END
 //
 }

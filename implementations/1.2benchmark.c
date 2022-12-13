@@ -156,7 +156,7 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                     printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
                 }
                  */
-                (time_taken < 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
+                (time_taken <= 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
 
 
                 break;
@@ -174,7 +174,7 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                      printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
                  }
                   */
-                (time_taken < 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
+                (time_taken <= 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
 
                 break;
             case 3:
@@ -191,7 +191,7 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                      printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
                  }
                   */
-                (time_taken < 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
+                (time_taken <= 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
 
                 break;
             case 4:
@@ -208,7 +208,7 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
                      printf("%07.0f     ", time_taken); //Print if time is larger then 1ms
                  }
                   */
-                (time_taken < 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
+                (time_taken <= 0) ? printf("t < 1ms     ") : printf("%07.0f     ", time_taken);
 
                 break;
             default:
