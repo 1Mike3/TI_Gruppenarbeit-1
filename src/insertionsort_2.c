@@ -84,11 +84,21 @@ void printList(struct node* head)
 }
 void inserS_LL (int *randArr, int sizeRandArr){
 
+    clock_t begin, end;
 
-        for(int i = ( sizeRandArr - 1 ); i >= 0; ){
-            writeToList(randArr[i]);
-            i--;
-        }
+    begin = clock();
+
+    for(int i = ( sizeRandArr - 1 ); i >= 0; ){
+        writeToList(randArr[i]);
+        i--;
+    }
+
+    end = clock();
+
+    double time_taken = ((double)end - (double)begin) / CLOCKS_PER_SEC;
+
+    printf("\nInitiasiation of int struct took %f miliseconds to execute \n", time_taken);
+
 /*
         printf("\nLinked List before sorting:\n");
         printList(head);
@@ -106,7 +116,7 @@ void inserS_LL (int *randArr, int sizeRandArr){
         printf("\nLinked List after sorting:\n");
         printList(head);
 */
-        double time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
+        time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
 
         printf("\ninserS() with linked list took %f miliseconds to execute \n", time_taken);
 
