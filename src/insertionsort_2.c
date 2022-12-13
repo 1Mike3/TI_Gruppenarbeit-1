@@ -74,15 +74,17 @@ void insertionSort()
 
 void printList(struct node* head)
 {
-    printf("Arr" );
-    while (head != NULL) {
+
+    int i = 0;
+    while (head != NULL && i < 15) {
 
         printf("%d ", head->data);
         head = head->next;
+        i++;
     }
-    printf("NULL");
+    printf("\n");
 }
-void inserS_LL (int *randArr, int sizeRandArr){
+int inserS_LL (int *randArr, int sizeRandArr, double *timetakenArr, double *timetakenArr2){
 
     clock_t begin, end;
 
@@ -95,29 +97,23 @@ void inserS_LL (int *randArr, int sizeRandArr){
 
     end = clock();
 
-    double time_taken = ((double)end - (double)begin) / CLOCKS_PER_SEC;
+    *timetakenArr = (((double)end - (double)begin) / CLOCKS_PER_SEC * 1000);
 
-    printf("\nInitiasiation of int struct took %f miliseconds to execute \n", time_taken);
-
-/*
-        printf("\nLinked List before sorting:\n");
+        //====================Print only 15 values of sorted list <- defined in printList();
+        printf("\nUnsorted Array / List \n");
         printList(head);
-        printf("\n");
-*/
+        //====================END
 
-        clock_t t;
-
-        t = clock();
+        begin = clock();
 
         insertionSort(head);
 
-        t = clock() - t;
-/*
-        printf("\nLinked List after sorting:\n");
-        printList(head);
-*/
-        time_taken = ((double)t)/CLOCKS_PER_SEC*1000;
+        end = clock();
+        *timetakenArr2 = (((double)end - (double)begin) / CLOCKS_PER_SEC * 1000);
 
-        printf("\ninserS() with linked list took %f miliseconds to execute \n", time_taken);
+        //====================Print only 15 values of sorted list <- defined in printList();
+        printf("\nSorted List \n");
+        printList(head);
+        //====================END
 
 }

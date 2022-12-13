@@ -67,7 +67,6 @@ int checkSort(int *arr, unsigned int size, short int mode){
 //print array pointer (for rand arraygen)
 //print the array
 void printRandArr(int *arrToPrint, int arrSize) {
-    printf("Arr ");
     for (int i = 0; i < arrSize; i++) {
         printf(" %d", *(arrToPrint + i));
     }

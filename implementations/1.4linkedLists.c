@@ -4,64 +4,64 @@
 #include <stdio.h>
 #include <time.h>
 #include "..\include\allfunclib.h"
-#include "stdlib.h"
-// C function showing how to do time delay
-#include <stdio.h>
-// To use time library of C
-#include <time.h>
-
-void delay(int number_of_seconds)
-{
-    // Converting time into milli_seconds
-    int milli_seconds = 1000 * number_of_seconds;
-
-    // Storing start time
-    clock_t start_time = clock();
-
-    // looping till required time is not achieved
-    while (clock() < start_time + milli_seconds)
-        ;
-}
 
 void compareLinkedList() {
 
+    //===================Calculate time taken by array init
     clock_t begin, end;
-
     begin = clock();
-
     // int pointer
     int *pRandArr;
     int randArr[2048] = { 0 };
     int arrSize = 2048;
     //get the random numbers and save the pointers
     pRandArr = genRandNum(arrSize,randArr);
-
     end = clock();
+    double init_time_taken2 = ((double)end - (double)begin) / CLOCKS_PER_SEC;
+    //===================END
 
-    double time_taken = ((double)end - (double)begin) / CLOCKS_PER_SEC;
+    //===================Calculate time taken by struct init
+    //by calling insertionsort and "returning" the values
+    //Also sort the struct filled with the values of above generated array
+    double timetaken_real;
+    double *init_time_taken = &timetaken_real;
+    double timetaken_real_sort;
+    double *sort_time_taken = &timetaken_real_sort;
+    //========insertionsort with linked list
+    inserS_LL(pRandArr, arrSize, init_time_taken, sort_time_taken);
+    //===================END
 
-    printf("\nInitiasiation of int array took %f miliseconds to execute \n", time_taken);
 
-//========insertionsort with linked list
-    inserS_LL(pRandArr, arrSize);
-
-/*
-    printf("\nunsorted Array \n");
-    printRandArr(pRandArr, arrSize);
-*/
-    clock_t t;
-    t = clock();
+    //===================Calculate time taken by insertionsort of array
+    begin = clock();
 
     inserS (pRandArr, arrSize);
 
-    t = clock() - t;
-/*
-    printf("\nsorted Array \n");
-    printRandArr(pRandArr, arrSize);
-*/
-    time_taken = ((float)t)/CLOCKS_PER_SEC*1000;
+    end = clock();
 
-    printf("\ninserS() with array took %f miliseconds to execute \n", time_taken);
+    double sort_time_taken2 = (((double)end - (double)begin) / CLOCKS_PER_SEC * 1000);
+    //====================END
+    //====================Print only 15 values of sorted array
+    printf("\nSorted Array \n");
+    //may throw a warning since it is "always" true (arrSize is not changed in the program)
+    //printRandArr(pRandArr, 15) : printRandArr(pRandArr, arrSize); //not used since warning and arrSize is not dynamic
+    printRandArr(pRandArr, 15);
+    //====================END
+    printf("\n\n");
+    //===================Print the init values
+    printf("\nInitialisation of\t\tTime needed (ms)\n");
+    printf("-------------------------------------------\n");
+    (init_time_taken2 < 0) ? printf("\nArray of size[%d]\t\t <1ms\n", arrSize) : printf("\nArray of size[%d]\t\t%.2f \n", arrSize, init_time_taken2);
+    (*init_time_taken < 0) ? printf("\nStruct\t\t\t\t <1ms \n") : printf("\nStruct\t\t\t\t%.2f \n", *init_time_taken);
 
+    printf("\n");
+    //===================END
 
+    //====================Print the values of time taken by sorting algs
+    printf("\nSorting algorithm\t\tTime needed (ms) \n");
+    printf("-------------------------------------------\n");
+    (sort_time_taken2 < 0) ? printf("\nInsertionsort array\t\t <1ms \n") : printf("\nInsertionsort array\t\t%.2f \n", sort_time_taken2);
+    (*sort_time_taken < 0) ? printf("\nInsertionsort linked list\t <1ms \n") : printf("\nInsertionsort linked list\t%.2f \n", *sort_time_taken);
+    //====================END
+//
 }
