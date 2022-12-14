@@ -8,6 +8,8 @@
 //deactivate comment out if want to compile and run standalone
 void benchmark1_2(int call);
 
+#if activateAllMain
+
 int main(){
     printf("\nSTART implementation 1.2\n\n");
     printf("\n======###### BENCHMARK TEST 1.2 #####=======\n\n");
@@ -19,6 +21,7 @@ int main(){
     printf("\nEND implementation 1.2\n");
 }
 
+#endif
 
 //function declarations, further information at definition
 void selectSubFunction (const int *sizeArr, int sizeNo, int call, int choseInit);

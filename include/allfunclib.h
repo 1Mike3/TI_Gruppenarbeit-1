@@ -4,6 +4,9 @@
 #include <stdio.h>
 //declare all functions below;
 
+#define activateAllMain 0
+
+
 //Markus
 void bubbleS (int *arr, int size);
 void inserS (int *arr, int size);
@@ -18,6 +21,7 @@ int checkSort(int *arr, int size, int mode);
 void basicCheck1_1(int call ,const int *sizeArr, int arrayNumber);
 void benchmark1_2(int call);
 void comparison1_3();
+
 
 //Emad
 void compareLinkedList();

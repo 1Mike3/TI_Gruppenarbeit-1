@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include "allfunclib.h"
  //deactivate comment out if you want to run this as a standalone executable
+#if 1
 
  int main () {
     //created the th arrays but have not initialized them, this will happen in the "basicCheck1_1 function with Emads rand func"
@@ -18,7 +19,7 @@
         }
         printf("\nEND implementation 1.1\n");
         }
-
+#endif
 
 void printAndSort(char sortAlgName[],const int *sizeArr, int sizeNo, int call);
 
@@ -84,10 +85,18 @@ void printAndSort(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
     printf("\n###### %s-IMPLEMENTATION #####\n\n", sortAlgName);
 
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
-    int *tempArr = malloc(sizeof(int) * *(sizeArr+0));
+    int *tempArr = malloc(sizeof(int) * (*(sizeArr+0)));
+    if(tempArr == NULL){
+        printf("error Malloc 1");
+        exit(1);
+    }
     for (int i = 0; i < sizeNo; ++i) {
         if(i >= 1){
-            tempArr = realloc(tempArr, sizeof (int )* *(sizeArr+i));
+            tempArr = realloc(tempArr, sizeof (int )* (*(sizeArr+i)));
+            if(tempArr == NULL){
+                printf("error Malloc 1");
+                exit(1);
+            }
         }
 
         printf("printout randomly initialized Array (SIZE: | %i |):\n",*(sizeArr+i));

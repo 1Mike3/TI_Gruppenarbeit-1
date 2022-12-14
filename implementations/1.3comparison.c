@@ -8,10 +8,12 @@
 
 
 void comparison1_3();
+
+#if activateAllMain
         int main(){
     comparison1_3();
 }
-
+#endif
 
 //function which implements the 1.2 assignment
 void comparison1_3() {
