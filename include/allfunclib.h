@@ -13,7 +13,7 @@ void printArr(int *arr, int size);
 void copyArr(int *arr1, int *arr2, int size);
 void quickS (int *arr, int size);
 void swapi(int *, int *);
-int checkSort(int *arr, int size, short int mode);
+int checkSort(int *arr, int size, int mode);
 //_________________Main implementations:
 void basicCheck1_1(int call ,const int *sizeArr, int arrayNumber);
 void benchmark1_2(int call);

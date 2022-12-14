@@ -1,5 +1,5 @@
 void inserS (int *arr, int size){
-    unsigned int i, j;
+    int i, j;
     int temp;
     for (i = 1; i < size; i++) {
         temp = *(arr+i);
