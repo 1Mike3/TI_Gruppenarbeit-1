@@ -4,7 +4,7 @@
 #include <stdio.h>
 //declare all functions below;
 
-#define activateAllMain 0
+#define activateAllMain 0 //deactivate/activate(=1) all main functions for debugging in clion
 
 
 //Markus
