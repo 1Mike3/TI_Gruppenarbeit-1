@@ -12,7 +12,7 @@
     }
 }
 */
- void insertion_sort (int *array, int size)
+ void inserS (int *array, int size)
 {
     int i, j, temp;
 

@@ -8,7 +8,7 @@
 //deactivate comment out if want to compile and run standalone
 void benchmark1_2(int call);
 
-#if activateAllMain
+#if 1
 
 int main(){
     printf("\nSTART implementation 1.2\n\n");
@@ -114,10 +114,18 @@ void selectSubFunction(const int *sizeArr, int sizeNo, int call,int choseInit) {
     double time_taken;
 
     //the size of tempArr will be dyn. alloc. depending on the size of the current working arr
-    int *tempArr = malloc(sizeof(int) * *(sizeArr+0));
+    int *tempArr = malloc((sizeof(int) * (*(sizeArr+0))));
+    if (tempArr == NULL){
+        printf("error Malloc 1");
+        exit(1);
+    }
     for (int i = 0; i < sizeNo; ++i) {
         if(i >= 1){
-            tempArr = realloc(tempArr, sizeof (int )* *(sizeArr+i));
+            tempArr = realloc(tempArr, (sizeof (int ) * (*(sizeArr+i))));
+            if (tempArr == NULL){
+                printf("error Malloc 2");
+                exit(2);
+            }
         }
 
         //########## Switch case for selection of initialization ############

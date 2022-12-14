@@ -2,7 +2,7 @@
 
 //include custom header file with all needed functions declared
 #include "allfunclib.h"
-#if 1
+#if activateAllMain
 int main() {
 int arrsdf[5] = {4,6,-2,-7,10};
     inserS(arrsdf, 5);

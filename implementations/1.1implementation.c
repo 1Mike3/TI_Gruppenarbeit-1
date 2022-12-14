@@ -94,8 +94,8 @@ void printAndSort(char *sortAlgName,const int *sizeArr, int sizeNo, int call) {
         if(i >= 1){
             tempArr = realloc(tempArr, (sizeof (int )* (*(sizeArr+i))));
             if(tempArr == NULL){
-                printf("error Malloc 1");
-                exit(1);
+                printf("error Malloc 2");
+                exit(2);
             }
         }
 
