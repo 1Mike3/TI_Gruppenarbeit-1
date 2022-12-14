@@ -74,7 +74,7 @@ void basicCheck1_1(int call,const int *sizeArr, int arrayNumber){
         default:
             break;
     }
-
+//
 }//END Basic1.1 Call
 
 //function which will be called in every switch-case to do the actual printing and sorting
