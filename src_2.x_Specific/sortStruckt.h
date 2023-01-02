@@ -1,0 +1,8 @@
+//
+// Created by osboxes on 02/01/23.
+//
+
+#ifndef GRUPPENARBEIT_TI_SORTSTRUCKT_H
+#define GRUPPENARBEIT_TI_SORTSTRUCKT_H
+
+#endif //GRUPPENARBEIT_TI_SORTSTRUCKT_H
