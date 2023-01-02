@@ -24,3 +24,14 @@ int *genRandNum(int size, int *randArr){
     return randArr;
 }
 
+int randNumReturn(const int upper, const int lower){
+
+    //integer for temporary storage of the generated number
+    int num = 0;
+
+    //calculate a random number | % = modulo
+    num = (rand() % (upper - lower + 1) + lower / 2) * 2;
+
+    return num;
+}
+

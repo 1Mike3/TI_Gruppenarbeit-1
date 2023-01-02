@@ -26,6 +26,7 @@ void comparison1_3();
 //Emad
 void compareLinkedList();
 int *genRandNum(int size, int *randArr);
+int randNumReturn(const int upper, const int lower);
 void printRandArr(int *arrToPrint, int arrSize);
 void merge(int arr[], int p, int q, int r);
 void mergeS (int *arr, int l, int r);

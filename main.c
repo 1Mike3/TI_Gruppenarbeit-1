@@ -7,11 +7,11 @@
 
 int main() {
 
-    ranStruct s1[400];
+    struct data s1[401];
     genRanStruct(400, s1);
 
     for(int i=0; i<=400;i++){
-        printf("%d %s | ",s1[i].index, s1[i].ranChar);
+        printf("%d %s | ", s1[i].number, s1[i].string);
     }
 
     return 0;
