@@ -7,12 +7,17 @@
 
 #endif //GRUPPENARBEIT_TI_BINARYSEARCHALGORITHM_H
 
+#include "generateRandomStruct.h"
+
+
 
 //typedef of the struct used to do the sorting
+/*
 typedef struct data {
     int number;
     char string[30];
 }data;
+ */
 
 //enum for return value of checkOrderChar function
 enum retCheckOrderChar {

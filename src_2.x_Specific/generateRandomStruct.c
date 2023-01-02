@@ -6,7 +6,8 @@
 
 int genRanStruct(int valuesCount, struct data workingStruct[]){
     for(int i=0; i <= valuesCount; i++) {
-        workingStruct[i].number = randNumReturn(3000,0);
+      //  workingStruct[i].number = randNumReturn(3000,0);
+        workingStruct[i].number = i;
         char randomletter[6]={};
         for(int i=0; i<5; i++){
 

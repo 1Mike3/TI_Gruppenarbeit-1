@@ -2,10 +2,13 @@
 // Created by osboxes on 02/01/23.
 //
 #include "allfunclib.h"
+#include "binarySearchAlgorithm.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
 
 #include "generateRandomStruct.h"
 #if 1//activateAllMain
@@ -18,6 +21,14 @@ int main(){
     for(int i=0; i<=structDataCount;i++){
         printf("%d %s | ", s1[i].number, s1[i].string);
     }
+
+    int userInput;
+    printf("\nEnter Integer: ");
+
+    printf("\n");
+
+   int returnIndex = binarySearchInteger(s1, 50, 0, 401);
+    printf("\nThe Retutnindex is: ½i", returnIndex);
 }
 #endif
 
