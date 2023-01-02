@@ -9,7 +9,7 @@
 
 typedef struct data {
     int number;
-    char string[20];
+    char string[30];
 }data;
 
 #if 1//activateAllMain
