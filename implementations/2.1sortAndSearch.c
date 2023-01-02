@@ -12,9 +12,10 @@
 int main(){
 
     struct data s1[401];
-    genRanStruct(400, s1);
+    int structDataCount = 400;
+    genRanStruct(structDataCount, s1);
 
-    for(int i=0; i<=400;i++){
+    for(int i=0; i<=structDataCount;i++){
         printf("%d %s | ", s1[i].number, s1[i].string);
     }
 }
