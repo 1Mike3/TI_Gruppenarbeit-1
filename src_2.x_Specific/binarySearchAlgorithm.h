@@ -7,6 +7,7 @@
 
 #endif //GRUPPENARBEIT_TI_BINARYSEARCHALGORITHM_H
 
+
 //typedef of the struct used to do the sorting
 typedef struct data {
     int number;
@@ -25,6 +26,12 @@ enum retCheckOrderChar {
 enum retCheckOrderString {
     orderString_stringsEqual = 0,
     orderString_firstStringLess = 1,
-    orderString_secondCharLess = 3,
+    orderString_secondStringLess = 3,
     orderString_inputStringValueInvalid = 4,
 };
+
+
+int checkOrderChar(const char char1, const char char2);
+int checkOrderString(const char *string1,const char *string2);
+int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmostIndex,  int rightmostIndex);
+int binarySearchString(data *sortedStructArray,char *searchedString,int leftmostIndex, int rightmostIndex);
