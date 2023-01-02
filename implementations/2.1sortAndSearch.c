@@ -7,14 +7,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct data {
-    int number;
-    char string[30];
-}data;
-
+#include "generateRandomStruct.h"
 #if 1//activateAllMain
 int main(){
 
+    struct data s1[401];
+    genRanStruct(400, s1);
+
+    for(int i=0; i<=400;i++){
+        printf("%d %s | ", s1[i].number, s1[i].string);
+    }
 }
 #endif
 

@@ -4,7 +4,7 @@
 #include "allfunclib.h"
 #include "generateRandomStruct.h"
 
-
+/*
 int main() {
 
     struct data s1[401];
@@ -16,4 +16,4 @@ int main() {
 
     return 0;
 }
-
+*/
