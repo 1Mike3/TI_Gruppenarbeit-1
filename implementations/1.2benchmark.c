@@ -8,7 +8,7 @@
 //deactivate comment out if want to compile and run standalone
 void benchmark1_2(int call);
 
-#if 1
+#if activateAllMain
 
 int main(){
     printf("\nSTART implementation 1.2\n\n");
