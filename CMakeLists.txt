@@ -8,3 +8,4 @@ add_executable(Gruppenarbeit_TI main.c srcGeneral/mergesort.c srcGeneral/quickso
         implementations/1.1implementation.c implementations/1.3comparison.c
         implementations/1.4linkedLists.c implementations/1.2benchmark.c srcGeneral/insertionsort_2.c implementations/2.1sortAndSearch.c src_2.x_Specific/binarySearchAlgorithm.c src_2.x_Specific/binarySearchAlgorithm.h src_2.x_Specific/generateRandomStruct.c src_2.x_Specific/generateRandomStruct.h src_2.x_Specific/userInputSearch.c src_2.x_Specific/userInputSearch.h src_2.x_Specific/sortStruckt.c src_2.x_Specific/sortStruckt.h)
 target_include_directories (Gruppenarbeit_TI PUBLIC include)
+target_include_directories (Gruppenarbeit_TI PUBLIC src_2.x_Specific)

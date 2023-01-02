@@ -2,16 +2,18 @@
 
 //include custom header file with all needed functions declared
 #include "allfunclib.h"
-#if activateAllMain
+#include "generateRandomStruct.h"
+
+
 int main() {
-int arrsdf[5] = {4,6,-2,-7,10};
-    inserS(arrsdf, 5);
-    //compareLinkedList();
-    for (int i = 0; i < 5; ++i) {
-        printf("%i\n", arrsdf[i]);
+
+    ranStruct s1[400];
+    genRanStruct(400, s1);
+
+    for(int i=0; i<=400;i++){
+        printf("%d %s | ",s1[i].index, s1[i].ranChar);
     }
 
     return 0;
-
 }
-# endif
+
