@@ -16,7 +16,7 @@
 //if no element found return -1
 int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmostIndex,  int rightmostIndex){
 
-     int workingMiddleIndex = 1+ ((rightmostIndex -1) / 2);
+     int workingMiddleIndex = ((rightmostIndex + leftmostIndex) / 2);
 
     // #### check if middle was a hit, if so return the middle index  ####
     if( (sortedStructArray+workingMiddleIndex)->number == searchedInteger)
@@ -27,11 +27,13 @@ int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmost
         return  -1;
 
     // ##### case searched value is smaller than middle value  ####
-    if( (sortedStructArray+workingMiddleIndex)->number < searchedInteger)
+    volatile int debughelfer = (sortedStructArray+workingMiddleIndex)->number;
+    if( (sortedStructArray+workingMiddleIndex)->number > searchedInteger)
+
        return binarySearchInteger(sortedStructArray, searchedInteger, leftmostIndex, (workingMiddleIndex -1));
 
     // #### case searched value is smaller than middle value  ####
-    if( (sortedStructArray+workingMiddleIndex)->number > searchedInteger)
+    if( (sortedStructArray+workingMiddleIndex)->number < searchedInteger)
    return binarySearchInteger(sortedStructArray, searchedInteger, (workingMiddleIndex+1), rightmostIndex);
 
 }

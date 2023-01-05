@@ -27,8 +27,8 @@ int main(){
 
     printf("\n");
 
-   int returnIndex = binarySearchInteger(s1, 50, 0, 401);
-    printf("\nThe Retutnindex is: ½i", returnIndex);
+   int returnIndex = binarySearchInteger(s1, -8, 0, 400);
+    printf("\nThe Retutnindex is: %i", returnIndex);
 }
 #endif
 
