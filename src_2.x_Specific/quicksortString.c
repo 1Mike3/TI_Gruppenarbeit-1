@@ -2,21 +2,19 @@
 // Created by osboxes on 05/01/23.
 //
 
-#include "quicksortString.h"
-#include "allfunclib.h"
-#include "generateRandomStruct.h"
+
 #include "string.h"
 #include <stdlib.h>
-#include "stdio.h"
 #include "binarySearchAlgorithm.h"
 
-//will be changed to string
+//Changed our old quicksortfunction to compart stings in Data --Michi
 
 //Used sub-functions, (further infos over implementation):
 //unsigned in for indexes chosen so don't waste space on negative array indexes
 //lower technically not needed but added to be able to sort arrays partially
 int chosePartition(data *dataArray, int lower, int upper);
-void sorting(data *dataArray ,int lower, int upper);
+void sortings(data *dataArray ,int lower, int upper);
+void swapStr(char *val1,char *val2);
 
 
 
@@ -26,14 +24,14 @@ void sorting(data *dataArray ,int lower, int upper);
 //!!watch out size is total number of items AND NOT last array index...
 void quickSortString(data *dataArray, int size){
     int upperValue = (size-1);
-    sorting( dataArray, 0, upperValue);
+    sortings( dataArray, 0, upperValue);
 }
 
 //######################SUBFUNCTIONS######################################
 
 //function for choosing the Partition, will be recursively called in the "sorting function"
 //the lower and upper
-int chosePartition(data *dataArray,int lower,int upper){
+int chosePartitions(data *dataArray,int lower,int upper){
 
     //initialising Pivot, always chosen as upper element
     char *pivotValue = calloc(strlen((dataArray+upper)->string), sizeof(char ));
@@ -42,21 +40,22 @@ int chosePartition(data *dataArray,int lower,int upper){
     int lowCounter = lower; // var which will be incremented in for loop
 
     for ( int i = lower; i <= upper; ++i) { //
-        if (checkOrderString(pivotValue, (dataArray+i)->string)){ // OO (*(arr+i) < pivotValue){
-            swapi((arr+lowCounter), (arr+i));                     // OO swapi((arr+lowCounter), (arr+i));
+        if (orderString_secondStringLess == checkOrderString(pivotValue, (dataArray+i)->string)){ // OO (*(arr+i) < pivotValue){
+            swapStr((dataArray + i)->string, (dataArray+lowCounter )->string) ;            // OO swapi((arr+lowCounter), (arr+i));
             lowCounter++;
         }
     }
-    swapi((arr+lowCounter), (arr+upper));
+
+    swapStr((dataArray+lowCounter)->string,(dataArray+upper)->string ); // OO swapi((arr+lowCounter), (arr+upper));
     return lowCounter;
 }
 
 //function which does the actual sorting
-void sorting(data *dataArray,int lower, int upper){
+void sortings(data *dataArray,int lower, int upper){
     if(lower < upper){
-        int temp = chosePartition(arr , lower, upper);
-        sorting(arr, lower, temp-1);
-        sorting(arr, temp+1, upper);
+        int temp = chosePartitions(dataArray , lower, upper);
+        sortings(dataArray, lower, temp-1);
+        sortings(dataArray, temp+1, upper);
     }
 }
 
@@ -64,6 +63,7 @@ void sorting(data *dataArray,int lower, int upper){
 //!!Untested
 void swapStr(char *val1,char *val2){
     char *temp  = val1;
-    *val1 = *val2;
-    *val2 = temp;
+    strcpy(temp, val1);
+    strcpy(val1, val2);
+    strcpy(val2, temp);
 }
