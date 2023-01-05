@@ -15,7 +15,7 @@
 #include "generateRandomStruct.h"
 
 
-
+#if 0
 
 char string [30] = "This is sparta";
 int searchedInteger;

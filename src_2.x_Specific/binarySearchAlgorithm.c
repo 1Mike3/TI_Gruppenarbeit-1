@@ -36,6 +36,7 @@ int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmost
     if( (sortedStructArray+workingMiddleIndex)->number < searchedInteger)
    return binarySearchInteger(sortedStructArray, searchedInteger, (workingMiddleIndex+1), rightmostIndex);
 
+
 }
 
 

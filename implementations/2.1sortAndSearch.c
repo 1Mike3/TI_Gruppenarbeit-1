@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "quicksortString.h"
 
 
 #include "generateRandomStruct.h"
@@ -15,7 +15,7 @@
 int main(){
 
     struct data s1[401];
-    int structDataCount = 400;
+    int structDataCount = 400; // highest index not dataCount misleading --Michi
     genRanStruct(structDataCount, s1);
 
     for(int i=0; i<=structDataCount;i++){
@@ -34,19 +34,27 @@ int main(){
      */
 
 
-#if 0// debug search binary string
+#if 1// debug search binary string
      //DEBUG TEST Binary Search String
 char userInput[6];
 printf("\nEnter String: ");
     scanf("%s",userInput );
 printf("\n");
 
+
+
+    quickSortString(s1, structDataCount+1);
+    for(int i=0; i<=structDataCount;i++){
+        printf("%d %s | ", s1[i].number, s1[i].string);
+    }
+
+
 int returnIndex = binarySearchString(s1, userInput, 0, 400);
 printf("\nThe Retutnindex is: %i", returnIndex);
 #endif  // debug search binary string
 
 
-#if 1 // debug char and stringcompare functions
+#if 0 // debug char and stringcompare functions
 char *str1 = "zzzzz";
 char *str2 = "zz6az6zz6";
 
@@ -57,6 +65,14 @@ char *str2 = "zz6az6zz6";
 #endif  // debug char and stringcompare functions
 
 #if 0 // debug quicksort String function
+    printf("Printed String Array:\n");
+
+    quickSortString(s1, structDataCount+1);
+
+    for(int i=0; i<=structDataCount;i++){
+        printf("%d %s | ", s1[i].number, s1[i].string);
+    }
+
 
 #endif // debug quicksort String function
 

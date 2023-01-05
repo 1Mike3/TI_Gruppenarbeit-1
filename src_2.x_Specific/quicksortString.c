@@ -34,19 +34,34 @@ void quickSortString(data *dataArray, int size){
 int chosePartitions(data *dataArray,int lower,int upper){
 
     //initialising Pivot, always chosen as upper element
-    char *pivotValue = calloc(strlen((dataArray+upper)->string), sizeof(char ));
+    char *pivotValue = calloc((strlen((dataArray+upper)->string)+1), sizeof(char ));
     strcpy(pivotValue, (dataArray+upper)->string);
 
     int lowCounter = lower; // var which will be incremented in for loop
 
     for ( int i = lower; i <= upper; ++i) { //
         if (orderString_secondStringLess == checkOrderString(pivotValue, (dataArray+i)->string)){ // OO (*(arr+i) < pivotValue){
+
+
+            //DEBUG
+            char debugstring_pivVal[6];  char debugstring_i[6]; char debugstring_low_count[6];
+            strcpy(debugstring_pivVal, pivotValue);
+            strcpy(debugstring_i,(dataArray+i)->string);
+            strcpy(debugstring_low_count, (dataArray+lowCounter)->string);
+
+
             swapStr((dataArray + i)->string, (dataArray+lowCounter )->string) ;            // OO swapi((arr+lowCounter), (arr+i));
+
+            strcpy(debugstring_i,(dataArray+i)->string);
+            strcpy(debugstring_low_count, (dataArray+lowCounter)->string);
+
+
             lowCounter++;
         }
     }
 
     swapStr((dataArray+lowCounter)->string,(dataArray+upper)->string ); // OO swapi((arr+lowCounter), (arr+upper));
+    free(pivotValue);
     return lowCounter;
 }
 
@@ -62,7 +77,7 @@ void sortings(data *dataArray,int lower, int upper){
 //function to swap two strings in an array
 //!!Untested
 void swapStr(char *val1,char *val2){
-    char *temp  = val1;
+    char temp[6];
     strcpy(temp, val1);
     strcpy(val1, val2);
     strcpy(val2, temp);
