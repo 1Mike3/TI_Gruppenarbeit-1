@@ -22,6 +22,8 @@ int main(){
         printf("%d %s | ", s1[i].number, s1[i].string);
     }
 
+    /*
+    DEBUG TEST Binary Search Ineger
     int userInput;
     printf("\nEnter Integer: ");
 
@@ -29,6 +31,36 @@ int main(){
 
    int returnIndex = binarySearchInteger(s1, -8, 0, 400);
     printf("\nThe Retutnindex is: %i", returnIndex);
+     */
+
+
+#if 0// debug search binary string
+     //DEBUG TEST Binary Search String
+char userInput[6];
+printf("\nEnter String: ");
+    scanf("%s",userInput );
+printf("\n");
+
+int returnIndex = binarySearchString(s1, userInput, 0, 400);
+printf("\nThe Retutnindex is: %i", returnIndex);
+#endif  // debug search binary string
+
+
+#if 1 // debug char and stringcompare functions
+char *str1 = "zzzzz";
+char *str2 = "zz6az6zz6";
+
+   int debugreturn = checkOrderString(str1, str2);
+
+    printf("\nchecke order return: %i\n", debugreturn);
+
+#endif  // debug char and stringcompare functions
+
+#if 0 // debug quicksort String function
+
+#endif // debug quicksort String function
+
+
 }
 #endif
 

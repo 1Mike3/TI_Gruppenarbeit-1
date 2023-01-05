@@ -27,7 +27,7 @@ int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmost
         return  -1;
 
     // ##### case searched value is smaller than middle value  ####
-    volatile int debughelfer = (sortedStructArray+workingMiddleIndex)->number;
+
     if( (sortedStructArray+workingMiddleIndex)->number > searchedInteger)
 
        return binarySearchInteger(sortedStructArray, searchedInteger, leftmostIndex, (workingMiddleIndex -1));
@@ -44,7 +44,7 @@ int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmost
 //returns the index of the array at the place where the element has been found
 //if no element found return -1
 int binarySearchString(data *sortedStructArray,char *searchedString,int leftmostIndex, int rightmostIndex){
-    int workingMiddleIndex = 1+ ((rightmostIndex -1) / 2);
+    int workingMiddleIndex = ((rightmostIndex + leftmostIndex) / 2);
 
     // #### check if middle was a hit, if so return the middle index  ####
     if (0 == strcmp((sortedStructArray+workingMiddleIndex)->string, searchedString))
@@ -54,12 +54,20 @@ int binarySearchString(data *sortedStructArray,char *searchedString,int leftmost
     if(leftmostIndex > rightmostIndex)
         return  -1;
 
+
+    //Debug helpers
+    volatile char string[6];
+    strcpy(string,(sortedStructArray+workingMiddleIndex)->string) ;
+
      //##### case searched value is smaller than middle value  ####
+     //FIRST  == SEARCHED STRING
+     //FIRST LESS
    if( orderString_firstStringLess == checkOrderString(searchedString, (sortedStructArray+workingMiddleIndex)->string))
     return binarySearchString(sortedStructArray, searchedString, leftmostIndex, (workingMiddleIndex -1));
 
-    // #### case searched value is smaller than middle value  ####
- if(  orderString_secondStringLess== checkOrderString(searchedString, (sortedStructArray+workingMiddleIndex)->string))
+    // #### case searched value is larger than middle value  ####
+    //SECOND LESS
+ if(  orderString_secondStringLess == checkOrderString(searchedString, (sortedStructArray+workingMiddleIndex)->string))
      return binarySearchString(sortedStructArray, searchedString, (workingMiddleIndex+1), rightmostIndex);
 }
 
@@ -67,7 +75,7 @@ int binarySearchString(data *sortedStructArray,char *searchedString,int leftmost
 
 int checkOrderString(const char *string1,const char *string2){
 
-    //return immidiadtely if strings are equal
+    //return immediately if strings are equal
     if(0 == strcmp(string1, string2))
         return  orderString_stringsEqual;
 
