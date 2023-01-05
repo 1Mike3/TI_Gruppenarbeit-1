@@ -25,16 +25,13 @@ int structDataCount = 400;
 struct data sortedStructArray[401];
 int numberOfElements = 0;
 
-
-
-#if allfunction
 int main (void) {
+    printf("Please enter 1 if you want to search for a string or 2 if you want to search for an integer: ");
+    scanf("%d", &searchFlag);
     printf("Please enter a string to be searched: ");
     scanf("%s", string);
     printf("Please enter an integer to be searched: ");
     scanf("%d", &searchedInteger);
-    printf("Please enter 1 if you want to search for a string or 2 if you want to search for an integer: ");
-    scanf("%d", &searchFlag);
     if(searchFlag != 1 && searchFlag != 2){
         printf("Invalid flag. Please enter 1 or 2. Program will exit now.");
         return 0;
