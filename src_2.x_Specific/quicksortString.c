@@ -7,19 +7,17 @@
 #include <stdlib.h>
 #include "binarySearchAlgorithm.h"
 
-//Changed our old quicksortfunction to compart stings in Data --Michi
+//Changed our old quicksortfunction to compare stings in Data structs --Michi
 
 //Used sub-functions, (further infos over implementation):
-//unsigned in for indexes chosen so don't waste space on negative array indexes
-//lower technically not needed but added to be able to sort arrays partially
-int chosePartition(data *dataArray, int lower, int upper);
+int chosePartitions(data *dataArray, int lower, int upper);
 void sortings(data *dataArray ,int lower, int upper);
 void swapStr(data *dataStr1 , data *dataStr2);
 
 
 
 //Qicksortfunction, entered array will be sorted using the quicksort-alg
-//"arr" is the chosen array of any size (edgecase size 0 behavior?)
+//rewritten to sort data structs according to string -Michi
 // "size" is the total number of elements the chosen array
 //!!watch out size is total number of items AND NOT last array index...
 void quickSortString(data *dataArray, int size){
@@ -28,7 +26,6 @@ void quickSortString(data *dataArray, int size){
 }
 
 //######################SUBFUNCTIONS######################################
-//randsst
 //function for choosing the Partition, will be recursively called in the "sorting function"
 //the lower and upper
 int chosePartitions(data *dataArray,int lower,int upper){
@@ -42,6 +39,7 @@ int chosePartitions(data *dataArray,int lower,int upper){
 
     int lowCounter = lower; // var which will be incremented in for loop
 
+    //run through elements, all smaller pivot left of pivot
     for ( int i = lower; i <= upper; ++i) { //
         if (orderString_secondStringLess == checkOrderString(pivotValue, (dataArray+i)->string)){ // OO (*(arr+i) < pivotValue){
 
@@ -52,14 +50,15 @@ int chosePartitions(data *dataArray,int lower,int upper){
             lowCounter++;
         }
     }
-
-    swapStr((dataArray+lowCounter),(dataArray+upper)); // OO swapi((arr+lowCounter), (arr+upper));
+ //insert pivot after all smaller elements to the left
+    swapStr((dataArray+lowCounter),(dataArray+((upper+lower)/2) ) ); // OO swapi((arr+lowCounter), (arr+upper)); //01 swapStr((dataArray+lowCounter),(dataArray+upper));
     free(pivotValue);
     return lowCounter;
 }
 
 //function which does the actual sorting
 void sortings(data *dataArray,int lower, int upper){
+    //call itself and sort partitions until indexes meet
     if(lower < upper){
         int temp = chosePartitions(dataArray , lower, upper);
         sortings(dataArray, lower, temp-1);

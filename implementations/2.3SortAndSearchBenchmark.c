@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#if 0
+
 //generate a random struct with 30000 elements
 //the max length of the string is 10
 //the max value of the integer is 500
@@ -48,7 +50,7 @@ cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 printf("Time taken by quicksort: %f\n", cpu_time_used);
 
 
-
+#endif
 
 
 
