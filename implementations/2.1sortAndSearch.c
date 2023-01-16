@@ -9,11 +9,11 @@
 #include "quicksortInt.h"
 
 #include "generateRandomStruct.h"
-
+#if 1
 int main() {
     int exit = 0;
-    struct data s1[40];  //Emad old 401
-    int structDataCount = 40; //Emad old 400
+    struct data s1[40];
+    int structDataCount = 40;
     genRanStruct(structDataCount, s1);
     int choice = 0;
     char userInput[6];
@@ -42,7 +42,7 @@ int main() {
                         printf("\n");
 
                 }
-                printf("\nEND =========UNSORTED========\n");
+                printf("\n=========END UNSORTED========\n");
                 printf("\nEnter String: ");
                 scanf("%s", userInput);
 
@@ -56,13 +56,13 @@ int main() {
                     if(i%15 == 0 && i != 0)
                         printf("\n");
                 }
-                printf("\n END =========SORTED========\n");
+                printf("\n=========END SORTED========\n");
 
 
                 int returnIndex = binarySearchString(s1, userInput, 0, structDataCount);
                 if(returnIndex >= 0){
                     int foundValue = s1[returnIndex].number;
-                    printf("\nThe Retutnindex is: %i", returnIndex);
+                    printf("\nThe Returnindex is: %i", returnIndex);
                     printf("\nThe value for the index is: %d", foundValue);
                 } else {
                     printf("No match in struct for %s", userInput);
@@ -81,7 +81,7 @@ int main() {
                     if(i%15 == 0 && i != 0)
                         printf("\n");
                 }
-                printf("\n=========UNSORTED========\n");
+                printf("\n=========END UNSORTED========\n");
 
 
                 printf("\nEnter Integer: ");
@@ -99,7 +99,7 @@ int main() {
                     if(i%15 == 0 && i != 0)
                         printf("\n");
                 }
-                printf("\n END =========SORTED========\n");
+                printf("\n=========END SORTED========\n");
 
 
                 break;
@@ -107,7 +107,7 @@ int main() {
 
 
             case 3:
-                printf("\nyou chose to quit the Program!\n");
+                printf("\nYou chose to quit the Program!\n");
                 exit = 1;
                 break;
             default:
@@ -117,3 +117,4 @@ int main() {
     }
     return 0;
 }
+#if 0
