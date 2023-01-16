@@ -3,7 +3,6 @@
 //
 
 #include "binarySearchAlgorithm.h"
-
 #include <string.h>
 #include <stdio.h>
 

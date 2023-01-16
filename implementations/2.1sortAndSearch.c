@@ -1,9 +1,7 @@
 //
 // Created by osboxes on 02/01/23.
 //
-#include "allfunclib.h"
 #include "binarySearchAlgorithm.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,129 +9,44 @@
 
 
 #include "generateRandomStruct.h"
-#if 1//activateAllMain
-int main(){
 
-    struct data s1[401];
-    int structDataCount = 400; // highest index not dataCount misleading --Michi
-    genRanStruct(structDataCount, s1);
-
-    for(int i=0; i<=structDataCount;i++){
-        printf("%d %s | ", s1[i].number, s1[i].string);
-    }
-
-    /*
-    DEBUG TEST Binary Search Ineger
-    int userInput;
-    printf("\nEnter Integer: ");
-
-    printf("\n");
-
-   int returnIndex = binarySearchInteger(s1, -8, 0, 400);
-    printf("\nThe Retutnindex is: %i", returnIndex);
-     */
-
-
-#if 1// debug search binary string
-     //DEBUG TEST Binary Search String
-char userInput[6];
-printf("\nEnter String: ");
-    scanf("%s",userInput );
-printf("\n");
-
-
-
-    quickSortString(s1, structDataCount+1);
-    for(int i=0; i<=structDataCount;i++){
-        printf("%d %s | ", s1[i].number, s1[i].string);
-    }
-
-
-int returnIndex = binarySearchString(s1, userInput, 0, 400);
-printf("\nThe Retutnindex is: %i", returnIndex);
-#endif  // debug search binary string
-
-
-#if 0 // debug char and stringcompare functions
-char *str1 = "zzzzz";
-char *str2 = "zz6az6zz6";
-
-   int debugreturn = checkOrderString(str1, str2);
-
-    printf("\nchecke order return: %i\n", debugreturn);
-
-#endif  // debug char and stringcompare functions
-
-#if 0 // debug quicksort String function
-    printf("Printed String Array:\n");
-
-    quickSortString(s1, structDataCount+1);
-
-    for(int i=0; i<=structDataCount;i++){
-        printf("%d %s | ", s1[i].number, s1[i].string);
-    }
-
-
-#endif // debug quicksort String function
-
-
-}
-#endif
-
-/* VON MARKUS
-//print data
-void print_data(struct data data[], int size) {
-    for (int i = 0; i < size; i++) {
-        printf("Number: %d, String: %s \n", data[i].number, data[i].string);
-    }
-}
-
- //sort the data by number
-void sort_by_number(struct data data[], int size) {
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size - 1; j++) {
-            if (data[j].number > data[j + 1].number) {
-                struct data temp = data[j];
-                data[j] = data[j + 1];
-                data[j + 1] = temp;
-            }
-        }
-    }
-}
-
-
- //sort the data by string
-void sort_by_string(struct data data[], int size) {
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size - 1; j++) {
-            if (strcmp(data[j].string, data[j + 1].string) > 0) {
-                struct data temp = data[j];
-                data[j] = data[j + 1];
-                data[j + 1] = temp;
-            }
-        }
-    }
-}
-
- //random
 int main() {
-    struct data data[5];
-    data[0].number = 5;
-    strcpy(data[0].string, "Hello!");
-    data[1].number = 2;
-    strcpy(data[1].string, "THIS");
-    data[2].number = 3;
-    strcpy(data[2].string, "IS");
-    data[3].number = 1;
-    strcpy(data[3].string, "SPARTA");
-        data[4].number = 4;
-    strcpy(data[4].string, "!!!1!1!1");
-    print_data(data, 5);
-    sort_by_number(data, 5);
-    print_data(data, 5);
-    sort_by_string(data, 5);
-    print_data(data, 5);
-    return 0;
-}
+    int exit = 0;
+    while(!exit){
+        struct data s1[401];
+        int structDataCount = 400; // highest index not dataCount misleading --Michi
+        genRanStruct(structDataCount, s1);
 
- */
+        for (int i = 0; i <= structDataCount; i++) {
+            printf("%d %s | ", s1[i].number, s1[i].string);
+        }
+        int choice = 0;
+        printf("\n\nPlease enter the number of choice.\n");
+        printf("1. Search string\n");
+        printf("2. Search integer\n");
+        printf("3. Quit\n");
+        scanf("%d", &choice);
+        char userInput[6];
+        switch (choice) {
+            case 1:
+                printf("\nEnter String: ");
+                scanf("%s", userInput);
+                printf("\n");
+                quickSortString(s1, structDataCount + 1);
+                for (int i = 0; i <= structDataCount; i++) {
+                    printf("%d %s | ", s1[i].number, s1[i].string);
+                }
+                int returnIndex = binarySearchString(s1, userInput, 0, 400);
+                printf("\nThe Retutnindex is: %i", returnIndex);
+                break;
+            case 2:
+                printf("Case 2");
+                break;
+            case 3:
+                exit = 1;
+                break;
+            default:
+                printf("Invalid input\n");
+        }
+    }
+}
