@@ -12,13 +12,14 @@
 
 int main() {
     int exit = 0;
+    struct data s1[40];  //Emad old 401
+    int structDataCount = 40; //Emad old 400
+    genRanStruct(structDataCount, s1);
+    int choice = 0;
+    char userInput[6];
+    int userInputInt = 0;
+
     while(!exit){
-        struct data s1[40];  //Emad old 401
-        int structDataCount = 40; //Emad old 400
-        genRanStruct(structDataCount, s1);
-        int choice = 0;
-        char userInput[6];
-       int userInputInt = 0;
 
         printf("\n\nPlease enter the number of choice.\n");
         printf("1. Search string\n");
@@ -114,4 +115,5 @@ int main() {
                 break;
         }
     }
+    return 0;
 }
