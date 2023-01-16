@@ -23,7 +23,9 @@ int main() {
         //create struct with given elements
         int structDataCount = 400;
         struct data s1[structDataCount];
+        //generate the random structures with randon int and 5 random chars
         genRanStruct(structDataCount, s1);
+        //choice handling
         int choice = 0;
         printf("\n\nPlease enter the number of choice.\n");
         printf("1. Search integer\n");
@@ -33,6 +35,7 @@ int main() {
         int userInput=-1;
         switch (choice) {
             case 1:
+                //print the unsorted array
                 printf("\n=========UNSORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
                     printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
@@ -40,14 +43,17 @@ int main() {
                         printf("\n");
 
                 }
-
                 printf("\n=========END UNSORTED========\n");
-                printf("\nEnter number: ");
 
+                //get user input for the value to search for
+                printf("\nEnter number: ");
                 scanf("%d", &userInput);
                 printf("\n");
 
+                //use LIB qsort to sort the given struct
                 qsort(s1,structDataCount,sizeof(struct data), cmpStruct);
+
+                //print sorted struct
                 printf("\n=========SORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
                     printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
@@ -56,7 +62,10 @@ int main() {
 
                 }
                 printf("\n ========= END SORTED========\n");
+
+                //create a temporary struct to store the found element and fill it with the return of the binarysearch lib function
                 struct data* structIndex = bsearch(&userInput, s1, structDataCount, sizeof(struct data), cmpStruct);
+                //handle the output depending on what has been found
                 if (structIndex != NULL) {
                     printf("\nElement found: %d with string value %s\n", structIndex->number, structIndex->string);
                 } else {
@@ -65,9 +74,11 @@ int main() {
 
                 break;
             case 2:
+                //stop the menu loop if user chooses
                 exit = 1;
                 break;
             default:
+                //if no valid input is given
                 printf("Invalid input\n");
                 break;
         }
