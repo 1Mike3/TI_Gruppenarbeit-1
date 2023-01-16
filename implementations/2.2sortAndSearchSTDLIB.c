@@ -1,7 +1,6 @@
 #include "binarySearchAlgorithm.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "quicksortString.h"
 #include "generateRandomStruct.h"
 
@@ -29,8 +28,8 @@ int main() {
             case 1:
                 printf("\n=========UNSORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
-                    printf("%d %s | ", s1[i].number, s1[i].string);
-                    if(i%5 == 0)
+                    printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
+                    if((i+1)%5 == 0)
                         printf("\n");
 
                 }
@@ -44,15 +43,15 @@ int main() {
                 qsort(s1,structDataCount,sizeof(struct data), cmpStruct);
                 printf("\n=========SORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
-                    printf(" [i:%d] %d %s | ", i,s1[i].number, s1[i].string);
-                    if(i%5 == 0 && i != 0)
+                    printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
+                    if((i+1)%5 == 0)
                         printf("\n");
 
                 }
                 printf("\n ========= END SORTED========\n");
                 struct data* structIndex = bsearch(&userInput, s1, structDataCount, sizeof(struct data), cmpStruct);
                 if (structIndex != NULL) {
-                    printf("Element found: %d with string value %s\n", structIndex->number, structIndex->string);
+                    printf("\nElement found: %d with string value %s\n", structIndex->number, structIndex->string);
                 } else {
                     printf("Element not found\n");
                 }

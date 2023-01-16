@@ -41,3 +41,22 @@ int *createSearchValues(int numSearchValues) {
 }
 
 //Code for Benchmark goes here
+
+clock_t start, end;
+
+// Measure the time taken for function1
+start = clock();
+function1(searchArray1, size);
+end = clock();
+double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
+printf("Time taken by function1: %f\n", time_taken);
+
+// Measure the time taken for function2
+start = clock();
+function2(searchArray2, size);
+end = clock();
+time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
+printf("Time taken by function2: %f\n", time_taken);
+
+return 0;
+}
