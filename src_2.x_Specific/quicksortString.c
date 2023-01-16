@@ -14,7 +14,7 @@
 //lower technically not needed but added to be able to sort arrays partially
 int chosePartition(data *dataArray, int lower, int upper);
 void sortings(data *dataArray ,int lower, int upper);
-void swapStr(char *val1,char *val2);
+void swapStr(data *dataStr1 , data *dataStr2);
 
 
 
@@ -50,7 +50,7 @@ int chosePartitions(data *dataArray,int lower,int upper){
             strcpy(debugstring_low_count, (dataArray+lowCounter)->string);
 
 
-            swapStr((dataArray + i)->string, (dataArray+lowCounter )->string) ;            // OO swapi((arr+lowCounter), (arr+i));
+            swapStr((dataArray + i), (dataArray+lowCounter));            // OO swapi((arr+lowCounter), (arr+i));
 
             strcpy(debugstring_i,(dataArray+i)->string);
             strcpy(debugstring_low_count, (dataArray+lowCounter)->string);
@@ -60,7 +60,7 @@ int chosePartitions(data *dataArray,int lower,int upper){
         }
     }
 
-    swapStr((dataArray+lowCounter)->string,(dataArray+upper)->string ); // OO swapi((arr+lowCounter), (arr+upper));
+    swapStr((dataArray+lowCounter),(dataArray+upper)); // OO swapi((arr+lowCounter), (arr+upper));
     free(pivotValue);
     return lowCounter;
 }
@@ -74,6 +74,7 @@ void sortings(data *dataArray,int lower, int upper){
     }
 }
 
+/* old, only switches string but not integer
 //function to swap two strings in an array
 //!!Untested
 void swapStr(char *val1,char *val2){
@@ -81,4 +82,22 @@ void swapStr(char *val1,char *val2){
     strcpy(temp, val1);
     strcpy(val1, val2);
     strcpy(val2, temp);
+}
+*/
+
+//function which swaps two dataStruct values
+void swapStr(data *dataStr1,data *dataStr2){
+    data tempStr;
+
+    //copy values one to temp
+    strcpy(tempStr.string, dataStr1->string);
+    tempStr.number = dataStr1->number;
+
+    //copy values two to one
+    strcpy(dataStr1->string, dataStr2->string);
+    dataStr1->number = dataStr2->number;
+
+//copy valuees temp (one) to two
+    strcpy(dataStr2->string, tempStr.string);
+    dataStr2->number = tempStr.number;
 }
