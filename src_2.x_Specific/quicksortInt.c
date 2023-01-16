@@ -6,6 +6,8 @@
 #include "allfunclib.h"
 #include "generateRandomStruct.h"
 
+#include <string.h>
+
 //Commented out old from Markus
 /*
 //Used sub-functions, (further infos over implementation):
@@ -95,10 +97,19 @@ void sortingI(data *dataStruct,int lower, int upper){
 }
 
 //swaps the Integer Value of two Structs of the type data
+//added strcpy so also swaps the strings of the struct
 void swapIntStruct(data *dataStruct1, data *dataStruct2){
     data tempStruct;
+
+    //added strypy so whole part of data struct is copied -Michi
+
     tempStruct.number = dataStruct1->number;
+    strcpy(tempStruct.string, dataStruct1->string);
+
     dataStruct1->number = dataStruct2->number;
-    dataStruct2->number = dataStruct1->number;
+    strcpy(dataStruct1->string, dataStruct2->string);
+
+    dataStruct2->number = tempStruct.number;
+    strcpy(dataStruct2->string, tempStruct.string);
 }
 

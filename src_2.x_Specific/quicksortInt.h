@@ -9,3 +9,5 @@
 #include "generateRandomStruct.h"
 
 #endif //GRUPPENARBEIT_TI_QUICKSORTINT_H
+
+void quickSortInt(data *dataStruct, int size);
