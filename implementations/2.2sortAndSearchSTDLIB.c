@@ -22,6 +22,7 @@ int main() {
         printf("\n\nPlease enter the number of choice.\n");
         printf("1. Search integer\n");
         printf("2. Quit\n");
+        printf("Choice: ");
         scanf("%d", &choice);
         int userInput=-1;
         switch (choice) {

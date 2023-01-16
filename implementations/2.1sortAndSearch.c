@@ -3,8 +3,8 @@
 #include <string.h>
 #include "quicksortString.h"
 #include "quicksortInt.h"
-
 #include "generateRandomStruct.h"
+
 #if 1
 int main() {
     int exit = 0;
@@ -24,6 +24,7 @@ int main() {
         printf("1. Search string\n");
         printf("2. Search integer\n");
         printf("3. Quit\n");
+        printf("Choice: ");
         scanf("%d", &choice);
         fflush(stdin);
 
