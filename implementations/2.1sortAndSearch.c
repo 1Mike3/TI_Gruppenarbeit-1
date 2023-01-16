@@ -12,21 +12,24 @@
 #if 1
 int main() {
     int exit = 0;
-    struct data s1[40];
-    int structDataCount = 40;
-    genRanStruct(structDataCount, s1);
+    struct data s1[400];
+    int structDataCount = 400;
     int choice = 0;
     char userInput[6];
     int userInputInt = 0;
+    char foundValueString[10];
+    int foundValue = 0;
 
     while(!exit){
+
+        genRanStruct(structDataCount , s1);
 
         printf("\n\nPlease enter the number of choice.\n");
         printf("1. Search string\n");
         printf("2. Search integer\n");
         printf("3. Quit\n");
         scanf("%d", &choice);
-
+        fflush(stdin);
 
 
         //switch case depending on user Input
@@ -34,6 +37,8 @@ int main() {
 
 
             case 1: //case for string selected
+
+
                 printf("\n=========UNSORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
                     printf("%d %s | ", s1[i].number, s1[i].string);
@@ -45,10 +50,14 @@ int main() {
                 printf("\n=========END UNSORTED========\n");
                 printf("\nEnter String: ");
                 scanf("%s", userInput);
-
-
+                fflush(stdin);
                 printf("\n");
+
+
                 quickSortString(s1, structDataCount);
+
+
+
                 printf("\n=========SORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
                     printf(" [i:%d] %d %s | ", i,s1[i].number, s1[i].string);
@@ -61,9 +70,11 @@ int main() {
 
                 int returnIndex = binarySearchString(s1, userInput, 0, structDataCount);
                 if(returnIndex >= 0){
-                    int foundValue = s1[returnIndex].number;
+                   foundValue = s1[returnIndex].number;
+                    strcpy(foundValueString, s1[returnIndex].string );
                     printf("\nThe Returnindex is: %i", returnIndex);
-                    printf("\nThe value for the index is: %d", foundValue);
+                    printf("\nThe integer value for the index is: %d", foundValue);
+                    printf("\nThe string value for the index is: %s", foundValueString);
                 } else {
                     printf("No match in struct for %s", userInput);
                 }
@@ -86,7 +97,7 @@ int main() {
 
                 printf("\nEnter Integer: ");
                 scanf("%d", &userInputInt);
-
+                fflush(stdin);
                 printf("\n");
 
                 //quickSortInt(s1, structDataCount);
@@ -101,6 +112,17 @@ int main() {
                 }
                 printf("\n=========END SORTED========\n");
 
+                returnIndex = binarySearchInteger(s1, userInputInt, 0, structDataCount);
+                if(returnIndex >= 0){
+                    foundValue = s1[returnIndex].number;
+                    strcpy(foundValueString, s1[returnIndex].string );
+                    printf("\nThe Returnindex is: %i", returnIndex);
+                    printf("\nThe integer value for the index is: %d", foundValue);
+                    printf("\nThe string value for the index is: %s", foundValueString);
+                } else {
+                    printf("No match in struct for %d", userInputInt);
+                }
+
 
                 break;
 
@@ -108,6 +130,7 @@ int main() {
 
             case 3:
                 printf("\nYou chose to quit the Program!\n");
+                fflush(stdin);
                 exit = 1;
                 break;
             default:
@@ -117,4 +140,5 @@ int main() {
     }
     return 0;
 }
+
 #endif
