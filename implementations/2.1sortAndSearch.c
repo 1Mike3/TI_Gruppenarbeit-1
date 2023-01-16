@@ -47,7 +47,7 @@ int main() {
 
                 }
                 printf("\n END =========SORTED========\n");
-                int returnIndex = binarySearchString(s1, userInput, 0, 39);
+                int returnIndex = binarySearchString(s1, userInput, 0, structDataCount);
                 if(returnIndex >= 0){
                     int foundValue = s1[returnIndex].number;
                     printf("\nThe Retutnindex is: %i", returnIndex);
@@ -71,6 +71,7 @@ int main() {
                 break;
             default:
                 printf("Invalid input\n");
+                break;
         }
     }
 }
