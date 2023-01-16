@@ -1,9 +1,5 @@
-//
-// Created by osboxes on 02/01/23.
-//
 #include "binarySearchAlgorithm.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include "quicksortString.h"
 #include "quicksortInt.h"
@@ -41,9 +37,8 @@ int main() {
 
                 printf("\n=========UNSORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
-                    printf("%d %s | ", s1[i].number, s1[i].string);
-                    //Michi, added so printout looks better
-                    if(i%15 == 0 && i != 0)
+                    printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
+                    if((i+1)%5 == 0)
                         printf("\n");
 
                 }
@@ -60,9 +55,8 @@ int main() {
 
                 printf("\n=========SORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
-                    printf(" [i:%d] %d %s | ", i,s1[i].number, s1[i].string);
-                    //Michi, added so printout looks better
-                    if(i%15 == 0 && i != 0)
+                    printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
+                    if((i+1)%5 == 0)
                         printf("\n");
                 }
                 printf("\n=========END SORTED========\n");
@@ -87,9 +81,8 @@ int main() {
 
                 printf("\n=========UNSORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
-                    printf("%d %s | ", s1[i].number, s1[i].string);
-                    //Michi, added so printout looks better
-                    if(i%15 == 0 && i != 0)
+                    printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
+                    if((i+1)%5 == 0)
                         printf("\n");
                 }
                 printf("\n=========END UNSORTED========\n");
@@ -105,9 +98,8 @@ int main() {
 
                 printf("\n=========SORTED========\n");
                 for (int i = 0; i < structDataCount; i++) {
-                    printf(" [i:%d] %d %s | ", i,s1[i].number, s1[i].string);
-                    //Michi, added so printout looks better
-                    if(i%15 == 0 && i != 0)
+                    printf("[i:%-3d] %-5d %s | ",i, s1[i].number, s1[i].string);
+                    if((i+1)%5 == 0)
                         printf("\n");
                 }
                 printf("\n=========END SORTED========\n");
