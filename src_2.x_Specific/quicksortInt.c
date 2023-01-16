@@ -51,7 +51,7 @@ int chosePartitionI(data *dataStruct, int lower,int upper){
 
             if((dataStruct+lowCounter+1) != (dataStruct+i)) //checks the addresses so don't copy to same address
             swapIntStruct((dataStruct+lowCounter+1), (dataStruct+i));
-            lowCounter++;
+                lowCounter++;
         }
     }
 
