@@ -33,8 +33,11 @@ void quickSortString(data *dataArray, int size){
 //the lower and upper
 int chosePartitions(data *dataArray,int lower,int upper){
 
-    //initialising Pivot, always chosen as upper element
-    char *pivotValue = calloc((strlen((dataArray+upper)->string)+1), sizeof(char ));
+    //chosePartition changed so Pivot
+    //initialising Pivot, changed to middle element
+    // old:  char *pivotValue = calloc((strlen((dataArray+upper)->string)+1), sizeof(char ));
+    //new                                                    //taking middle value here
+    char *pivotValue = calloc((strlen((dataArray+((upper+lower)/2))->string)+1), sizeof(char ));
     strcpy(pivotValue, (dataArray+upper)->string);
 
     int lowCounter = lower; // var which will be incremented in for loop

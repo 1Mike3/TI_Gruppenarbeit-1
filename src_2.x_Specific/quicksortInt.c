@@ -73,7 +73,10 @@ void quickSortInt(data *dataStruct, int size){
 //function for choosing the Partition, will be recursively called in the "sorting function"
 //the lower and upper
 int chosePartitionI(data *dataStruct, int lower,int upper){
-    int pivotValue = (dataStruct+upper)->number; //initialising Pivot, always chosen as upper element //OO *(arr+upper)
+    //now chosing Pivot middle value instead of rightmost
+    //old int pivotValue = (dataStruct+upper)->number;
+    //new
+    int pivotValue = (dataStruct+((upper+lower)/2))->number;
     int lowCounter = lower; // var which will be incremented in for loop
 
     for ( int i = lower; i <= upper; ++i) { //
@@ -101,10 +104,11 @@ void sortingI(data *dataStruct,int lower, int upper){
 //swaps the Integer Value of two Structs of the type data
 //added strcpy so also swaps the strings of the struct
 void swapIntStruct(data *dataStruct1, data *dataStruct2){
+    //temp struct used
     data tempStruct;
 
     //added strypy so whole part of data struct is copied -Michi
-
+    //
     tempStruct.number = dataStruct1->number;
     strcpy(tempStruct.string, dataStruct1->string);
 
