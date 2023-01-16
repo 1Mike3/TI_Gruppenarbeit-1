@@ -8,8 +8,8 @@
 #if 1
 int main() {
     int exit = 0;
-    struct data s1[400];
     int structDataCount = 400;
+    struct data s1[structDataCount];
     int choice = 0;
     char userInput[6];
     int userInputInt = 0;

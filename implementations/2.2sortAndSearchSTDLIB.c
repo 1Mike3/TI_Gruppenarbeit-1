@@ -4,8 +4,10 @@
 #include "quicksortString.h"
 #include "generateRandomStruct.h"
 
-#if 0
+#if 1
 
+//Create compare function to compare the numbers in the struct
+//this is used by the LIB qsort
 int cmpStruct(const void *a, const void *b) {
     struct data *ia = (struct data *)a;
     struct data *ib = (struct data *)b;
@@ -13,10 +15,14 @@ int cmpStruct(const void *a, const void *b) {
 }
 
 int main() {
+
+    //Show menu until user chooses to exit
     int exit = 0;
     while(!exit){
-        struct data s1[400];
+
+        //create struct with given elements
         int structDataCount = 400;
+        struct data s1[structDataCount];
         genRanStruct(structDataCount, s1);
         int choice = 0;
         printf("\n\nPlease enter the number of choice.\n");
