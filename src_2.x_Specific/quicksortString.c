@@ -34,24 +34,28 @@ int chosePartitions(data *dataArray,int lower,int upper){
     //initialising Pivot, changed to middle element
     // old:  char *pivotValue = calloc((strlen((dataArray+upper)->string)+1), sizeof(char ));
     //new                                                    //taking middle value here
-    char *pivotValue = calloc((strlen((dataArray+((upper+lower)/2))->string)+1), sizeof(char ));
-    strcpy(pivotValue, (dataArray+upper)->string);
-
+    int pivotIndex = ((upper+lower)/2);
+    char *pivotValue = calloc((strlen((dataArray+(pivotIndex))->string)+1), sizeof(char ));
+    strcpy(pivotValue, (dataArray+pivotIndex)->string);
     int lowCounter = lower; // var which will be incremented in for loop
 
-    //run through elements, all smaller pivot left of pivot
-    for ( int i = lower; i <= upper; ++i) { //
+    //insert pivot first position
+    if((dataArray + lower) != (dataArray+pivotIndex)) //so don't swap same memory addresses!!
+        swapStr((dataArray + lower), (dataArray+pivotIndex));
+
+    //run through elements, all smaller pivot "left of pivot"
+    for ( int i = lower+1; i <= upper; ++i) { //
         if (orderString_secondStringLess == checkOrderString(pivotValue, (dataArray+i)->string)){ // OO (*(arr+i) < pivotValue){
 
-
-             if((dataArray + i) != (dataArray+lowCounter)) //so don't swap same memory addresses!!
-             swapStr((dataArray + i), (dataArray+lowCounter));            // OO swapi((arr+lowCounter), (arr+i));
+             if((dataArray + i) != (dataArray+lowCounter+1)) //so don't swap same memory addresses!!
+             swapStr((dataArray + i), (dataArray+lowCounter+1));            // OO swapi((arr+lowCounter), (arr+i));
 
             lowCounter++;
         }
     }
- //insert pivot after all smaller elements to the left
-    swapStr((dataArray+lowCounter),(dataArray+((upper+lower)/2) ) ); // OO swapi((arr+lowCounter), (arr+upper)); //01 swapStr((dataArray+lowCounter),(dataArray+upper));
+
+    //swap the pivot back
+    swapStr((dataArray+lower),(dataArray+lowCounter ) );
     free(pivotValue);
     return lowCounter;
 }

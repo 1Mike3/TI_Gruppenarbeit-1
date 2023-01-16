@@ -37,21 +37,26 @@ int chosePartitionI(data *dataStruct, int lower,int upper){
     //old int pivotValue = (dataStruct+upper)->number;
     //new
     //assign pivot value from middle data struct number element
-    int pivotValue = (dataStruct+((upper+lower)/2))->number;
+    int pivotIndex = (lower + upper) / 2;
+    int pivotValue = (dataStruct+pivotIndex)->number;
     int lowCounter = lower; // var which will be incremented in for loop
 
+    //moves pivot value to first index
+    if((dataStruct+lower) != (dataStruct+pivotIndex)) // checks the addresses so don't copy to same address
+        swapIntStruct((dataStruct+lower), (dataStruct+pivotIndex));
+
     //shifts all the elements smaller than the pivot value left of it
-    for ( int i = lower; i <= upper; ++i) { //
+    for ( int i = lower+1; i <= upper; ++i) { //
         if ((dataStruct+i)->number < pivotValue){  // OO *arr+i
 
-            if((dataStruct+lowCounter) != (dataStruct+i)) //checks the addresses so don't copy to same address
-            swapIntStruct((dataStruct+lowCounter), (dataStruct+i));
+            if((dataStruct+lowCounter+1) != (dataStruct+i)) //checks the addresses so don't copy to same address
+            swapIntStruct((dataStruct+lowCounter+1), (dataStruct+i));
             lowCounter++;
         }
     }
 
     //insert pivot after smaller elements
-    swapIntStruct((dataStruct+lowCounter), ( dataStruct+( (upper+lower)/2) ) ); // changed from upper
+    swapIntStruct((dataStruct+lower), ( dataStruct+ lowCounter )); // changed from upper
     return lowCounter;
 }
 
