@@ -12,10 +12,10 @@
 //the max length of the string is 10
 //the max value of the integer is 500
 
-int genRanStruct(int valuesCount, struct data workingStruct[]) {
+int genRanBigStruct(int valuesCount, struct data workingStruct[]) {
     int i;
     for (i = 0; i < valuesCount; i++) {
-        workingStruct[i].number = rand() % 500;
+        workingStruct[i].number = randNumReturn(3000,0);
         int j;
         for (j = 0; j < 5; j++) {
             workingStruct[i].string[j] = (char) (rand() % 26 + 65); //ASCII 65-90 = A-Z
@@ -24,28 +24,37 @@ int genRanStruct(int valuesCount, struct data workingStruct[]) {
     return 0;
 }
 
-int compare(const void *a, const void *b)
-{
+int cmpStruct(const void *a, const void *b) {
     struct data *ia = (struct data *)a;
     struct data *ib = (struct data *)b;
-    return ia->number - ib->number;
+    return (ia->number - ib->number);
 }
 
 int main() {
-    struct data workingStruct[30000];
-    genRanStruct(30000, workingStruct);
+
+    int tempArraySize = 500;
+    int structDataCount = 30000;
+    int *tempArr = malloc((sizeof(int) * tempArraySize));
+    if(tempArr == NULL){
+        printf("error Malloc 1");
+        exit(1);
+    }
+    genRandPosNum(tempArraySize,tempArr);
+    for(int i=0; i < tempArraySize; i++){
+        printf("%d ", tempArr[i]);
+    }
+    struct data workingStruct[structDataCount];
+    genRanBigStruct(structDataCount, workingStruct);
     clock_t start, end;
     double cpu_time_used;
     start = clock();
-    qsort(workingStruct, 30000, sizeof(struct data), compare);
+    qsort(workingStruct,structDataCount,sizeof(struct data), cmpStruct);
     end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Time taken by qsort: %f\n", cpu_time_used);
 
     start = clock();
-   // quicksort(workingStruct, 0, 30000);
-   //sortieren von integern -Michi
-    quickSortInt(workingStruct, 3000);
+    quickSortInt(workingStruct, structDataCount);
     end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Time taken by quicksort: %f\n", cpu_time_used);

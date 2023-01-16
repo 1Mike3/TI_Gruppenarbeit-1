@@ -23,7 +23,27 @@ int *genRandNum(int size, int *randArr){
 
     return randArr;
 }
+int *genRandPosNum(int size, int *randArr){
 
+    //define max upper and lower
+    const int upper = 3000;
+    const int lower = 0;
+
+    //integer for temporary storage of the generated number
+    int num = 0;
+    int i;
+
+    for (i = 0; i < size; i++) {
+
+        //calculate a random number | % = modulo
+        num = (rand() % (upper - lower + 1) + lower / 2) * 2;
+
+        //write random num to array
+        randArr[i] = num;
+    }
+
+    return randArr;
+}
 int randNumReturn(const int upper, const int lower){
     return rand() % (upper - lower + 1) + lower;
 }
