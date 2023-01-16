@@ -28,7 +28,7 @@ void quickSortString(data *dataArray, int size){
 }
 
 //######################SUBFUNCTIONS######################################
-
+//randsst
 //function for choosing the Partition, will be recursively called in the "sorting function"
 //the lower and upper
 int chosePartitions(data *dataArray,int lower,int upper){
