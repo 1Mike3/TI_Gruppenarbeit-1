@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "quicksortInt.h"
 
 //generate a random struct with 30000 elements
 //the max length of the string is 10
@@ -42,7 +43,9 @@ int main() {
     printf("Time taken by qsort: %f\n", cpu_time_used);
 
     start = clock();
-    quicksort(workingStruct, 0, 30000);
+   // quicksort(workingStruct, 0, 30000);
+   //sortieren von integern -Michi
+    quickSortInt(workingStruct, 3000);
     end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Time taken by quicksort: %f\n", cpu_time_used);
