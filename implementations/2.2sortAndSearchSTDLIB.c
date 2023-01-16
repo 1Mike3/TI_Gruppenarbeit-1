@@ -8,7 +8,7 @@
 #include "quicksortString.h"
 #include "generateRandomStruct.h"
 
-#if 1
+#if 0
 
 int main() {
     int exit = 0;
