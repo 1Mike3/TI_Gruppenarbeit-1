@@ -4,6 +4,8 @@
 #include "generateRandomStruct.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <time.h>
 
 //generate a random struct with 30000 elements
 //the max length of the string is 10
@@ -21,33 +23,31 @@ int genRanStruct(int valuesCount, struct data workingStruct[]) {
     return 0;
 }
 
-//a main function to test the function
+int compare(const void *a, const void *b)
+{
+    struct data *ia = (struct data *)a;
+    struct data *ib = (struct data *)b;
+    return ia->number - ib->number;
+}
+
 int main() {
     struct data workingStruct[30000];
     genRanStruct(30000, workingStruct);
-    int i;
-    for (i = 0; i < 30000; i++) {
-        printf("%d %s \n", workingStruct[i].number, workingStruct[i].string);
-    }
+    clock_t start, end;
+    double cpu_time_used;
+    start = clock();
+    qsort(workingStruct, 30000, sizeof(struct data), compare);
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Time taken by qsort: %f\n", cpu_time_used);
+
+    start = clock();
+    quicksort(workingStruct, 0, 30000);
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Time taken by quicksort: %f\n", cpu_time_used);
     return 0;
 }
-
-clock_t start, end;
-double cpu_time_used;
-
-start = clock();
-qsort(workingStruct, 30000, sizeof(struct data), compare);
-end = clock();
-cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-printf("Time taken by qsort: %f\n", cpu_time_used);
-
-start = clock();
-quicksort(workingStruct, 0, 30000);
-end = clock();
-cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-printf("Time taken by quicksort: %f\n", cpu_time_used);
-
-
 
 
 
