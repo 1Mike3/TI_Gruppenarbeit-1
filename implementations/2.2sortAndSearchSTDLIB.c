@@ -16,8 +16,8 @@ int cmpStruct(const void *a, const void *b) {
 int main() {
     int exit = 0;
     while(!exit){
-        struct data s1[40];  //Emad old 401
-        int structDataCount = 40; //Emad old 400
+        struct data s1[400];
+        int structDataCount = 400;
         genRanStruct(structDataCount, s1);
         int choice = 0;
         printf("\n\nPlease enter the number of choice.\n");

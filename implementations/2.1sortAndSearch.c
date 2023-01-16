@@ -9,7 +9,7 @@
 #include "quicksortInt.h"
 
 #include "generateRandomStruct.h"
-#if 1
+#if 0
 int main() {
     int exit = 0;
     struct data s1[40];
