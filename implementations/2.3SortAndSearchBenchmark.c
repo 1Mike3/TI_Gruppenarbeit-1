@@ -18,7 +18,7 @@ int genRanBigStruct(int valuesCount, struct data workingStruct[]) {
         workingStruct[i].number = randNumReturn(3000,0);
         int j;
         for (j = 0; j < 5; j++) {
-            workingStruct[i].string[j] = (char) (rand() % 26 + 65); //ASCII 65-90 = A-Z
+            workingStruct[i].string[j] = (char) ('a' + (rand() % 26));
         }
     }
     return 0;
@@ -45,6 +45,14 @@ int main() {
     }
     struct data workingStruct[structDataCount];
     genRanBigStruct(structDataCount, workingStruct);
+    printf("\n=========UNSORTED========\n");
+    for (int i = 0; i < 100; i++) {
+        printf("[i:%-3d] %-5d %s | ",i, workingStruct[i].number, workingStruct[i].string);
+        if((i+1)%5 == 0)
+            printf("\n");
+
+    }
+    printf("\n=========END UNSORTED========\n");
     clock_t start, end;
     double cpu_time_used;
     start = clock();
@@ -52,7 +60,6 @@ int main() {
     end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Time taken by qsort: %f\n", cpu_time_used);
-
     start = clock();
     quickSortInt(workingStruct, structDataCount);
     end = clock();
