@@ -67,3 +67,4 @@ void printRandArr(int *arrToPrint, int arrSize) {
         printf(" %d", *(arrToPrint + i));
     }
 }
+
