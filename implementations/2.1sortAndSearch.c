@@ -13,8 +13,8 @@
 int main() {
     int exit = 0;
     while(!exit){
-        struct data s1[401];
-        int structDataCount = 400; // highest index not dataCount misleading --Michi
+        struct data s1[40];  //Emad old 401
+        int structDataCount = 40; //Emad old 400
         genRanStruct(structDataCount, s1);
         int choice = 0;
         printf("\n\nPlease enter the number of choice.\n");
@@ -26,20 +26,28 @@ int main() {
         switch (choice) {
             case 1:
                 printf("\n=========UNSORTED========\n");
-                for (int i = 0; i <= structDataCount; i++) {
+                for (int i = 0; i < structDataCount; i++) {
                     printf("%d %s | ", s1[i].number, s1[i].string);
+                    //Michi, added so printout looks better
+                    if(i%15 == 0)
+                        printf("\n");
+
                 }
-                printf("\n=========UNSORTED========\n");
+                printf("\nEND =========UNSORTED========\n");
                 printf("\nEnter String: ");
                 scanf("%s", userInput);
                 printf("\n");
-                quickSortString(s1, structDataCount + 1);
+                quickSortString(s1, structDataCount);
                 printf("\n=========SORTED========\n");
-                for (int i = 0; i <= structDataCount; i++) {
-                    printf("%d %s | ", s1[i].number, s1[i].string);
+                for (int i = 0; i < structDataCount; i++) {
+                    printf(" [i:%d] %d %s | ", i,s1[i].number, s1[i].string);
+                    //Michi, added so printout looks better
+                    if(i%15 == 0)
+                        printf("\n");
+
                 }
-                printf("\n=========SORTED========\n");
-                int returnIndex = binarySearchString(s1, userInput, 0, 400);
+                printf("\n END =========SORTED========\n");
+                int returnIndex = binarySearchString(s1, userInput, 0, 39);
                 if(returnIndex >= 0){
                     int foundValue = s1[returnIndex].number;
                     printf("\nThe Retutnindex is: %i", returnIndex);
@@ -52,7 +60,7 @@ int main() {
                 break;
             case 2:
                 printf("\n=========UNSORTED========\n");
-                for (int i = 0; i <= structDataCount; i++) {
+                for (int i = 0; i < structDataCount; i++) {
                     printf("%d %s | ", s1[i].number, s1[i].string);
                 }
                 printf("\n=========UNSORTED========\n");
