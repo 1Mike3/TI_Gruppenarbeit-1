@@ -43,18 +43,8 @@ int chosePartitions(data *dataArray,int lower,int upper){
         if (orderString_secondStringLess == checkOrderString(pivotValue, (dataArray+i)->string)){ // OO (*(arr+i) < pivotValue){
 
 
-            //DEBUG
-            char debugstring_pivVal[6];  char debugstring_i[6]; char debugstring_low_count[6];
-            strcpy(debugstring_pivVal, pivotValue);
-            strcpy(debugstring_i,(dataArray+i)->string);
-            strcpy(debugstring_low_count, (dataArray+lowCounter)->string);
-
-
-            swapStr((dataArray + i), (dataArray+lowCounter));            // OO swapi((arr+lowCounter), (arr+i));
-
-            strcpy(debugstring_i,(dataArray+i)->string);
-            strcpy(debugstring_low_count, (dataArray+lowCounter)->string);
-
+             if((dataArray + i) != (dataArray+lowCounter)) //so don't swap same memory addresses!!
+             swapStr((dataArray + i), (dataArray+lowCounter));            // OO swapi((arr+lowCounter), (arr+i));
 
             lowCounter++;
         }

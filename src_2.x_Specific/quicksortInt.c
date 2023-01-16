@@ -78,6 +78,8 @@ int chosePartitionI(data *dataStruct, int lower,int upper){
 
     for ( int i = lower; i <= upper; ++i) { //
         if ((dataStruct+i)->number < pivotValue){  // OO *arr+i
+
+            if((dataStruct+lowCounter) != (dataStruct+i)) //checks the addresses so don't copy to same address
             swapIntStruct((dataStruct+lowCounter), (dataStruct+i));
             lowCounter++;
         }

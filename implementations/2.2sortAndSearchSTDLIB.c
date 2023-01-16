@@ -5,7 +5,7 @@
 #include "quicksortString.h"
 #include "generateRandomStruct.h"
 
-#if 1
+#if 0
 
 int cmpStruct(const void *a, const void *b) {
     struct data *ia = (struct data *)a;
