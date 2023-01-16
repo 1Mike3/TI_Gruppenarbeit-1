@@ -45,7 +45,7 @@ int main() {
                     printf("\nThe Retutnindex is: %i", returnIndex);
                     printf("\nThe value for the index is: %d", foundValue);
                 } else {
-                    printf("No macth in struct for &s", userInput);
+                    printf("No match in struct for %s", userInput);
                 }
 
 
