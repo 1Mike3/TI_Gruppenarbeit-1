@@ -23,10 +23,8 @@ int *genRandNum(int size, int *randArr){
 
     return randArr;
 }
-int *genRandPosNum(int size, int *randArr){
+int *genRandPosNum(int size, int *randArr, const int upper){
 
-    //define max upper and lower
-    const int upper = 3000;
     const int lower = 0;
 
     //integer for temporary storage of the generated number
