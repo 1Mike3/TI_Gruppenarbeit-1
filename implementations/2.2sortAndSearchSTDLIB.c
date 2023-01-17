@@ -4,7 +4,7 @@
 #include "quicksortString.h"
 #include "generateRandomStruct.h"
 
-#if 1
+#if 0
 
 //Create compare function to compare the numbers in the struct
 //this is used by the LIB qsort
