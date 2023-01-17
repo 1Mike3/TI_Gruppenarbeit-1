@@ -69,6 +69,8 @@ int binarySearchString(data *sortedStructArray,char *searchedString,int leftmost
     //SECOND LESS
  if(  orderString_secondStringLess == checkOrderString(searchedString, (sortedStructArray+workingMiddleIndex)->string))
      return binarySearchString(sortedStructArray, searchedString, (workingMiddleIndex+1), rightmostIndex);
+
+
 }
 
 //the checkOrder functions assume that a string consists of lowercase ASCII alphabetical character

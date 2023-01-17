@@ -12,7 +12,7 @@ int main() {
 
     for(int i=0; i<=400;i++){
         printf("%d %s | ", s1[i].number, s1[i].string);
-    }
+    }gc
 
     return 0;
 }
