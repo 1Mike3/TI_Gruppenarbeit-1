@@ -18,4 +18,5 @@ int genRanStruct(int valuesCount, struct data workingStruct[]){
         strcpy(workingStruct[i].string, randomletter);
     }
 
+    return 0;
 }

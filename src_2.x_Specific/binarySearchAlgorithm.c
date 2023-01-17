@@ -28,14 +28,13 @@ int binarySearchInteger(data *sortedStructArray,int searchedInteger,int leftmost
     // ##### case searched value is smaller than middle value  ####
 
     if( (sortedStructArray+workingMiddleIndex)->number > searchedInteger)
-
        return binarySearchInteger(sortedStructArray, searchedInteger, leftmostIndex, (workingMiddleIndex -1));
 
     // #### case searched value is smaller than middle value  ####
     if( (sortedStructArray+workingMiddleIndex)->number < searchedInteger)
    return binarySearchInteger(sortedStructArray, searchedInteger, (workingMiddleIndex+1), rightmostIndex);
 
-
+    return -1;
 }
 
 
@@ -56,7 +55,7 @@ int binarySearchString(data *sortedStructArray,char *searchedString,int leftmost
 
 
     //Debug helpers
-    volatile char string[6];
+     char string[6];
     strcpy(string,(sortedStructArray+workingMiddleIndex)->string) ;
 
      //##### case searched value is smaller than middle value  ####
@@ -70,7 +69,7 @@ int binarySearchString(data *sortedStructArray,char *searchedString,int leftmost
  if(  orderString_secondStringLess == checkOrderString(searchedString, (sortedStructArray+workingMiddleIndex)->string))
      return binarySearchString(sortedStructArray, searchedString, (workingMiddleIndex+1), rightmostIndex);
 
-
+return -1;
 }
 
 //the checkOrder functions assume that a string consists of lowercase ASCII alphabetical character
@@ -101,7 +100,7 @@ int checkOrderString(const char *string1,const char *string2){
     }
 
     int tempCheckOrderCharRetVal;
-    for (int i = 0; i < maxCompareLength; ++i) {
+    for (unsigned int i = 0; i < maxCompareLength; ++i) {
         tempCheckOrderCharRetVal  = checkOrderChar(string1[i], string2[i]);
         switch (tempCheckOrderCharRetVal) {
             case orderChar_charsEqual:
@@ -156,4 +155,5 @@ int checkOrderChar(const char char1, const char char2){
     if(char1 > char2)
         return orderChar_secondCharLess;
 
+    return  orderChar_inputCharValueInvalid;
 }
