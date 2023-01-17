@@ -22,6 +22,10 @@ void genRanBigStruct(int valuesCount, struct data workingStruct[]){
         strcpy(workingStruct[i].string, randomletter);
     }
 
+
+
+    return 0;
+
 }
 
 //compare function for the qsort to use
