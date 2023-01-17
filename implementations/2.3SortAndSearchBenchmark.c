@@ -30,7 +30,7 @@ int cmpStruct(const void *a, const void *b) {
     struct data *ib = (struct data *)b;
     return (ia->number - ib->number);
 }
-#if 0
+#if 1
 
 int main() {
     //set seed for rand funcion
