@@ -45,6 +45,7 @@ int main() {
         printf("error Malloc 1");
         exit(1);
     }
+    printf("=============================================LIB FUNCTIONS BEG =============================================\n");
     genRandPosNum(tempArraySize,tempArr,5000);
     struct data workingStruct[structDataCount];
     genRanBigStruct(structDataCount, workingStruct);
@@ -60,7 +61,6 @@ int main() {
     double cpu_time_used;
     start = clock();
     qsort(workingStruct,structDataCount,sizeof(struct data), cmpStruct);
-    matchescounter = 0;
     for(int i=0; i < tempArraySize; i++){
         //create a temporary struct to store the found element and fill it with the return of the binarysearch lib function
         struct data* structIndex = bsearch(&tempArr[i], workingStruct, structDataCount, sizeof(struct data), cmpStruct);
@@ -79,10 +79,10 @@ int main() {
 
     }
     printf("\n=========END SORTED========\n");
-    printf("Time taken by qsort: %f\n", cpu_time_used);
-    printf("\nFound %d matches.", matchescounter);
-
-
+    printf("Time taken by library functions: %f\n", cpu_time_used);
+    printf("Found %d matches.\n", matchescounter);
+    printf("=============================================LIB FUNCTIONS END =============================================\n");
+    printf("=============================================OWN FUNCTIONS BEG =============================================\n");
     struct data workingStruct2[structDataCount];
     genRanBigStruct(structDataCount, workingStruct2);
     printf("\n=========UNSORTED========\n");
@@ -113,9 +113,9 @@ int main() {
 
     }
     printf("\n=========END SORTED========\n");
-    printf("Time taken by quicksort: %f\n", cpu_time_used);
-    printf("\nFound %d matches.", matchescounter);
-
+    printf("Time taken by our functions: %f\n", cpu_time_used);
+    printf("Found %d matches.\n", matchescounter);
+    printf("=============================================OWN FUNCTIONS END =============================================\n");
     return 0;
 }
 
