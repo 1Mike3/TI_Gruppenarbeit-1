@@ -86,14 +86,17 @@ void swapStr(data *dataStr1,data *dataStr2){
     data tempStr;
 
     //copy values one to temp
+    if(0 != strcmp(tempStr.string, dataStr1->string))
     strcpy(tempStr.string, dataStr1->string);
-    tempStr.number = dataStr1->number;
+      tempStr.number = dataStr1->number;
 
     //copy values two to one
+    if(0 != strcmp(dataStr2->string, dataStr1->string))
     strcpy(dataStr1->string, dataStr2->string);
-    dataStr1->number = dataStr2->number;
+      dataStr1->number = dataStr2->number;
 
 //copy valuees temp (one) to two
+    if(0 != strcmp(tempStr.string, dataStr2->string))
     strcpy(dataStr2->string, tempStr.string);
-    dataStr2->number = tempStr.number;
+      dataStr2->number = tempStr.number;
 }

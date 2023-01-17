@@ -22,10 +22,6 @@ void genRanBigStruct(int valuesCount, struct data workingStruct[]){
         strcpy(workingStruct[i].string, randomletter);
     }
 
-
-
-    return 0;
-
 }
 
 //compare function for the qsort to use
@@ -34,6 +30,7 @@ int cmpStruct(const void *a, const void *b) {
     struct data *ib = (struct data *)b;
     return (ia->number - ib->number);
 }
+#if 0
 
 int main() {
     //set seed for rand funcion
@@ -145,5 +142,5 @@ int main() {
 }
 
 
-
+#endif
 

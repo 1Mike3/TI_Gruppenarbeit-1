@@ -81,14 +81,17 @@ void swapIntStruct(data *dataStruct1, data *dataStruct2){
     //added strypy so whole part of data struct is copied -Michi
     // cpy elements 1 to tempp
     tempStruct.number = dataStruct1->number;
+    if(0 != strcmp(dataStruct1->string, tempStruct.string))
     strcpy(tempStruct.string, dataStruct1->string);
 
     //cpy elements 2 to 1
-    dataStruct1->number = dataStruct2->number;
+      dataStruct1->number = dataStruct2->number;
+    if(0 != strcmp(dataStruct1->string, dataStruct2->string))
     strcpy(dataStruct1->string, dataStruct2->string);
 
     //cpy elements tmp(1) to 2
-    dataStruct2->number = tempStruct.number;
+      dataStruct2->number = tempStruct.number;
+    if(0 != strcmp(dataStruct2->string, tempStruct.string))
     strcpy(dataStruct2->string, tempStruct.string);
 }
 

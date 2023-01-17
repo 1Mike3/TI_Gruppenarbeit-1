@@ -7,15 +7,16 @@
 
 #if 1
 int main() {
-    int exit = 0;
-    int structDataCount = 400;
-    struct data s1[structDataCount];
-    int choice = 0;
-    char userInput[6];
-    int userInputInt = 0;
-    char foundValueString[10];
-    int foundValue = 0;
+    int exit = 0; //var for breaking the while loop
+    int structDataCount = 400; //count of the struct Array Elements
+    struct data s1[structDataCount]; // Array containing the data structs for sorting and searching
+    int choice = 0; //user input
+    char userInput[6]; //user input
+    int userInputInt = 0; //user input search integer
+    char foundValueString[10]; //string containing the discovered value with the binary search function
+    int foundValue = 0; //integer containing th discovered value with the binary search function
 
+    //loops until the user choses to quit
     while(!exit){
 
         genRanStruct(structDataCount , s1);
